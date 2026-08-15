@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us – Yak N Sup | Hidden Cove Marina, Frisco TX</title>
+<meta name="description" content="Contact Yak N Sup at Hidden Cove Marina on Lake Lewisville, Frisco TX. Questions about rentals, group bookings, or events — we're here to help.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact Us – Yak N Sup | Hidden Cove Marina, Frisco TX">
+<meta property="og:description" content="Contact Yak N Sup at Hidden Cove Marina on Lake Lewisville, Frisco TX. Questions about rentals, group bookings, or events — we're here to help.">
+<meta property="og:image" content="https://yaknsup.com/images/picspicpi/488A0802.jpg">
+<meta property="og:url" content="https://yaknsup.com/texas/contact.html">
+<link rel="canonical" href="https://yaknsup.com/texas/contact.html">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<style>
+.contact-page { margin-top:108px; }
+.contact-hero { 
+  background-color: var(--dark-warm);
+  background-image: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)), url('../images/act-sup.jpg');
+  background-size: cover; background-position: center 40%;
+  color: white; padding: 72px 48px;
+  border-bottom: 3px solid var(--orange);
+}
+.contact-hero h1 { color:white; font-family:'Sunday Romantic', serif; font-size:clamp(44px,6vw,68px); margin-bottom:12px; }
+.contact-hero p { font-size:18px; color:rgba(255,255,255,0.82); }
+.contact-main { background:var(--card); padding:80px 48px; }
+.contact-layout { display:grid; grid-template-columns:1fr 1.2fr; gap:64px; max-width:1000px; margin:0 auto; }
+.contact-info h2 { font-family:'Sunday Romantic', serif; font-size:32px; margin-bottom:20px; }
+.contact-method { display:flex; align-items:flex-start; gap:16px; padding:20px 0; border-bottom:1px solid var(--border); }
+.contact-method:last-of-type { border:none; }
+.cm-icon { font-size:28px; flex-shrink:0; }
+.cm-label { font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--orange); margin-bottom:4px; }
+.cm-val { font-size:16px; font-weight:600; color:var(--deep-blue); }
+.cm-note { font-size:13px; color:var(--mid); margin-top:2px; }
+.cm-val a { color:var(--deep-blue); text-decoration:none; }
+.cm-val a:hover { color:var(--orange); }
+.hours-card { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:24px; margin-top:28px; }
+.hours-card h4 { font-family:'Sunday Romantic', serif; font-size:28px; margin-bottom:14px; }
+.hours-row { display:flex; justify-content:space-between; font-size:14px; padding:7px 0; border-bottom:1px solid var(--border); }
+.hours-row:last-child { border:none; }
+.hours-row span:last-child { font-weight:600; }
+.contact-form { background:var(--card); border:1px solid var(--border); border-radius:24px; padding:36px; }
+.contact-form h3 { font-family:'Sunday Romantic', serif; font-size:32px; margin-bottom:24px; }
+.form-group { margin-bottom:16px; }
+.form-group label { display:block; font-size:13px; font-weight:600; color:var(--deep-blue); margin-bottom:6px; }
+.form-group input, .form-group select, .form-group textarea { width:100%; padding:12px 16px; border:1px solid var(--border); border-radius:12px; font-family:'Lato',sans-serif; font-size:14px; background:white; color:var(--deep-blue); outline:none; transition:border 0.2s; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color:var(--orange); }
+.form-group textarea { resize:vertical; min-height:120px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.locations-section-contact { background:var(--card); padding:64px 48px; }
+.loc-cards { display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:800px; margin:0 auto; }
+.loc-card-contact { background:white; border:1px solid var(--border); border-radius:20px; padding:28px; }
+.loc-card-contact h3 { font-family:'Sunday Romantic', serif; font-size:28px; margin-bottom:16px; }
+.loc-detail { display:flex; gap:10px; font-size:14px; color:var(--mid); margin-bottom:10px; }
+.loc-detail-icon { flex-shrink:0; }
+@media (max-width:960px) {
+  .contact-hero { padding:48px 20px; }
+  .contact-main { padding:56px 20px; }
+  .contact-layout { grid-template-columns:1fr; gap:32px; }
+  .locations-section-contact { padding:48px 20px; }
+  .loc-cards { grid-template-columns:1fr; }
+}
+@font-face { font-family: 'Sunday Romantic'; src: url('../fonts/SundayRomantic.otf') format('opentype'); font-weight: normal; font-style: normal; font-display: swap; }
+.section-tag {
+  font-family: 'Oswald', sans-serif; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase; font-size: 12px;
+  color: var(--orange); display: block; margin-bottom: 8px;
+}
+/* Blue accents */
+.contact-method { border-bottom: 1px solid var(--sky) !important; }
+.cm-val a { color: var(--deep-blue) !important; }
+.cm-val a:hover { color: var(--heritage) !important; }
+.hours-card { border-left: 4px solid var(--deep-blue) !important; }
+.hours-card h4 { color: var(--deep-blue) !important; }
+.loc-card-contact { border-top: 3px solid var(--heritage) !important; }
+.loc-card-contact h3 { color: var(--deep-blue) !important; }
+
+/* -- LOCATION BAR -- */
+.loc-bar {
+  position: fixed; top: 72px; left: 0; right: 0; z-index: 99;
+  height: 36px; padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: Oswald, sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+.loc-bar-tx { background: var(--orange) !important; color: white !important; transition: none !important; }
+.loc-bar-pin { display: flex; align-items: center; gap: 6px; }
+.loc-bar-switch {
+  display: flex; align-items: center; gap: 6px;
+  color: inherit; text-decoration: none; opacity: 0.75; transition: opacity 0.2s;
+}
+.loc-bar-switch:hover { opacity: 1; }
+.page-hero, .exp-hero, .page-hero-sm { margin-top: 108px !important; }
+</style>
+</head>
+<body>
+<!-- LOCATION BAR -->
+<div class="loc-bar loc-bar-tx">
+  <span class="loc-bar-pin">
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+    Hidden Cove, Texas
+  </span>
+  <a class='loc-bar-switch' href='/'>
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+    Switch Location
+  </a>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" id="svg-sprite" style="display:none;position:absolute;" aria-hidden="true">
+<defs>
+<!-- Location / Map pin -->
+<symbol id="ic-location" viewBox="0 0 24 24"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Clock / Hours -->
+<symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><polyline points="12 7 12 12 15.5 15" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Calendar -->
+<symbol id="ic-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="1.8"/><line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Phone -->
+<symbol id="ic-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="11" y1="18" x2="13" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Email / Envelope -->
+<symbol id="ic-email" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><polyline points="2,4 12,13 22,4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Kayak paddle (double-blade) -->
+<symbol id="ic-paddle" viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 6.5 Q12 3 15.5 6.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8.5 17.5 Q12 21 15.5 17.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Kayak (side view) -->
+<symbol id="ic-kayak" viewBox="0 0 24 24"><path d="M3 13 Q12 8 21 13 Q12 15 3 13Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="13" x2="12" y2="9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="9.5" y1="9" x2="14.5" y2="9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- SUP / Paddleboard person -->
+<symbol id="ic-sup" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="7.5" x2="12" y2="14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 11l-3 3M15 11l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 20 Q12 17 20 20" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Life jacket / PFD -->
+<symbol id="ic-vest" viewBox="0 0 24 24"><path d="M12 3L8 7V20H16V7L12 3Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="3" x2="12" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8 9H5C4 9 3 10 3 11V20H8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M16 9H19C20 9 21 10 21 11V20H16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Group / People -->
+<symbol id="ic-group" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="17" cy="8" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M21 21v-2a3.5 3.5 0 0 0-2.5-3.4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Family -->
+<symbol id="ic-family" viewBox="0 0 24 24"><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="16" cy="6" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="16" r="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 21v-2a4 4 0 0 1 4-4h2M21 21v-2a4 4 0 0 0-4-4h-2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><line x1="12" y1="18" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Sun / Sunrise -->
+<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="2" x2="12" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="2" y1="12" x2="4" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="20" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Moon -->
+<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Water waves -->
+<symbol id="ic-water" viewBox="0 0 24 24"><path d="M2 12 Q5.5 9 9 12 Q12.5 15 16 12 Q19.5 9 22 12" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M2 17 Q5.5 14 9 17 Q12.5 20 16 17 Q19.5 14 22 17" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.5"/></symbol>
+<!-- Fish -->
+<symbol id="ic-fish" viewBox="0 0 24 24"><path d="M6 12C6 12 8 7 14 7C18.5 7 21 9.5 21 12C21 14.5 18.5 17 14 17C8 17 6 12 6 12Z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M6 12L2 8M6 12L2 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="16" cy="10" r="1" fill="currentColor"/></symbol>
+<!-- Fishing rod -->
+<symbol id="ic-fishing" viewBox="0 0 24 24"><line x1="4" y1="20" x2="20" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M20 4 Q22 8 18 10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="17.5" cy="11" r="1.5" stroke="currentColor" stroke-width="1.5" fill="none"/></symbol>
+<!-- Map / Compass -->
+<symbol id="ic-map" viewBox="0 0 24 24"><polygon points="3,6 9,3 15,6 21,3 21,18 15,21 9,18 3,21" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="9" y1="3" x2="9" y2="18" stroke="currentColor" stroke-width="1.8"/><line x1="15" y1="6" x2="15" y2="21" stroke="currentColor" stroke-width="1.8"/></symbol>
+<!-- Parking P -->
+<symbol id="ic-parking" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M9 18V6h5a3 3 0 0 1 0 6H9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<!-- Gift card / Gift -->
+<symbol id="ic-gift" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="7" x2="12" y2="21" stroke="currentColor" stroke-width="1.8"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Safety / Shield -->
+<symbol id="ic-safety" viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5.25 3.5 10.15 8 11.36C16.5 22.15 20 17.25 20 12V6L12 2Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><polyline points="9,12 11,14 15,10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Check circle -->
+<symbol id="ic-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8 12.5l3 3 5-5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- X / Cross -->
+<symbol id="ic-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Star -->
+<symbol id="ic-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Camera / Instagram -->
+<symbol id="ic-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="13" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Music note / TikTok -->
+<symbol id="ic-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Share / Facebook -->
+<symbol id="ic-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- YouTube -->
+<symbol id="ic-youtube" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="currentColor" stroke-width="1.8" fill="none"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Arrow right -->
+<symbol id="ic-arrow-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><polyline points="12,5 19,12 12,19" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Plus (FAQ open) -->
+<symbol id="ic-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Gear / Quality -->
+<symbol id="ic-gear" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 5.5 Q12 2 15.5 5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8.5 18.5 Q12 22 15.5 18.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Marker / pin (alternate) -->
+<symbol id="ic-marker" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 2C7.58 2 4 5.58 4 10c0 6 8 12 8 12s8-6 8-12c0-4.42-3.58-8-8-8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Thermometer / Temperature -->
+<symbol id="ic-temp" viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- City / Building -->
+<symbol id="ic-city" viewBox="0 0 24 24"><rect x="3" y="9" width="13" height="13" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M16 9V6l5-2v15H16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="13" x2="9" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="7" y1="17" x2="9" y2="17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="11" y1="13" x2="13" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Tools / Coordinator -->
+<symbol id="ic-tools" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" id="svg-sprite" style="display:none;position:absolute;" aria-hidden="true">
+<defs>
+<!-- Location / Map pin -->
+<symbol id="ic-location" viewBox="0 0 24 24"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Clock / Hours -->
+<symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><polyline points="12 7 12 12 15.5 15" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Calendar -->
+<symbol id="ic-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="1.8"/><line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Phone -->
+<symbol id="ic-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="11" y1="18" x2="13" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Email / Envelope -->
+<symbol id="ic-email" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><polyline points="2,4 12,13 22,4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Kayak paddle (double-blade) -->
+<symbol id="ic-paddle" viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 6.5 Q12 3 15.5 6.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8.5 17.5 Q12 21 15.5 17.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Kayak (side view) -->
+<symbol id="ic-kayak" viewBox="0 0 24 24"><path d="M3 13 Q12 8 21 13 Q12 15 3 13Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="13" x2="12" y2="9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="9.5" y1="9" x2="14.5" y2="9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- SUP / Paddleboard person -->
+<symbol id="ic-sup" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="7.5" x2="12" y2="14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 11l-3 3M15 11l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 20 Q12 17 20 20" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Life jacket / PFD -->
+<symbol id="ic-vest" viewBox="0 0 24 24"><path d="M12 3L8 7V20H16V7L12 3Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="3" x2="12" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8 9H5C4 9 3 10 3 11V20H8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M16 9H19C20 9 21 10 21 11V20H16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Group / People -->
+<symbol id="ic-group" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="17" cy="8" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M21 21v-2a3.5 3.5 0 0 0-2.5-3.4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Family -->
+<symbol id="ic-family" viewBox="0 0 24 24"><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="16" cy="6" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="16" r="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 21v-2a4 4 0 0 1 4-4h2M21 21v-2a4 4 0 0 0-4-4h-2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><line x1="12" y1="18" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Sun / Sunrise -->
+<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="2" x2="12" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="2" y1="12" x2="4" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="20" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Moon -->
+<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Water waves -->
+<symbol id="ic-water" viewBox="0 0 24 24"><path d="M2 12 Q5.5 9 9 12 Q12.5 15 16 12 Q19.5 9 22 12" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M2 17 Q5.5 14 9 17 Q12.5 20 16 17 Q19.5 14 22 17" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.5"/></symbol>
+<!-- Fish -->
+<symbol id="ic-fish" viewBox="0 0 24 24"><path d="M6 12C6 12 8 7 14 7C18.5 7 21 9.5 21 12C21 14.5 18.5 17 14 17C8 17 6 12 6 12Z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M6 12L2 8M6 12L2 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="16" cy="10" r="1" fill="currentColor"/></symbol>
+<!-- Fishing rod -->
+<symbol id="ic-fishing" viewBox="0 0 24 24"><line x1="4" y1="20" x2="20" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M20 4 Q22 8 18 10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="17.5" cy="11" r="1.5" stroke="currentColor" stroke-width="1.5" fill="none"/></symbol>
+<!-- Map / Compass -->
+<symbol id="ic-map" viewBox="0 0 24 24"><polygon points="3,6 9,3 15,6 21,3 21,18 15,21 9,18 3,21" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="9" y1="3" x2="9" y2="18" stroke="currentColor" stroke-width="1.8"/><line x1="15" y1="6" x2="15" y2="21" stroke="currentColor" stroke-width="1.8"/></symbol>
+<!-- Parking P -->
+<symbol id="ic-parking" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M9 18V6h5a3 3 0 0 1 0 6H9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<!-- Gift card / Gift -->
+<symbol id="ic-gift" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="7" x2="12" y2="21" stroke="currentColor" stroke-width="1.8"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Safety / Shield -->
+<symbol id="ic-safety" viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5.25 3.5 10.15 8 11.36C16.5 22.15 20 17.25 20 12V6L12 2Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><polyline points="9,12 11,14 15,10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Check circle -->
+<symbol id="ic-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8 12.5l3 3 5-5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- X / Cross -->
+<symbol id="ic-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Star -->
+<symbol id="ic-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Camera / Instagram -->
+<symbol id="ic-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="13" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Music note / TikTok -->
+<symbol id="ic-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Share / Facebook -->
+<symbol id="ic-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- YouTube -->
+<symbol id="ic-youtube" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="currentColor" stroke-width="1.8" fill="none"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Arrow right -->
+<symbol id="ic-arrow-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><polyline points="12,5 19,12 12,19" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Plus (FAQ open) -->
+<symbol id="ic-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Gear / Quality -->
+<symbol id="ic-gear" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 5.5 Q12 2 15.5 5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8.5 18.5 Q12 22 15.5 18.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Marker / pin (alternate) -->
+<symbol id="ic-marker" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 2C7.58 2 4 5.58 4 10c0 6 8 12 8 12s8-6 8-12c0-4.42-3.58-8-8-8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Thermometer / Temperature -->
+<symbol id="ic-temp" viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- City / Building -->
+<symbol id="ic-city" viewBox="0 0 24 24"><rect x="3" y="9" width="13" height="13" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M16 9V6l5-2v15H16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="13" x2="9" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="7" y1="17" x2="9" y2="17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="11" y1="13" x2="13" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Tools / Coordinator -->
+<symbol id="ic-tools" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs>
+</svg>
+
+<nav id="mainNav">
+  <a class='nav-logo' href='/texas/' style='position:relative;display:inline-block;'>
+    <img src="../images/logo-nav-black.png" alt="Yak N Sup" class="nav-logo-img" style="height:46px;display:block;">
+  </a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <a href='/texas/#locations'>Locations</a>
+      <div class="dropdown-menu">
+        <a href='/locations/canyon-lake'>Hidden Cove — TX</a>
+        <div class="dropdown-divider"></div>
+        <a href='/locations/hidden-cove'>Hidden Cove, TX</a>
+      </div>
+    </li>
+    <li><a href='/texas/rentals'>Rentals</a></li>
+    <li class="nav-dropdown">
+      <a href='/texas/experiences'>Special Events</a>
+      <div class="dropdown-menu">
+        <a href='/texas/experiences#guided'>Guided Canyon Tours</a>
+        <a href='/texas/experiences#moonlight'>Full Moon Paddle</a>
+        <a href='/texas/experiences#sunset'>Sunset Paddle</a>
+        <div class="dropdown-divider"></div>
+        <a href='/texas/experiences'>Full Calendar →</a>
+      </div>
+    </li>
+    <li><a href='/texas/groups'>Groups</a></li>
+    <li><a href='/texas/about'>About</a></li>
+    <li><a href='/texas/blog'>Blog</a></li>
+    <li><a href='/texas/faq'>FAQs</a></li>
+    <a href="https://fareharbor.com/yaknsup-frisco/items/" target="_blank" class="btn-book">Book Now</a>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href='/locations/canyon-lake'>Hidden Cove, TX</a>
+  <a href='/texas/rentals'>Rentals &amp; Pricing</a>
+  <a href='/texas/experiences'>Special Events</a>
+  <a href='/texas/groups'>For Groups</a>
+  <a href='/texas/about'>About Us</a>
+  <a href='/texas/blog'>Blog</a>
+  <a href='/texas/faq'>FAQs</a>
+  <a href='/texas/gift-cards'>Gift Cards</a>
+  <a href='/texas/contact'>Contact</a>
+  <a href="https://fareharbor.com/yaknsup-frisco/items/" target="_blank" class="m-book">Book Now</a>
+</div>
+
+<div class="contact-page">
+  <div class="contact-hero">
+    <span class="section-tag">Get in Touch</span>
+    <h1>Contact<br><span class="gold">Us</span></h1>
+    <p>Questions, group inquiries, or just want to know what the water's like today — we're here.</p>
+  </div>
+  <div class="contact-main">
+    <div class="contact-layout">
+      <div class="contact-info">
+        <h2>Reach Out Anytime</h2>
+        <div class="contact-method"><span class="cm-icon"><svg style="width:24px;height:24px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-phone"/></svg></span><div><div class="cm-label">Phone / Text</div><div class="cm-val"><a href="tel:+19726459191">(972) 645-9191</a></div><div class="cm-note">Text preferred — we're on the water most of the day</div></div></div>
+        <div class="contact-method"><span class="cm-icon"><svg style="width:24px;height:24px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-email"/></svg></span><div><div class="cm-label">Email</div><div class="cm-val"><a href="mailto:hello@yaknsup.com">hello@yaknsup.com</a></div><div class="cm-note">We respond within 24 hours, usually much faster</div></div></div>
+        <div class="contact-method"><span class="cm-icon"><svg style="width:24px;height:24px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-camera"/></svg></span><div><div class="cm-label">Follow Us</div><div class="cm-val" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:4px;">
+          <a href="https://instagram.com/yaknsuptexas" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" style="display:inline-block;vertical-align:middle"><title>Instagram</title><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://tiktok.com/@yaknsuptexas" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><title>TikTok</title><path d="M14 3c.3 2.4 1.9 4.3 4.5 4.6v3c-1.7 0-3.2-.5-4.5-1.4v6.1a5.6 5.6 0 1 1-5.6-5.6c.3 0 .7 0 1 .1v3.1a2.6 2.6 0 1 0 1.6 2.4V3H14Z"/></svg></a>
+          <a href="https://facebook.com/yaknsuptexas" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><title>Facebook</title><path d="M15 8h-2a2 2 0 0 0-2 2v11M8 13h6"/></svg></a>
+        </div><div class="cm-note">@yaknsuptexas — DMs welcome</div></div></div>
+        <div class="contact-method"><span class="cm-icon"></span><div><div class="cm-label">Groups & Events</div><div class="cm-val"><a href='/texas/groups'>Group Inquiry Form →</a></div><div class="cm-note">Best for parties of 10+, corporate events, and custom experiences</div></div></div>
+        <div class="hours-card">
+          <h4>Hours of Operation</h4>
+          <div class="hours-row"><span>Thu · Sun · Mon</span><span>10 AM – 8 PM</span></div>
+          <div class="hours-row"><span>Fri · Sat</span><span>10 AM – 9 PM</span></div>
+          <div class="hours-row"><span>Tue · Wed</span><span>Closed</span></div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+        </div>
+        <div class="form-group"><label>Email</label><input type="email" placeholder="jane@email.com"></div>
+        <div class="form-group"><label>Phone (optional)</label><input type="tel" placeholder="(555) 555-5555"></div>
+        <div class="form-group"><label>What's this about?</label>
+          <select><option>General question</option><option>Booking help</option><option>Group / event inquiry</option><option>Season pass question</option><option>Cancellation or rescheduling</option><option>Feedback or compliment</option><option>Other</option></select>
+        </div>
+        <div class="form-group"><label>Message</label><textarea placeholder="Tell us what you need..."></textarea></div>
+        <button class="btn-primary" style="width:100%;" onclick="alert('Message sent! We\'ll get back to you within 24 hours.')">Send Message</button>
+        <p style="font-size:12px;color:var(--mid);margin-top:12px;text-align:center;">We respond within 24 hours — usually much sooner.</p>
+      </div>
+    </div>
+  </div>
+  <div class="locations-section-contact">
+    <div class="center" style="margin-bottom:40px;">
+      <span class="section-tag">Our Locations</span>
+      <h2>Find Us on the Water</h2>
+    </div>
+    <div class="loc-cards">
+      <div class="loc-card-contact">
+        <h3>Hidden Cove Marina · Lake Lewisville</h3>
+        <div class="loc-detail"><svg style="width:16px;height:16px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px;" aria-hidden="true"><use href="#ic-location"/></svg><span>20400 Hackberry Creek Park Rd #200, Frisco, TX 75036</span></div>
+        <div class="loc-detail"><svg style="width:16px;height:16px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px;" aria-hidden="true"><use href="#ic-clock"/></svg><span>Thu · Sun · Mon: 10 AM – 8 PM &nbsp;|&nbsp; Fri · Sat: 10 AM – 9 PM &nbsp;|&nbsp; Tue · Wed: Closed</span></div>
+        <div class="loc-detail"><svg style="width:16px;height:16px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px;" aria-hidden="true"><use href="#ic-phone"/></svg><span><a href="tel:+19726459191">(972) 645-9191</a> — call or text</span></div>
+        <div class="loc-detail"><svg style="width:16px;height:16px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px;" aria-hidden="true"><use href="#ic-parking"/></svg><span>$20 park entry fee at gate — bring receipt for a $10 gift card</span></div>
+        <a class='btn-outline-blue' href='/locations/hidden-cove' style='margin-top:16px;display:inline-block;font-size:14px;padding:11px 22px;'>Location Details →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><a class='footer-logo' href='/texas/'><img src="../images/logo-nav-white.png" alt="Yak N Sup" class="footer-logo-img" style="mix-blend-mode:screen;width:180px;height:auto;"></a><p>Kayak and paddleboard rentals on Lake Lewisville at Hidden Cove Marina, Frisco TX.</p><div class="newsletter"><input type="email" placeholder="Get updates"><button>Subscribe</button></div></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href='/texas/about'>About Us</a></li><li><a href='/texas/blog'>Blog</a></li><li><a href='/texas/faq'>FAQs</a></li><li><a href='/texas/gift-cards'>Gift Cards</a></li><li><a href='/texas/contact'>Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Explore</h4><ul><li><a href='/texas/rentals'>Rentals</a></li><li><a href='/texas/experiences'>Special Events</a></li><li><a href='/texas/groups'>Group Bookings</a></li><li><a href='/texas/passes'>Season Passes</a></li><li><a href="https://fareharbor.com/yaknsup-frisco/items/" target="_blank">Book Now</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+19726459191">(972) 645-9191</a></li><li><a href="mailto:hello@yaknsup.com">hello@yaknsup.com</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Yak N Sup. All rights reserved.</p><div class="social-links"><a href="#"></a><a href="#"></a><a href="#"></a><a href="#"></a></div></div>
+</footer>
+<script>
+(function(){
+  var nav = document.getElementById('mainNav');
+  if(!nav) return;
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, {passive:true});
+  var btn = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ menu.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+
+<!-- FareHarbor Lightframe API -->
+<script src="https://fareharbor.com/embeds/api/v1/?autolightboxall=yes"></script>
+</body>
+</html>

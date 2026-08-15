@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us – Yak N Sup</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<style>
+/* ─── ABOUT PAGE ─────────────────────── */
+.about-hero {
+  margin-top: 108px; position: relative;
+  height: 420px; overflow: hidden;
+  display: flex; align-items: flex-end;
+}
+.about-hero img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover; object-position: center 55%;
+}
+.about-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.75) 100%);
+}
+.about-hero-content {
+  position: relative; z-index: 2; color: white; padding: 0 20px 40px; width: 100%;
+}
+.about-hero-content .eyebrow {
+  font-family: 'Oswald', sans-serif; font-size: 12px; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase; opacity: 0.8;
+  margin-bottom: 10px; display: block;
+}
+.about-hero-content h1 {
+  font-family: 'Sunday Romantic', serif;
+  font-size: clamp(40px, 9vw, 72px); line-height: 1; color: white; margin-bottom: 12px;
+}
+.about-hero-content p {
+  font-size: 16px; opacity: 0.85; max-width: 480px; line-height: 1.65;
+}
+
+/* ─── STORY ──────────────────────────── */
+.story-section { background: var(--card); }
+.story-grid { display: flex; flex-direction: column; gap: 40px; max-width: 900px; margin: 0 auto; }
+.story-text h2 {
+  font-family: 'Sunday Romantic', serif; font-size: clamp(28px, 5vw, 44px);
+  color: var(--deep-blue); margin-bottom: 16px; line-height: 1.05;
+}
+.story-text p { font-size: 16px; color: var(--mid); line-height: 1.8; margin-bottom: 16px; }
+.story-text p:last-child { margin-bottom: 0; }
+.story-img {
+  width: 100%; border-radius: 18px; overflow: hidden; height: 280px;
+}
+.story-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+
+/* ─── VALUES ──────────────────────────── */
+.values-section { 
+  background-color: var(--dark-warm);
+  background-image: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url('../images/picspicpi/31-488A5568.jpg');
+  background-size: cover; background-position: center;
+  color: white; }
+.values-section .sec-label { color: var(--gold); }
+.values-section h2.sec-title { color: white; }
+.values-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 16px; max-width: 900px; margin: 0 auto;
+}
+.value-card {
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px; padding: 28px 24px;
+}
+.value-icon { font-size: 32px; margin-bottom: 12px; }
+.value-card h3 {
+  font-family: 'Oswald', sans-serif; font-size: 17px; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase; color: white; margin-bottom: 8px;
+}
+.value-card p { font-size: 14px; color: rgba(255,255,255,0.72); line-height: 1.7; }
+
+/* ─── LOCATIONS INTRO ─────────────────── */
+.locations-intro { background: var(--sky); }
+.locations-intro h2 { color: white !important; }
+.locations-intro .sec-label { color: var(--orange) !important; }
+.locations-intro > .center > p { color: var(--deep-blue) !important; font-weight: 600; }
+.loc-blurb { background: white !important; }
+.loc-pair { display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: 0 auto; }
+.loc-blurb {
+  background: var(--card); border-radius: 16px; padding: 28px 24px;
+  border: 2px solid var(--border); display: flex; gap: 16px; align-items: flex-start;
+}
+.loc-blurb-icon {
+  font-size: 32px; flex-shrink: 0;
+  width: 56px; height: 56px; background: var(--deep-blue); border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+}
+.loc-blurb h3 {
+  font-family: 'Sunday Romantic', serif; font-size: 20px; color: var(--deep-blue); margin-bottom: 6px;
+}
+.loc-blurb p { font-size: 14px; color: var(--mid); line-height: 1.65; margin-bottom: 10px; }
+
+/* ─── TEAM / COMMUNITY ────────────────── */
+.community-section { 
+  background-color: var(--dark-warm);
+  background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)), url('../images/groups-visual.jpg');
+  background-size: cover; background-position: center; }
+.community-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+.community-section h2.sec-title { color: white; }
+.community-section .sec-label { color: var(--gold); }
+.community-section p { font-size: 16px; color: rgba(255,255,255,0.82); line-height: 1.8; margin-bottom: 20px; }
+
+/* ─── CTA BAND ────────────────────────── */
+.about-cta {
+  background: var(--sky); color: white;
+  padding: 56px 20px; text-align: center;
+}
+.about-cta h2 {
+  font-family: 'Sunday Romantic', serif; font-size: clamp(28px, 6vw, 48px);
+  color: white; margin-bottom: 12px;
+}
+.about-cta p { font-size: 16px; color: var(--deep-blue); font-weight: 600; max-width: 480px; margin: 0 auto 28px; line-height: 1.7; }
+.about-cta-btns { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+.btn-white {
+  display: inline-block; background: var(--orange); color: white;
+  padding: 14px 32px; border-radius: 100px;
+  font-family: 'Oswald', sans-serif; font-weight: 700;
+  font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase;
+  text-decoration: none; transition: all 0.2s;
+}
+.btn-white:hover { background: var(--orange-lt); transform: translateY(-1px); }
+
+@media (min-width: 768px) {
+  .about-hero { height: 520px; margin-top: 108px; }
+  .about-hero-content { padding: 0 56px 56px; }
+  .story-grid { flex-direction: row; align-items: center; gap: 56px; }
+  .story-img { height: 380px; flex: 0 0 45%; }
+  .values-grid { grid-template-columns: repeat(3, 1fr); }
+  .loc-pair { flex-direction: row; gap: 24px; }
+  .loc-blurb { flex: 1; }
+  .about-cta { padding: 80px 48px; }
+  .about-cta-btns { flex-direction: row; justify-content: center; }
+}
+@font-face { font-family: 'Sunday Romantic'; src: url('../fonts/SundayRomantic.otf') format('opentype'); font-weight: normal; font-style: normal; font-display: swap; }
+/* Blue accents */
+.story-text h2 { color: var(--deep-blue) !important; }
+.value-card { border-top: 2px solid rgba(138,180,198,0.3) !important; }
+.loc-blurb { border-color: rgba(255,255,255,0.4) !important; border-width: 2px !important; }
+.loc-blurb h3 { color: var(--deep-blue) !important; }
+.loc-blurb-icon { background: var(--orange) !important; }
+.loc-blurb-icon svg { color: var(--deep-blue) !important; stroke: var(--deep-blue) !important; }
+/* about-cta stays orange */
+/* Locations intro on light bg — no gold override needed */
+
+/* -- LOCATION BAR -- */
+.loc-bar {
+  position: fixed; top: 72px; left: 0; right: 0; z-index: 99;
+  height: 36px; padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: Oswald, sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+.loc-bar-az { background: var(--orange) !important; color: white !important; transition: none !important; }
+.loc-bar-pin { display: flex; align-items: center; gap: 6px; }
+.loc-bar-switch {
+  display: flex; align-items: center; gap: 6px;
+  color: inherit; text-decoration: none; opacity: 0.7; transition: opacity 0.2s;
+}
+.loc-bar-switch:hover { opacity: 1; }
+.page-hero, .exp-hero, .page-hero-sm { margin-top: 108px !important; }
+</style>
+</head>
+<body>
+<!-- LOCATION BAR -->
+<div class="loc-bar loc-bar-az">
+  <span class="loc-bar-pin">
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+    Canyon Lake, Arizona
+  </span>
+  <a class='loc-bar-switch' href='/'>
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+    Switch Location
+  </a>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" id="svg-sprite" style="display:none;position:absolute;" aria-hidden="true">
+<defs>
+<!-- Location / Map pin -->
+<symbol id="ic-location" viewBox="0 0 24 24"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Clock / Hours -->
+<symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><polyline points="12 7 12 12 15.5 15" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Calendar -->
+<symbol id="ic-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="1.8"/><line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Phone -->
+<symbol id="ic-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="11" y1="18" x2="13" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Email / Envelope -->
+<symbol id="ic-email" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><polyline points="2,4 12,13 22,4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Kayak paddle (double-blade) -->
+<symbol id="ic-paddle" viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 6.5 Q12 3 15.5 6.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8.5 17.5 Q12 21 15.5 17.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Kayak (side view) -->
+<symbol id="ic-kayak" viewBox="0 0 24 24"><path d="M3 13 Q12 8 21 13 Q12 15 3 13Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="13" x2="12" y2="9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="9.5" y1="9" x2="14.5" y2="9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- SUP / Paddleboard person -->
+<symbol id="ic-sup" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="7.5" x2="12" y2="14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 11l-3 3M15 11l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 20 Q12 17 20 20" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Life jacket / PFD -->
+<symbol id="ic-vest" viewBox="0 0 24 24"><path d="M12 3L8 7V20H16V7L12 3Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="3" x2="12" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8 9H5C4 9 3 10 3 11V20H8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M16 9H19C20 9 21 10 21 11V20H16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Group / People -->
+<symbol id="ic-group" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="17" cy="8" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M21 21v-2a3.5 3.5 0 0 0-2.5-3.4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Family -->
+<symbol id="ic-family" viewBox="0 0 24 24"><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="16" cy="6" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="16" r="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 21v-2a4 4 0 0 1 4-4h2M21 21v-2a4 4 0 0 0-4-4h-2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><line x1="12" y1="18" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Sun / Sunrise -->
+<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="2" x2="12" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="2" y1="12" x2="4" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="20" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Moon -->
+<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Water waves -->
+<symbol id="ic-water" viewBox="0 0 24 24"><path d="M2 12 Q5.5 9 9 12 Q12.5 15 16 12 Q19.5 9 22 12" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M2 17 Q5.5 14 9 17 Q12.5 20 16 17 Q19.5 14 22 17" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.5"/></symbol>
+<!-- Fish -->
+<symbol id="ic-fish" viewBox="0 0 24 24"><path d="M6 12C6 12 8 7 14 7C18.5 7 21 9.5 21 12C21 14.5 18.5 17 14 17C8 17 6 12 6 12Z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M6 12L2 8M6 12L2 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="16" cy="10" r="1" fill="currentColor"/></symbol>
+<!-- Fishing rod -->
+<symbol id="ic-fishing" viewBox="0 0 24 24"><line x1="4" y1="20" x2="20" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M20 4 Q22 8 18 10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="17.5" cy="11" r="1.5" stroke="currentColor" stroke-width="1.5" fill="none"/></symbol>
+<!-- Map / Compass -->
+<symbol id="ic-map" viewBox="0 0 24 24"><polygon points="3,6 9,3 15,6 21,3 21,18 15,21 9,18 3,21" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="9" y1="3" x2="9" y2="18" stroke="currentColor" stroke-width="1.8"/><line x1="15" y1="6" x2="15" y2="21" stroke="currentColor" stroke-width="1.8"/></symbol>
+<!-- Parking P -->
+<symbol id="ic-parking" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M9 18V6h5a3 3 0 0 1 0 6H9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<!-- Gift card / Gift -->
+<symbol id="ic-gift" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="7" x2="12" y2="21" stroke="currentColor" stroke-width="1.8"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Safety / Shield -->
+<symbol id="ic-safety" viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5.25 3.5 10.15 8 11.36C16.5 22.15 20 17.25 20 12V6L12 2Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><polyline points="9,12 11,14 15,10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Check circle -->
+<symbol id="ic-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8 12.5l3 3 5-5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- X / Cross -->
+<symbol id="ic-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Star -->
+<symbol id="ic-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Camera / Instagram -->
+<symbol id="ic-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="13" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Music note / TikTok -->
+<symbol id="ic-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Share / Facebook -->
+<symbol id="ic-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- YouTube -->
+<symbol id="ic-youtube" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="currentColor" stroke-width="1.8" fill="none"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Arrow right -->
+<symbol id="ic-arrow-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><polyline points="12,5 19,12 12,19" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Plus (FAQ open) -->
+<symbol id="ic-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Gear / Quality -->
+<symbol id="ic-gear" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 5.5 Q12 2 15.5 5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8.5 18.5 Q12 22 15.5 18.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Marker / pin (alternate) -->
+<symbol id="ic-marker" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 2C7.58 2 4 5.58 4 10c0 6 8 12 8 12s8-6 8-12c0-4.42-3.58-8-8-8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Thermometer / Temperature -->
+<symbol id="ic-temp" viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- City / Building -->
+<symbol id="ic-city" viewBox="0 0 24 24"><rect x="3" y="9" width="13" height="13" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M16 9V6l5-2v15H16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="13" x2="9" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="7" y1="17" x2="9" y2="17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="11" y1="13" x2="13" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Tools / Coordinator -->
+<symbol id="ic-tools" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" id="svg-sprite" style="display:none;position:absolute;" aria-hidden="true">
+<defs>
+<!-- Location / Map pin -->
+<symbol id="ic-location" viewBox="0 0 24 24"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Clock / Hours -->
+<symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><polyline points="12 7 12 12 15.5 15" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Calendar -->
+<symbol id="ic-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="1.8"/><line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Phone -->
+<symbol id="ic-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="11" y1="18" x2="13" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Email / Envelope -->
+<symbol id="ic-email" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><polyline points="2,4 12,13 22,4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Kayak paddle (double-blade) -->
+<symbol id="ic-paddle" viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 6.5 Q12 3 15.5 6.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8.5 17.5 Q12 21 15.5 17.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Kayak (side view) -->
+<symbol id="ic-kayak" viewBox="0 0 24 24"><path d="M3 13 Q12 8 21 13 Q12 15 3 13Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="13" x2="12" y2="9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="9.5" y1="9" x2="14.5" y2="9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- SUP / Paddleboard person -->
+<symbol id="ic-sup" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="7.5" x2="12" y2="14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 11l-3 3M15 11l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 20 Q12 17 20 20" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Life jacket / PFD -->
+<symbol id="ic-vest" viewBox="0 0 24 24"><path d="M12 3L8 7V20H16V7L12 3Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="3" x2="12" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8 9H5C4 9 3 10 3 11V20H8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M16 9H19C20 9 21 10 21 11V20H16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Group / People -->
+<symbol id="ic-group" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="17" cy="8" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M21 21v-2a3.5 3.5 0 0 0-2.5-3.4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Family -->
+<symbol id="ic-family" viewBox="0 0 24 24"><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="16" cy="6" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="16" r="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 21v-2a4 4 0 0 1 4-4h2M21 21v-2a4 4 0 0 0-4-4h-2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><line x1="12" y1="18" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Sun / Sunrise -->
+<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="2" x2="12" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="2" y1="12" x2="4" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="20" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Moon -->
+<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Water waves -->
+<symbol id="ic-water" viewBox="0 0 24 24"><path d="M2 12 Q5.5 9 9 12 Q12.5 15 16 12 Q19.5 9 22 12" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M2 17 Q5.5 14 9 17 Q12.5 20 16 17 Q19.5 14 22 17" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.5"/></symbol>
+<!-- Fish -->
+<symbol id="ic-fish" viewBox="0 0 24 24"><path d="M6 12C6 12 8 7 14 7C18.5 7 21 9.5 21 12C21 14.5 18.5 17 14 17C8 17 6 12 6 12Z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M6 12L2 8M6 12L2 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="16" cy="10" r="1" fill="currentColor"/></symbol>
+<!-- Fishing rod -->
+<symbol id="ic-fishing" viewBox="0 0 24 24"><line x1="4" y1="20" x2="20" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M20 4 Q22 8 18 10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="17.5" cy="11" r="1.5" stroke="currentColor" stroke-width="1.5" fill="none"/></symbol>
+<!-- Map / Compass -->
+<symbol id="ic-map" viewBox="0 0 24 24"><polygon points="3,6 9,3 15,6 21,3 21,18 15,21 9,18 3,21" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="9" y1="3" x2="9" y2="18" stroke="currentColor" stroke-width="1.8"/><line x1="15" y1="6" x2="15" y2="21" stroke="currentColor" stroke-width="1.8"/></symbol>
+<!-- Parking P -->
+<symbol id="ic-parking" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M9 18V6h5a3 3 0 0 1 0 6H9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<!-- Gift card / Gift -->
+<symbol id="ic-gift" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="7" x2="12" y2="21" stroke="currentColor" stroke-width="1.8"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Safety / Shield -->
+<symbol id="ic-safety" viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5.25 3.5 10.15 8 11.36C16.5 22.15 20 17.25 20 12V6L12 2Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><polyline points="9,12 11,14 15,10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Check circle -->
+<symbol id="ic-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8 12.5l3 3 5-5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- X / Cross -->
+<symbol id="ic-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Star -->
+<symbol id="ic-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Camera / Instagram -->
+<symbol id="ic-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="13" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Music note / TikTok -->
+<symbol id="ic-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Share / Facebook -->
+<symbol id="ic-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- YouTube -->
+<symbol id="ic-youtube" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="currentColor" stroke-width="1.8" fill="none"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Arrow right -->
+<symbol id="ic-arrow-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><polyline points="12,5 19,12 12,19" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Plus (FAQ open) -->
+<symbol id="ic-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Gear / Quality -->
+<symbol id="ic-gear" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 5.5 Q12 2 15.5 5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8.5 18.5 Q12 22 15.5 18.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Marker / pin (alternate) -->
+<symbol id="ic-marker" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 2C7.58 2 4 5.58 4 10c0 6 8 12 8 12s8-6 8-12c0-4.42-3.58-8-8-8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Thermometer / Temperature -->
+<symbol id="ic-temp" viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- City / Building -->
+<symbol id="ic-city" viewBox="0 0 24 24"><rect x="3" y="9" width="13" height="13" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M16 9V6l5-2v15H16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="13" x2="9" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="7" y1="17" x2="9" y2="17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="11" y1="13" x2="13" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Tools / Coordinator -->
+<symbol id="ic-tools" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs>
+</svg>
+
+
+<nav id="mainNav">
+  <a class='nav-logo' href='/arizona/' style='position:relative;display:inline-block;'>
+    <img src="../images/logo-nav-black.png" alt="Yak N Sup" class="nav-logo-img" style="height:46px;display:block;">
+  </a>
+  <ul class="nav-links">
+    
+    <li><a href='/arizona/rentals'>Rentals</a></li>
+    <li class="nav-dropdown">
+      <a href='/arizona/experiences'>Special Events</a>
+      <div class="dropdown-menu">
+        <a href='/arizona/experiences#guided'>Guided Canyon Tours</a>
+        <a href='/arizona/experiences#moonlight'>Full Moon Paddle</a>
+        <a href='/arizona/experiences#sunset'>Sunset Paddle</a>
+        <div class="dropdown-divider"></div>
+        <a href='/arizona/experiences'>Full Calendar →</a>
+      </div>
+    </li>
+    <li><a href='/arizona/groups'>Groups</a></li>
+    <li><a href='/arizona/about'>About</a></li>
+    <li><a href='/arizona/blog'>Blog</a></li>
+    <li><a href='/arizona/faq'>FAQs</a></li>
+    <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-book">Book Now</a>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href='/locations/canyon-lake'>Canyon Lake Marina, AZ</a>
+  <a href='/arizona/rentals'>Rentals &amp; Pricing</a>
+  <a href='/arizona/experiences'>Special Events</a>
+  <a href='/arizona/groups'>For Groups</a>
+  <a href='/arizona/about'>About Us</a>
+  <a href='/arizona/blog'>Blog</a>
+  <a href='/arizona/faq'>FAQs</a>
+  <a href='/arizona/gift-cards'>Gift Cards</a>
+  <a href='/arizona/contact'>Contact</a>
+  <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="m-book">Book Now</a>
+</div>
+
+<!-- HERO -->
+<div class="about-hero">
+  <img src="../images/picspicpi/53-R6__8653.jpg" alt="Yak N Sup guides leading a group through Canyon Lake" style="object-position:center 60%;">
+  <div class="about-hero-overlay"></div>
+  <div class="about-hero-content">
+    <span class="eyebrow">Our Story</span>
+    <h1>Born on<br><span class="gold">the Water</span></h1>
+    <p>We started Yak N Sup because we believe everyone deserves a great day on the lake. No experience required.</p>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="story-section">
+  <div class="story-grid">
+    <div class="story-img">
+      <img src="../images/groups-visual.jpg" alt="Group paddling through Canyon Lake Arizona">
+    </div>
+    <div class="story-text">
+      <span class="sec-label">Who We Are</span>
+      <h2>Lake Days, Done Right.</h2>
+      <p>Yak N Sup started with a simple idea — that getting on the water shouldn't be complicated, expensive, or intimidating. We wanted to make kayaking and paddleboarding accessible to everyone, from first-timers to seasoned paddlers.</p>
+      <p>We set up at Canyon Lake Marina in Arizona, one of the most stunning stretches of water in the Southwest — massive canyon walls, calm water, and scenery that genuinely stops people in their tracks. We're growing — and wherever we go, we bring the same obsession with making lake days great.</p>
+      <p>We're locally owned, lake-obsessed, and genuinely stoked every time we see someone push off from the dock for the first time. That energy is what Yak N Sup is all about.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values-section">
+  <div class="center">
+    <span class="sec-label">What We're About</span>
+    <h2 class="sec-title">Our Values</h2>
+    <p class="sec-sub" style="color:rgba(255,255,255,0.65);margin:0 auto 40px;">Everything we do comes back to these.</p>
+  </div>
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-icon"><svg style="width:32px;height:32px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;" aria-hidden="true"><use href="#ic-water"/></svg></div>
+      <h3>Lake First</h3>
+      <p>We protect the places we play. We keep our lakes clean, operate responsibly, and give back to the communities around us.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon"><svg style="width:32px;height:32px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;" aria-hidden="true"><use href="#ic-sun"/></svg></div>
+      <h3>Good Vibes Only</h3>
+      <p>Welcoming, laid-back, and genuinely happy to be out there. We want every person who shows up to leave with a smile.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon"><svg style="width:32px;height:32px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;" aria-hidden="true"><use href="#ic-vest"/></svg></div>
+      <h3>Quality Gear</h3>
+      <p>We invest in our equipment so you get a great experience every time. Clean boats, properly fitted PFDs, and gear that works.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon"><svg style="width:32px;height:32px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;" aria-hidden="true"><use href="#ic-marker"/></svg></div>
+      <h3>Locally Rooted</h3>
+      <p>We're not a chain. We're a local business built around specific communities and specific lakes that we genuinely love.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon"><svg style="width:32px;height:32px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;" aria-hidden="true"><use href="#ic-group"/></svg></div>
+      <h3>Everyone Welcome</h3>
+      <p>First timer, grandparent, corporate team, bachelorette crew — everyone belongs on the water. We make it work for all of them.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon"><svg style="width:32px;height:32px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;" aria-hidden="true"><use href="#ic-camera"/></svg></div>
+      <h3>Memorable Moments</h3>
+      <p>We're not just renting boats. We're helping people create memories — first paddles, birthdays, proposals, sunsets. All of it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT MAKES CANYON LAKE SPECIAL -->
+<section class="locations-intro">
+  <div class="center">
+    <span class="sec-label">Why Canyon Lake</span>
+    <h2 class="sec-title">There's No Place Like It.</h2>
+    <p class="sec-sub" style="margin:0 auto 36px;">Massive canyon walls, crystal-clear desert water, and scenery that doesn't look real until you're floating on it.</p>
+  </div>
+  <div class="loc-pair">
+    <div class="loc-blurb">
+      <div class="loc-blurb-icon"><svg style="width:28px;height:28px;color:var(--deep-blue);stroke:var(--deep-blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-water"/></svg></div>
+      <div>
+        <h3>The Water</h3>
+        <p>Canyon Lake is one of the clearest, most striking bodies of water in Arizona. Calm enough for beginners, open enough for those who want to explore — and surrounded by Superstition Mountain scenery you won't find anywhere else.</p>
+        <a class='btn-link' href='/arizona/rentals' style='color:var(--orange);'>See Rentals →</a>
+      </div>
+    </div>
+    <div class="loc-blurb">
+      <div class="loc-blurb-icon"><svg style="width:28px;height:28px;color:var(--deep-blue);stroke:var(--deep-blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-sun"/></svg></div>
+      <div>
+        <h3>The Experience</h3>
+        <p>45 minutes from Phoenix, but it feels like a world away. Canyon walls rising straight out of the water, golden light at sunset, and an energy that just makes people happy to be alive. That's what we've built our whole thing around.</p>
+        <a class='btn-link' href='/arizona/experiences' style='color:var(--orange);'>Explore Special Events →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="community-section">
+  <div class="community-inner">
+    <span class="sec-label">Community</span>
+    <h2 class="sec-title">More Than a Rental Shop</h2>
+    <p>We host full moon paddles, sunset paddles, group adventures, and social events because we believe the water is better when shared. We're building a community of people who love lake life — and we want you in it.</p>
+    <p>Whether you're a first-timer or a regular, a solo paddler or here with 50 of your closest friends, you belong at Yak N Sup.</p>
+    <a class='btn-primary' href='/arizona/experiences'>See Our Special Events</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="about-cta">
+  <h2>Come Paddle With Us.</h2>
+  <p>Book a rental, join a guided tour, or just show up at the dock. We'll take care of the rest.</p>
+  <div class="about-cta-btns">
+    <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-white">Book Now</a>
+    <a class='btn-outline-white' href='/arizona/contact'>Contact Us</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a class='footer-logo' href='/arizona/'>
+    <img src="../images/logo-nav-white.png" alt="Yak N Sup — Rentals · Tours · Adventure" class="footer-logo-img" style="mix-blend-mode:screen;width:200px;height:auto;display:block;margin:0 auto 14px;">
+  </a>
+  <p class="footer-tagline">Lake adventures, made better. Share it. Live it. See you out there.</p>
+  <div class="newsletter">
+    <input type="email" placeholder="Get updates &amp; deals">
+    <button>Subscribe</button>
+  </div>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href='/arizona/about'>About Us</a></li>
+        <li><a href='/arizona/blog'>Blog</a></li>
+        <li><a href='/arizona/faq'>FAQs</a></li>
+        <li><a href='/arizona/gift-cards'>Gift Cards</a></li>
+        <li><a href='/arizona/contact'>Contact Us</a></li>
+        <li><a href="#">Safety &amp; Policies</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href='/locations/canyon-lake'>Canyon Lake Marina, AZ</a></li>
+        <li><a href='/arizona/rentals'>Rentals &amp; Pricing</a></li>
+        <li><a href='/arizona/experiences'>Special Events</a></li>
+        <li><a href='/arizona/passes'>Season Passes</a></li>
+        <li><a href='/arizona/groups'>Group Bookings</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <li>Rentals: 8 AM – 5:30 PM</li>
+      <li>Tours: 10:30 AM – 1 PM</li>
+      <li>Events: 5:30 – 9:30 PM</li>
+      <li>7 days/week</li>
+    </div>
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <li><a href="tel:+14804208144">(480) 420-8144</a></li>
+      <li><a href="mailto:hello@yaknsup.com">hello@yaknsup.com</a></li>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Yak N Sup. All rights reserved. Lake life, done right.</p>
+          <div class="social-row" style="display:flex;gap:16px;align-items:center;font-size:13px;opacity:0.75;">
+      <a href="https://instagram.com/yaknsupaz" style="color:inherit;text-decoration:none;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" style="display:inline-block;vertical-align:middle"><title>Instagram</title><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://tiktok.com/@yaknsupaz" style="color:inherit;text-decoration:none;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><title>TikTok</title><path d="M14 3c.3 2.4 1.9 4.3 4.5 4.6v3c-1.7 0-3.2-.5-4.5-1.4v6.1a5.6 5.6 0 1 1-5.6-5.6c.3 0 .7 0 1 .1v3.1a2.6 2.6 0 1 0 1.6 2.4V3H14Z"/></svg></a>
+      <a href="https://facebook.com/yaknsupaz" style="color:inherit;text-decoration:none;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><title>Facebook</title><path d="M15 8h-2a2 2 0 0 0-2 2v11M8 13h6"/></svg></a>
+      <span style="opacity:0.5;">@yaknsupaz</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function closeMobile() { document.getElementById('mobileMenu').classList.remove('open'); }
+</script>
+<script>
+(function(){
+  var nav = document.getElementById('mainNav');
+  if(!nav) return;
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, {passive:true});
+  var btn = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ menu.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+
+<!-- FareHarbor Lightframe API -->
+<script src="https://fareharbor.com/embeds/api/v1/?autolightboxall=yes"></script>
+</body>
+</html>

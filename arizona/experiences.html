@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Events – Yak N Sup | Canyon Lake, Arizona</title>
+<meta name="description" content="Sunset paddles, full moon tours, and group events at Canyon Lake Marina, Arizona. Unforgettable water experiences near Mesa and Phoenix, AZ.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Special Events – Yak N Sup | Canyon Lake, Arizona">
+<meta property="og:description" content="Sunset paddles, full moon tours, and group events at Canyon Lake Marina, Arizona. Unforgettable water experiences near Mesa and Phoenix, AZ.">
+<meta property="og:image" content="https://yaknsup.com/images/picspicpi/R6__9521.jpg">
+<meta property="og:url" content="https://yaknsup.com/arizona/experiences.html">
+<link rel="canonical" href="https://yaknsup.com/arizona/experiences.html">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<style>
+.exp-hero { 
+  background-color: var(--dark-warm);
+  background-image: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url('../images/groups-visual.jpg');
+  background-size: cover; background-position: center 80%;
+  color: white; margin-top: 72px; padding: 72px 48px; position: relative; overflow: hidden; }
+.exp-hero::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(200,90,42,0.25) 0%, transparent 60%); }
+.exp-hero-inner { position:relative; z-index:1; max-width:640px; }
+.exp-hero h1 { font-family:'Sunday Romantic', serif; font-size:clamp(44px,6vw,72px); line-height:1; margin-bottom:16px; }
+.exp-hero p { font-size:18px; opacity:0.8; margin-bottom:32px; line-height:1.7; }
+.exp-hero-pills { display:flex; gap:12px; flex-wrap:wrap; }
+.exp-pill { background:rgba(255,255,255,0.14); border:1.5px solid rgba(255,255,255,0.55); padding:10px 22px; border-radius:100px; font-size:13px; font-weight:700; color:white; text-decoration:none; transition:all 0.2s; letter-spacing:0.5px; }
+.exp-pill:hover { background:var(--orange); border-color:var(--orange); }
+
+.exp-main { background:white; }
+.exp-big-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; max-width:1100px; margin:0 auto 56px; }
+.exp-feature { border-radius:24px; overflow:hidden; border:1px solid var(--border); background:var(--card); display:flex; flex-direction:column; transition:transform 0.2s, box-shadow 0.2s; }
+.exp-feature:hover { transform:translateY(-5px); box-shadow:0 16px 48px rgba(0,0,0,0.1); }
+.exp-feature-img { height:300px; overflow:hidden; position:relative; }
+.exp-feature-img img { width:100%; height:100%; object-fit:cover; object-position:center; transition:transform 0.4s; }
+.exp-feature:hover .exp-feature-img img { transform:scale(1.04); }
+.exp-feature-img-bg { width:100%; height:100%; }
+.exp-feature-body { padding:28px 32px; flex:1; display:flex; flex-direction:column; }
+.exp-meta { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:12px; }
+.exp-badge { font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:5px 12px; border-radius:100px; }
+.badge-daily { background:var(--orange-pale); color:var(--orange); }
+.badge-monthly { background:#ddeaf5; color:#123F6B; }
+.badge-seasonal { background:#e8f0f8; color:#2D6EA3; }
+.badge-special { background:#f8e8f4; color:#6a1a6a; }
+.exp-feature-body h3 { font-family:'Sunday Romantic', serif; font-size:34px; line-height:1.05; margin-bottom:10px; }
+.exp-feature-body p { font-size:15px; color:var(--mid); line-height:1.7; margin-bottom:20px; flex:1; }
+.exp-details { list-style:none; margin-bottom:24px; }
+.exp-details li { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--mid); padding:5px 0; }
+.exp-btn-row { display:flex; gap:12px; }
+
+.exp-small-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; max-width:1100px; margin:0 auto; }
+.exp-small-card { border-radius:20px; overflow:hidden; border:1px solid var(--border); background:var(--card); transition:transform 0.2s, box-shadow 0.2s; }
+.exp-small-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,0.08); }
+.exp-small-img { height:180px; overflow:hidden; }
+.exp-small-img img { width:100%; height:100%; object-fit:cover; }
+.exp-small-img-bg { width:100%; height:100%; }
+.exp-small-img-placeholder { width:100%; height:100%; }
+.exp-small-body { padding:20px 24px; }
+.exp-small-body h4 { font-family:'Sunday Romantic', serif; font-size:26px; line-height:1.05; margin-bottom:8px; }
+.exp-small-body p { font-size:14px; color:var(--mid); line-height:1.6; margin-bottom:16px; }
+
+.calendar-section {
+  background-color:var(--dark-warm);
+  background-image: linear-gradient(rgba(0,0,0,0.62),rgba(0,0,0,0.62)), url("../images/act-tours.jpg");
+  background-size:cover; background-position:center; position:relative;
+}
+.calendar-section .sec-label { color:var(--gold); }
+.calendar-section h2 { color:white; }
+.calendar-section > .center > p { color:rgba(255,255,255,0.78); }
+/* Calendar card stays light — floats on dark bg */
+.calendar-placeholder { background:var(--card); border-radius:16px; overflow:hidden; box-shadow:0 8px 40px rgba(0,0,0,0.35); }
+.calendar-placeholder { max-width:900px; margin:0 auto; background:white; border:1px solid var(--border); border-radius:20px; overflow:hidden; }
+.cal-header { background:var(--deep-blue); color:white; padding:20px 28px; display:flex; justify-content:space-between; align-items:center; }
+.cal-header h3 { font-family:'Sunday Romantic', serif; font-size:28px; line-height:1.05; }
+.cal-header span { font-size:14px; opacity:0.6; }
+.cal-event { display:flex; align-items:center; gap:20px; padding:20px 28px; border-bottom:1px solid var(--border); transition:background 0.15s; }
+.cal-event:hover { background:var(--card); }
+.cal-event:last-child { border:none; }
+.cal-date { text-align:center; min-width:52px; }
+.cal-date .cal-day { font-family:'Sunday Romantic', serif; font-size:34px; color:var(--orange); line-height:1; }
+.cal-date .cal-month { font-size:11px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--mid); }
+.cal-info { flex:1; }
+.cal-info h4 { font-family:'Sunday Romantic', serif; font-size:22px; line-height:1.1; margin-bottom:4px; }
+.cal-info p { font-size:14px; color:var(--mid); }
+.cal-loc { font-size:12px; font-weight:600; color:var(--orange); }
+
+.lessons-section { background:var(--card); }
+.lessons-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; max-width:1000px; margin:0 auto; }
+.lesson-card { background:var(--card); border-radius:18px; padding:32px 28px; border:1px solid var(--border); text-align:center; }
+.lesson-icon { font-size:40px; margin-bottom:14px; }
+.lesson-card h4 { font-family:'Oswald', sans-serif; font-size:18px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; line-height:1.05; margin-bottom:10px; }
+.lesson-card p { font-size:15px; color:var(--mid); line-height:1.65; }
+
+@media (max-width:960px) {
+  .exp-hero { padding:48px 20px; }
+  .exp-big-grid { grid-template-columns:1fr; }
+  .exp-small-grid { grid-template-columns:1fr 1fr; }
+  .lessons-grid { grid-template-columns:1fr 1fr; }
+}
+@media (max-width:600px) {
+  .exp-small-grid { grid-template-columns:1fr; }
+  .lessons-grid { grid-template-columns:1fr; }
+}
+@font-face { font-family: 'Sunday Romantic'; src: url('../fonts/SundayRomantic.otf') format('opentype'); font-weight: normal; font-style: normal; font-display: swap; }
+.section-tag {
+  font-family: 'Oswald', sans-serif; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase; font-size: 12px;
+  color: var(--orange); display: block; margin-bottom: 8px;
+}
+/* Blue accents */
+.exp-badge.badge-daily { background: var(--heritage) !important; color: white !important; }
+.exp-badge.badge-monthly { background: var(--deep-blue) !important; color: white !important; }
+.exp-badge.badge-special { background: var(--sky) !important; color: var(--deep-blue) !important; }
+.exp-badge.badge-seasonal { background: var(--heritage) !important; color: white !important; }
+.exp-feature { border-top: 3px solid var(--deep-blue) !important; }
+.exp-small-card { border-top: 3px solid var(--heritage) !important; }
+.cal-date .cal-day { color: var(--deep-blue) !important; }
+.cal-date .cal-month { color: var(--heritage) !important; }
+.exp-pill { background: rgba(255,255,255,0.12) !important; border: 1.5px solid rgba(255,255,255,0.5) !important; color: white !important; }
+.exp-pill:hover { background: var(--orange) !important; color: white !important; border-color: var(--orange) !important; }
+.lesson-card { border-top: 3px solid var(--sky) !important; }
+.lesson-icon { color: var(--deep-blue); }
+.exp-hero { color: white !important; }
+.exp-hero h1 { color: white !important; }
+.exp-hero .sec-label { color: rgba(255,255,255,0.75) !important; }
+.exp-hero p { color: rgba(255,255,255,0.82) !important; }
+.lessons-section { background: var(--sky) !important; }
+.lessons-section h2, .lessons-section h4 { color: white !important; }
+.lessons-section .sec-label,
+.lessons-section .section-tag { color: rgba(255,255,255,0.6) !important; }
+/* Section h2 headings — Sunday Romantic consistent with brand */
+.exp-main h2, .calendar-section h2, .lessons-section h2 {
+  font-family: 'Sunday Romantic', serif;
+  letter-spacing: 0.04em;
+}
+/* Exp-details list — icon + text */
+.exp-details li::before { display: none; }
+.exp-detail-icon { width:16px; height:16px; stroke:var(--heritage); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; }
+/* Lesson icon wrapper */
+.lesson-icon { display:flex; align-items:center; justify-content:center; width:64px; height:64px; background:rgba(255,255,255,0.15); border-radius:50%; margin:0 auto 18px; }
+.lesson-icon svg { width:30px; height:30px; stroke:white; fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+/* Small card placeholders */
+.exp-small-img-placeholder {
+  width:100%; height:100%;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;
+}
+.exp-small-img-placeholder svg { width:40px; height:40px; stroke:rgba(255,255,255,0.65); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+.exp-small-img-placeholder span { font-family:'Oswald',sans-serif; font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.4); }
+.lessons-section p { color: rgba(255,255,255,0.82) !important; }
+.lesson-card { background: rgba(255,255,255,0.15) !important; border: 1.5px solid rgba(255,255,255,0.25) !important; }
+.lesson-card h4 { color: white !important; }
+.lesson-card p { color: var(--deep-blue) !important; }
+
+/* ─── LOCATION CHOOSER ─── */
+.loc-chooser {
+  background: var(--cream);
+  padding: 52px 48px 48px;
+  border-bottom: 1px solid var(--border);
+}
+.loc-chooser-inner { max-width: 900px; margin: 0 auto; }
+.loc-chooser-label {
+  font-family: 'Oswald', sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--orange);
+  display: block; margin-bottom: 10px; text-align: center;
+}
+.loc-chooser h2 {
+  font-family: 'Sunday Romantic', serif; font-size: clamp(28px,4vw,40px);
+  color: var(--deep-blue); margin: 0 0 6px; text-align: center; letter-spacing: 0.04em;
+}
+.loc-chooser-sub {
+  font-size: 15px; color: var(--mid); text-align: center; margin-bottom: 36px; line-height: 1.6;
+}
+.loc-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; }
+.loc-tile {
+  border-radius: 20px; overflow: hidden; cursor: pointer;
+  border: 2px solid var(--border); transition: all 0.2s;
+  position: relative; background: white;
+}
+.loc-tile:hover { border-color: var(--deep-blue); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.09); }
+.loc-tile.active { border-color: var(--deep-blue); box-shadow: 0 0 0 3px rgba(18,63,107,0.15), 0 8px 28px rgba(0,0,0,0.1); }
+.loc-tile-img {
+  height: 130px; overflow: hidden; position: relative;
+}
+.loc-tile-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.4s; }
+.loc-tile:hover .loc-tile-img img { transform: scale(1.04); }
+.loc-tile-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.45) 100%);
+}
+.loc-tile-body { padding: 18px 22px 20px; }
+.loc-state-tag {
+  font-family: 'Oswald', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  display: inline-block; padding: 3px 10px; border-radius: 100px;
+  margin-bottom: 8px;
+}
+.loc-state-az { background: rgba(18,63,107,0.1); color: var(--deep-blue); }
+.loc-state-tx { background: rgba(200,96,48,0.1); color: var(--orange); }
+.loc-tile h3 {
+  font-family: 'Oswald', sans-serif; font-size: 17px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--deep-blue); margin: 0 0 4px;
+}
+.loc-tile p { font-size: 13px; color: var(--mid); margin: 0; line-height: 1.5; }
+.loc-tile .coming-soon-ribbon {
+  position: absolute; top: 12px; right: 12px;
+  background: var(--orange); color: white;
+  font-family: 'Oswald', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 100px;
+}
+.loc-all-btn {
+  display: block; width: 100%; text-align: center;
+  padding: 13px; border-radius: 100px; border: 1.5px solid var(--border);
+  font-family: 'Oswald', sans-serif; font-size: 12px; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--mid);
+  background: white; cursor: pointer; transition: all 0.2s;
+}
+.loc-all-btn:hover { border-color: var(--deep-blue); color: var(--deep-blue); }
+.loc-all-btn.active { background: var(--deep-blue); border-color: var(--deep-blue); color: white; }
+
+/* Location badges on cards */
+.badge-loc {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-family: 'Oswald', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 100px;
+}
+.badge-loc svg { width: 10px; height: 10px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+.badge-loc-az { background: rgba(18,63,107,0.1); color: var(--deep-blue); }
+.badge-loc-tx { background: rgba(200,96,48,0.1); color: var(--orange); }
+.badge-loc-both { background: rgba(18,63,107,0.08); color: var(--heritage); }
+
+/* Filter hide state */
+.exp-feature[data-hidden], .exp-small-card[data-hidden], .cal-event[data-hidden] {
+  display: none !important;
+}
+.loc-filter-notice {
+  text-align: center; padding: 48px 24px; color: var(--mid); font-size: 15px;
+  display: none;
+}
+.loc-filter-notice.visible { display: block; }
+
+/* Coming soon dim on TX items when viewing all */
+.exp-feature[data-loc="tx"] .exp-feature-img::after,
+.exp-small-card[data-loc="tx"] .exp-small-img::after {
+  content: ''; position: absolute; inset: 0;
+}
+
+@media (max-width: 640px) {
+  .loc-chooser { padding: 40px 20px; }
+  .loc-tiles { grid-template-columns: 1fr; gap: 14px; }
+  .loc-tile-img { height: 100px; }
+}
+
+/* -- LOCATION BAR -- */
+.loc-bar {
+  position: fixed; top: 72px; left: 0; right: 0; z-index: 99;
+  height: 36px; padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: Oswald, sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+.loc-bar-az { background: var(--orange) !important; color: white !important; transition: none !important; }
+.loc-bar-pin { display: flex; align-items: center; gap: 6px; }
+.loc-bar-switch {
+  display: flex; align-items: center; gap: 6px;
+  color: inherit; text-decoration: none; opacity: 0.7; transition: opacity 0.2s;
+}
+.loc-bar-switch:hover { opacity: 1; }
+.page-hero, .exp-hero, .page-hero-sm { margin-top: 108px !important; }
+</style>
+</head>
+<body>
+<!-- LOCATION BAR -->
+<div class="loc-bar loc-bar-az">
+  <span class="loc-bar-pin">
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+    Canyon Lake, Arizona
+  </span>
+  <a class='loc-bar-switch' href='/'>
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+    Switch Location
+  </a>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" id="svg-sprite" style="display:none;position:absolute;width:0;height:0;" aria-hidden="true">
+<defs>
+<symbol id="ic-location" viewBox="0 0 24 24"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><polyline points="12 7 12 12 15.5 15" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="1.8"/><line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<symbol id="ic-paddle" viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 6.5 Q12 3 15.5 6.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8.5 17.5 Q12 21 15.5 17.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="ic-kayak" viewBox="0 0 24 24"><path d="M3 13 Q12 8 21 13 Q12 15 3 13Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="13" x2="12" y2="9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="9.5" y1="9" x2="14.5" y2="9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<symbol id="ic-sup" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="7.5" x2="12" y2="14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 11l-3 3M15 11l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 20 Q12 17 20 20" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="ic-vest" viewBox="0 0 24 24"><path d="M12 3L8 7V20H16V7L12 3Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="3" x2="12" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8 9H5C4 9 3 10 3 11V20H8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M16 9H19C20 9 21 10 21 11V20H16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<symbol id="ic-group" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="17" cy="8" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M21 21v-2a3.5 3.5 0 0 0-2.5-3.4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="ic-family" viewBox="0 0 24 24"><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="16" cy="6" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="16" r="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 21v-2a4 4 0 0 1 4-4h2M21 21v-2a4 4 0 0 0-4-4h-2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><line x1="12" y1="18" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="2" x2="12" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="2" y1="12" x2="4" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="20" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-water" viewBox="0 0 24 24"><path d="M2 12 Q5.5 9 9 12 Q12.5 15 16 12 Q19.5 9 22 12" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M2 17 Q5.5 14 9 17 Q12.5 20 16 17 Q19.5 14 22 17" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.5"/></symbol>
+<symbol id="ic-fish" viewBox="0 0 24 24"><path d="M6 12C6 12 8 7 14 7C18.5 7 21 9.5 21 12C21 14.5 18.5 17 14 17C8 17 6 12 6 12Z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M6 12L2 8M6 12L2 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="16" cy="10" r="1" fill="currentColor"/></symbol>
+<symbol id="ic-fishing" viewBox="0 0 24 24"><line x1="4" y1="20" x2="20" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M20 4 Q22 8 18 10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="17.5" cy="11" r="1.5" stroke="currentColor" stroke-width="1.5" fill="none"/></symbol>
+<symbol id="ic-gift" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="7" x2="12" y2="21" stroke="currentColor" stroke-width="1.8"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<symbol id="ic-safety" viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5.25 3.5 10.15 8 11.36C16.5 22.15 20 17.25 20 12V6L12 2Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><polyline points="9,12 11,14 15,10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8 12.5l3 3 5-5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<symbol id="ic-marker" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 2C7.58 2 4 5.58 4 10c0 6 8 12 8 12s8-6 8-12c0-4.42-3.58-8-8-8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+</defs>
+</svg>
+
+<nav id="mainNav">
+  <a class='nav-logo' href='/arizona/' style='position:relative;display:inline-block;'>
+    <img src="../images/logo-nav-black.png" alt="Yak N Sup" class="nav-logo-img" style="height:46px;display:block;">
+  </a>
+  <ul class="nav-links">
+    
+    <li><a href='/arizona/rentals'>Rentals</a></li>
+    <li class="nav-dropdown">
+      <a href='/arizona/experiences'>Special Events</a>
+      <div class="dropdown-menu">
+        <a href='/arizona/experiences#guided'>Guided Canyon Tours</a>
+        <a href='/arizona/experiences#moonlight'>Full Moon Paddle</a>
+        <a href='/arizona/experiences#sunset'>Sunset Paddle</a>
+        <div class="dropdown-divider"></div>
+        <a href='/arizona/experiences'>Full Calendar →</a>
+      </div>
+    </li>
+    <li><a href='/arizona/groups'>Groups</a></li>
+    <li><a href='/arizona/about'>About</a></li>
+    <li><a href='/arizona/blog'>Blog</a></li>
+    <li><a href='/arizona/faq'>FAQs</a></li>
+    <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-book">Book Now</a>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href='/locations/canyon-lake'>Canyon Lake Marina, AZ</a>
+  <a href='/arizona/rentals'>Rentals &amp; Pricing</a>
+  <a href='/arizona/experiences'>Special Events</a>
+  <a href='/arizona/groups'>For Groups</a>
+  <a href='/arizona/about'>About Us</a>
+  <a href='/arizona/blog'>Blog</a>
+  <a href='/arizona/faq'>FAQs</a>
+  <a href='/arizona/gift-cards'>Gift Cards</a>
+  <a href='/arizona/contact'>Contact</a>
+  <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="m-book">Book Now</a>
+</div>
+
+<!-- HERO -->
+<div class="exp-hero">
+  <div class="exp-hero-inner">
+    <span class="section-tag" style="color:var(--orange);">Guided Tours & Special Events</span>
+    <h1>More Than<br><span class="gold">Just a Rental</span></h1>
+    <p>Guided tours, full moon paddles, sunset sessions, lessons, and special events. Designed to create connection, community, and memories you'll actually talk about.</p>
+    <div class="exp-hero-pills">
+      <a href="#guided" class="exp-pill">Guided Tours</a>
+      <a href="#moonlight" class="exp-pill">Full Moon Paddle</a>
+      <a href="#sunset" class="exp-pill">Sunset Paddle</a>
+      <a href="#lessons" class="exp-pill">Lessons</a>
+      <a href="#calendar" class="exp-pill">Full Calendar</a>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURED EXPERIENCES -->
+<section class="exp-main" id="guided">
+  <div class="center">
+    <span class="section-tag">Featured</span>
+    <h2 class="sec-title"><span class="gold">Special Events</span></h2>
+    <p class="section-sub" style="margin:0 auto 48px;">These aren't just activities — they're the kind of memories people come back for again and again.</p>
+  </div>
+  <div class="exp-big-grid">
+
+    <div class="exp-feature">
+      <div class="exp-feature-img">
+        <img src="../images/picspicpi/488A8741.jpg" alt="Guided canyon tour at Canyon Lake">
+      </div>
+      <div class="exp-feature-body">
+        <div class="exp-meta">
+          <span class="exp-badge badge-daily">Daily</span>
+          <span class="exp-badge badge-seasonal">Canyon Lake, AZ</span>
+        </div>
+        <h3>Guided Canyon Tour</h3>
+        <p>Our signature experience. A knowledgeable guide leads your group through the dramatic canyon passages of Canyon Lake — narrow slots, towering walls, and scenery most visitors never find on their own. Perfect for all skill levels.</p>
+        <ul class="exp-details">
+          <li><svg class="exp-detail-icon" aria-hidden="true"><use href="#ic-clock"/></svg> Daily 10:30 AM – 1 PM (2.5 hours)</li>
+          <li><svg class="exp-detail-icon" aria-hidden="true"><use href="#ic-group"/></svg> Small groups — intimate and unhurried</li>
+          <li><svg class="exp-detail-icon" aria-hidden="true"><use href="#ic-vest"/></svg> All gear included — PFD, paddle, briefing</li>
+          <li><svg class="exp-detail-icon" aria-hidden="true"><use href="#ic-check"/></svg> No experience necessary</li>
+        </ul>
+        <div class="exp-btn-row">
+          <a href="https://fareharbor.com/yaknsup/items/?flow=1475705" target="_blank" class="btn-primary">Book This Tour</a>
+          <a class='btn-outline' href='/locations/canyon-lake'>View Location</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-feature" id="moonlight">
+      <div class="exp-feature-img">
+        <img src="../images/picspicpi/488A8876.jpg" alt="Full moon paddle at Canyon Lake">
+      </div>
+      <div class="exp-feature-body">
+        <div class="exp-meta">
+          <span class="exp-badge badge-monthly">Monthly</span>
+          <span class="exp-badge badge-special">Night Event</span>
+        </div>
+        <h3>Full Moon Paddle</h3>
+        <p>Paddling under a full moon is one of those experiences that's genuinely hard to describe until you've done it. The canyon walls glow, the water is glass, and everything feels a little magical. Glow gear provided. Zero experience needed.</p>
+        <ul class="exp-details">
+          <li><svg class="exp-detail-icon" aria-hidden="true"><use href="#ic-moon"/></svg> Monthly on the full moon</li>
+          <li><svg class="exp-detail-icon" aria-hidden="true"><use href="#ic-clock"/></svg> 5:30 PM – 9:30 PM</li>
+          <li><svg class="exp-detail-icon" aria-hidden="true"><use href="#ic-star"/></svg> Glow gear and lights included</li>
+          <li><svg class="exp-detail-icon" aria-hidden="true"><use href="#ic-check"/></svg> Absolute beginners welcome</li>
+        </ul>
+        <div class="exp-btn-row">
+          <a href="https://fareharbor.com/yaknsup/items/?flow=1475706" target="_blank" class="btn-primary">Book Full Moon</a>
+          <a href="#calendar" class="btn-outline">See Dates</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MORE EXPERIENCES -->
+  <div class="exp-small-grid" id="sunset">
+    <div class="exp-small-card">
+      <div class="exp-small-img">
+        <img src="../images/picspicpi/26-488A8857.jpg" alt="Sunset paddle at Canyon Lake">
+      </div>
+      <div class="exp-small-body">
+        <span class="exp-badge badge-seasonal" style="margin-bottom:10px;display:inline-block;">Weekends</span>
+        <h4>Sunset Paddle</h4>
+        <p>Golden hour on the water. Small group, great energy, and the whole lake turning orange and pink. The perfect way to end a day.</p>
+        <a href="https://fareharbor.com/yaknsup/items/?flow=1475706" target="_blank" class="btn-sm">Book Now</a>
+      </div>
+    </div>
+    <div class="exp-small-card">
+      <div class="exp-small-img">
+        <img src="../images/picspicpi/488A8849.jpg" alt="Birthday on the water at Canyon Lake" style="width:100%;height:100%;object-fit:cover;object-position:center;">
+      </div>
+      <div class="exp-small-body">
+        <span class="exp-badge badge-special" style="margin-bottom:10px;display:inline-block;">Birthday Perk</span>
+        <h4>Birthday on the Water</h4>
+        <p>Get 1 free 2-hour rental during your birthday week. Plus we'll help you plan a group paddle if the whole crew wants in.</p>
+        <a href="https://fareharbor.com/yaknsup/items/?flow=1475703" target="_blank" class="btn-sm">Claim Perk</a>
+      </div>
+    </div>
+    <div class="exp-small-card">
+      <div class="exp-small-img">
+        <img src="../images/picspicpi/488A1168.jpg" alt="Fishing experience at Canyon Lake" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;">
+      </div>
+      <div class="exp-small-body">
+        <span class="exp-badge badge-daily" style="margin-bottom:10px;display:inline-block;">Anytime</span>
+        <h4>Fishing Experience</h4>
+        <p>Canyon Lake is stocked with bass, catfish, and crappie. Rent a PDL fishing kayak and find your own quiet cove. No fishing license included — bring your own.</p>
+        <a class='btn-sm' href='/arizona/rentals'>See Fishing Rates</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDAR -->
+<section class="calendar-section" id="calendar">
+  <div class="center">
+    <span class="section-tag">Upcoming Events</span>
+    <h2 class="sec-title">Full Calendar</h2>
+    <p class="section-sub" style="margin:0 auto 48px;">Book early — guided tours and special events fill up fast, especially on weekends.</p>
+  </div>
+  <div class="calendar-placeholder">
+    <div class="cal-header">
+      <h3>Upcoming Events — June 2026</h3>
+      <span>All times local</span>
+    </div>
+    <div class="cal-event">
+      <div class="cal-date"><div class="cal-day">07</div><div class="cal-month">Jun</div></div>
+      <div class="cal-info">
+        <h4>Full Moon Paddle</h4>
+        <p>5:30 PM – 9:30 PM · Glow gear included · Small group</p>
+      </div>
+      <span class="cal-loc">Canyon Lake, AZ</span>
+      <a href="https://fareharbor.com/yaknsup/items/?flow=1475706" target="_blank" class="btn-sm" style="margin-left:16px;">Book</a>
+    </div>
+    <div class="cal-event">
+      <div class="cal-date"><div class="cal-day">14</div><div class="cal-month">Jun</div></div>
+      <div class="cal-info">
+        <h4>Guided Canyon Tour</h4>
+        <p>10:30 AM – 1:00 PM · Daily offering · All skill levels</p>
+      </div>
+      <span class="cal-loc">Canyon Lake, AZ</span>
+      <a href="https://fareharbor.com/yaknsup/items/?flow=1475705" target="_blank" class="btn-sm" style="margin-left:16px;">Book</a>
+    </div>
+    <div class="cal-event">
+      <div class="cal-date"><div class="cal-day">21</div><div class="cal-month">Jun</div></div>
+      <div class="cal-info">
+        <h4>Sunset Paddle</h4>
+        <p>6:30 PM – 9:00 PM · Small group · Drinks after</p>
+      </div>
+      <span class="cal-loc">Canyon Lake, AZ</span>
+      <a href="https://fareharbor.com/yaknsup/items/?flow=1475706" target="_blank" class="btn-sm" style="margin-left:16px;">Book</a>
+    </div>
+    <div class="cal-event">
+      <div class="cal-date"><div class="cal-day">28</div><div class="cal-month">Jun</div></div>
+      <div class="cal-info">
+        <h4>Paddle & Hang — Social Event</h4>
+        <p>3:00 PM – 6:00 PM · Meet people, explore, grab a drink after</p>
+      </div>
+      <span class="cal-loc">Canyon Lake, AZ</span>
+      <a href="https://fareharbor.com/yaknsup/items/?flow=1475706" target="_blank" class="btn-sm" style="margin-left:16px;">Book</a>
+    </div>
+    <div style="padding:24px 28px;text-align:center;border-top:1px solid var(--border);">
+      <p style="font-size:14px;color:var(--mid);margin-bottom:16px;">Full live calendar powered by FareHarbor — all dates, times, and real-time availability.</p>
+      <a href="https://fareharbor.com/yaknsup/items/?flow=1475706" target="_blank" class="btn-primary">View Full Calendar & Book</a>
+    </div>
+  </div>
+</section>
+
+<!-- LESSONS -->
+<section class="lessons-section" id="lessons">
+  <div class="center">
+    <span class="section-tag">Learn</span>
+    <h2 class="sec-title">Classes & Lessons</h2>
+    <p class="section-sub" style="margin:0 auto 48px;color:var(--deep-blue);">Want to go beyond a rental? Our instructors can take your skills to the next level — beginner to advanced.</p>
+  </div>
+  <div class="lessons-grid">
+    <div class="lesson-card">
+      <div class="lesson-icon"><svg aria-hidden="true"><use href="#ic-sup"/></svg></div>
+      <h4>SUP Basics</h4>
+      <p style="color:var(--deep-blue);">Learn proper stance, paddle technique, and how to get up confidently. One session and you'll be solid. Great for first-timers.</p>
+      <a href="https://fareharbor.com/yaknsup/items/?flow=1475704" target="_blank" class="btn-sm" style="margin-top:16px;display:inline-block;">Book a Lesson</a>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-icon"><svg aria-hidden="true"><use href="#ic-kayak"/></svg></div>
+      <h4>Kayak Skills</h4>
+      <p style="color:var(--deep-blue);">From basic paddling to edging, bracing, and reading water. Great for anyone who wants to paddle more efficiently and explore farther.</p>
+      <a href="https://fareharbor.com/yaknsup/items/?flow=1475704" target="_blank" class="btn-sm" style="margin-top:16px;display:inline-block;">Book a Lesson</a>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-icon"><svg aria-hidden="true"><use href="#ic-family"/></svg></div>
+      <h4>Private & Family</h4>
+      <p style="color:var(--deep-blue);">One-on-one or family instruction at your pace. Great for kids learning for the first time or adults who want personalized attention.</p>
+      <a class='btn-sm' href='/arizona/contact' style='margin-top:16px;display:inline-block;'>Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a class='footer-logo' href='/arizona/'><img src="../images/logo-nav-white.png" alt="Yak N Sup" class="footer-logo-img" style="mix-blend-mode:screen;width:200px;height:auto;display:block;margin:0 auto 14px;"></a>
+      <p>Kayak and paddleboard rentals, special events, and good times on the water at Canyon Lake Marina, Arizona.</p>
+      <div class="newsletter"><input type="email" placeholder="Get updates & deals"><button>Subscribe</button></div>
+    </div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href='/arizona/about'>About Us</a></li><li><a href='/arizona/blog'>Blog</a></li>
+    <li><a href='/arizona/blog'>Blog</a>
+  <a href='/arizona/faq'>FAQs</a></li>
+      <li><a href='/arizona/gift-cards'>Gift Cards</a></li><li><a href='/arizona/contact'>Contact Us</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Explore</h4><ul>
+      <li><a href='/locations/canyon-lake'>Canyon Lake Marina, AZ</a></li>
+      <li><a href='/arizona/rentals'>Rentals & Pricing</a></li>
+      <li><a href='/arizona/experiences'>Special Events</a></li>
+      <li><a href='/arizona/passes'>Season Passes</a></li>
+      <li><a href='/arizona/groups'>Group Bookings</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="mailto:hello@yaknsup.com">hello@yaknsup.com</a></li>
+      <li><a href="tel:+14804208144">(480) 420-8144</a></li>
+      <li style="margin-top:16px;font-size:13px;color:rgba(255,255,255,0.4);">16802 AZ-88<br>Tortilla Flat, AZ 85190</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Yak N Sup. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#"></a><a href="#"></a><a href="#"></a><a href="#"></a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var nav = document.getElementById('mainNav');
+  if(!nav) return;
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, {passive:true});
+  var btn = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ menu.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+<!-- FareHarbor Lightframe API -->
+<script src="https://fareharbor.com/embeds/api/v1/?autolightboxall=yes"></script>
+</body>
+</html>

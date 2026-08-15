@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Group Bookings – Yak N Sup | Canyon Lake, Arizona</title>
+<meta name="description" content="Corporate events, birthday parties, and large group rentals at Canyon Lake Marina, Arizona. Yak N Sup makes group outings easy and fun near Mesa and Phoenix.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Group Bookings – Yak N Sup | Canyon Lake, Arizona">
+<meta property="og:description" content="Corporate events, birthday parties, and large group rentals at Canyon Lake Marina, Arizona. Yak N Sup makes group outings easy and fun.">
+<meta property="og:image" content="https://yaknsup.com/images/picspicpi/R6__9521.jpg">
+<meta property="og:url" content="https://yaknsup.com/arizona/groups.html">
+<link rel="canonical" href="https://yaknsup.com/arizona/groups.html">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<style>
+.groups-hero { margin-top:108px; position:relative; height:480px; overflow:hidden; }
+.groups-hero img { width:100%; height:100%; object-fit:cover; object-position:center 40%; display:block; }
+.groups-hero-overlay { position:absolute; inset:0; background:linear-gradient(to bottom, rgba(10,20,30,0.3) 0%, rgba(10,20,30,0.65) 100%); }
+.groups-hero-content { position:absolute; bottom:0; left:0; right:0; padding:48px; color:white; }
+.groups-hero-content h1 { font-family:'Sunday Romantic', serif; font-size:clamp(44px,6vw,72px); line-height:1; margin-bottom:12px; }
+.groups-hero-content p { font-size:19px; opacity:0.88; max-width:560px; }
+
+.group-types { background:white; }
+.group-types-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; max-width:1100px; margin:0 auto; }
+.group-type-card { background:var(--card); border-radius:20px; padding:36px 28px; border:1px solid var(--border); transition:transform 0.2s; }
+.group-type-card:hover { transform:translateY(-3px); }
+.gt-icon { font-size:44px; margin-bottom:14px; }
+.group-type-card h3 { font-family:'Sunday Romantic', serif; font-size:28px; line-height:1.05; margin-bottom:10px; }
+.group-type-card p { font-size:15px; color:var(--mid); line-height:1.7; }
+
+.how-it-works { background:var(--cream); }
+.hiw-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; max-width:1000px; margin:0 auto; }
+.hiw-step { text-align:center; padding:28px 20px; background:white; border-radius:18px; border:1px solid var(--border); }
+.hiw-num { width:48px; height:48px; background:var(--orange); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Sunday Romantic', serif; font-size:26px; margin:0 auto 14px; }
+.hiw-step h4 { font-family:'Sunday Romantic', serif; font-size:24px; line-height:1.1; margin-bottom:8px; }
+.hiw-step p { font-size:15px; color:var(--mid); line-height:1.6; }
+
+.perks-section { 
+  background-color: var(--dark-warm);
+  background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url('../images/act-groups.jpg');
+  background-size: cover; background-position: center;
+  color: white; }
+.perks-section h2, .perks-section h4 { color: white; }
+.perks-section .sec-label { color: var(--gold); }
+.perks-section p { color: rgba(255,255,255,0.82); }
+.perks-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; max-width:900px; margin:0 auto; }
+.perk-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:18px; padding:28px 24px; display:flex; gap:16px; align-items:flex-start; }
+.perk-card-icon { font-size:28px; flex-shrink:0; }
+.perk-card h4 { font-family:'Sunday Romantic', serif; font-size:26px; line-height:1.05; margin-bottom:6px; color:white; }
+.perk-card p { font-size:15px; color:rgba(255,255,255,0.65); line-height:1.65; }
+
+.inquiry-section { background:white; }
+.inquiry-wrap { display:grid; grid-template-columns:1fr 1fr; gap:56px; max-width:1000px; margin:0 auto; align-items:start; }
+.inquiry-info h2 { font-size:clamp(32px,4vw,48px); font-family:'Sunday Romantic',serif; }
+.inquiry-info p { font-size:15px; color:var(--mid); margin-bottom:20px; line-height:1.75; }
+.inquiry-info ul { list-style:none; margin-bottom:28px; }
+.inquiry-info li { padding:8px 0; border-bottom:1px solid var(--border); font-size:15px; display:flex; align-items:center; gap:8px; }
+.inquiry-info li::before { content:'&#10003;'; color:var(--orange); font-weight:800; }
+.inquiry-form { background:var(--card); border:1px solid var(--border); border-radius:24px; padding:36px; }
+.inquiry-form h3 { font-family:'Sunday Romantic', serif; font-size:24px; margin-bottom:24px; }
+.form-group { margin-bottom:16px; }
+.form-group label { display:block; font-size:13px; font-weight:600; color:var(--deep-blue); margin-bottom:6px; }
+.form-group input, .form-group select, .form-group textarea {
+  width:100%; padding:12px 16px; border:1px solid var(--border); border-radius:12px;
+  font-family:'Lato',sans-serif; font-size:14px; background:white; color:var(--deep-blue);
+  outline:none; transition:border 0.2s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color:var(--orange); }
+.form-group textarea { resize:vertical; min-height:100px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.form-submit { width:100%; margin-top:8px; }
+
+@media (max-width:960px) {
+  .groups-hero-content { padding:32px 20px; }
+  .group-types-grid { grid-template-columns:repeat(2,1fr); }
+  .hiw-steps { grid-template-columns:repeat(2,1fr); }
+  .perks-grid { grid-template-columns:1fr; }
+  .inquiry-wrap { grid-template-columns:1fr; gap:32px; }
+}
+@media (max-width:600px) {
+  .group-types-grid { grid-template-columns:1fr; }
+}
+@font-face { font-family: 'Sunday Romantic'; src: url('../fonts/SundayRomantic.otf') format('opentype'); font-weight: normal; font-style: normal; font-display: swap; }
+.section-tag {
+  font-family: 'Oswald', sans-serif; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase; font-size: 12px;
+  color: var(--orange); display: block; margin-bottom: 8px;
+}
+/* Blue accents */
+.group-type-card { border-top: 3px solid var(--heritage) !important; }
+.group-type-card:nth-child(3n+1) { border-top-color: var(--deep-blue) !important; }
+.hiw-num { background: var(--deep-blue) !important; }
+.perk-card { border-left: 4px solid var(--heritage) !important; }
+.perk-card:nth-child(even) { border-left-color: var(--sky) !important; }
+.hiw-step { border-top: 2px solid var(--sky); }
+.gt-icon { font-size: 36px; margin-bottom: 12px; color: var(--heritage); }
+.groups-hero-content h1 { color: white !important; }
+.groups-hero-overlay { background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.72) 100%) !important; }
+/* How it works — sky blue strip */
+.how-it-works { background: var(--sky) !important; }
+.how-it-works h2 { color: white !important; }
+.how-it-works .section-tag, .how-it-works .sec-label { color: var(--orange) !important; }
+.how-it-works > .center > p { color: var(--deep-blue) !important; font-weight: 600; }
+.how-it-works h4 { color: var(--deep-blue) !important; }
+.hiw-num { background: var(--orange) !important; color: white !important; }
+/* Perks — keep dark photo */
+
+/* -- LOCATION BAR -- */
+.loc-bar {
+  position: fixed; top: 72px; left: 0; right: 0; z-index: 99;
+  height: 36px; padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: Oswald, sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+.loc-bar-az { background: var(--orange) !important; color: white !important; transition: none !important; }
+.loc-bar-pin { display: flex; align-items: center; gap: 6px; }
+.loc-bar-switch {
+  display: flex; align-items: center; gap: 6px;
+  color: inherit; text-decoration: none; opacity: 0.7; transition: opacity 0.2s;
+}
+.loc-bar-switch:hover { opacity: 1; }
+.page-hero, .exp-hero, .page-hero-sm { margin-top: 108px !important; }
+</style>
+</head>
+<body>
+<!-- LOCATION BAR -->
+<div class="loc-bar loc-bar-az">
+  <span class="loc-bar-pin">
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+    Canyon Lake, Arizona
+  </span>
+  <a class='loc-bar-switch' href='/'>
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+    Switch Location
+  </a>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" id="svg-sprite" style="display:none;position:absolute;width:0;height:0;" aria-hidden="true">
+<defs>
+<!-- Location / Map pin -->
+<symbol id="ic-location" viewBox="0 0 24 24"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Clock / Hours -->
+<symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><polyline points="12 7 12 12 15.5 15" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Calendar -->
+<symbol id="ic-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="1.8"/><line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Phone -->
+<symbol id="ic-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="11" y1="18" x2="13" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Email / Envelope -->
+<symbol id="ic-email" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><polyline points="2,4 12,13 22,4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Kayak paddle (double-blade) -->
+<symbol id="ic-paddle" viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 6.5 Q12 3 15.5 6.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8.5 17.5 Q12 21 15.5 17.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Kayak (side view) -->
+<symbol id="ic-kayak" viewBox="0 0 24 24"><path d="M3 13 Q12 8 21 13 Q12 15 3 13Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="13" x2="12" y2="9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="9.5" y1="9" x2="14.5" y2="9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- SUP / Paddleboard person -->
+<symbol id="ic-sup" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="7.5" x2="12" y2="14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 11l-3 3M15 11l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 20 Q12 17 20 20" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Life jacket / PFD -->
+<symbol id="ic-vest" viewBox="0 0 24 24"><path d="M12 3L8 7V20H16V7L12 3Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="3" x2="12" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8 9H5C4 9 3 10 3 11V20H8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M16 9H19C20 9 21 10 21 11V20H16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Group / People -->
+<symbol id="ic-group" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="17" cy="8" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M21 21v-2a3.5 3.5 0 0 0-2.5-3.4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Family -->
+<symbol id="ic-family" viewBox="0 0 24 24"><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="16" cy="6" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="16" r="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 21v-2a4 4 0 0 1 4-4h2M21 21v-2a4 4 0 0 0-4-4h-2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><line x1="12" y1="18" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Sun / Sunrise -->
+<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="2" x2="12" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="2" y1="12" x2="4" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="20" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Moon -->
+<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Water waves -->
+<symbol id="ic-water" viewBox="0 0 24 24"><path d="M2 12 Q5.5 9 9 12 Q12.5 15 16 12 Q19.5 9 22 12" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M2 17 Q5.5 14 9 17 Q12.5 20 16 17 Q19.5 14 22 17" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.5"/></symbol>
+<!-- Fish -->
+<symbol id="ic-fish" viewBox="0 0 24 24"><path d="M6 12C6 12 8 7 14 7C18.5 7 21 9.5 21 12C21 14.5 18.5 17 14 17C8 17 6 12 6 12Z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M6 12L2 8M6 12L2 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="16" cy="10" r="1" fill="currentColor"/></symbol>
+<!-- Fishing rod -->
+<symbol id="ic-fishing" viewBox="0 0 24 24"><line x1="4" y1="20" x2="20" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M20 4 Q22 8 18 10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="17.5" cy="11" r="1.5" stroke="currentColor" stroke-width="1.5" fill="none"/></symbol>
+<!-- Map / Compass -->
+<symbol id="ic-map" viewBox="0 0 24 24"><polygon points="3,6 9,3 15,6 21,3 21,18 15,21 9,18 3,21" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="9" y1="3" x2="9" y2="18" stroke="currentColor" stroke-width="1.8"/><line x1="15" y1="6" x2="15" y2="21" stroke="currentColor" stroke-width="1.8"/></symbol>
+<!-- Parking P -->
+<symbol id="ic-parking" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M9 18V6h5a3 3 0 0 1 0 6H9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<!-- Gift card / Gift -->
+<symbol id="ic-gift" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="7" x2="12" y2="21" stroke="currentColor" stroke-width="1.8"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Safety / Shield -->
+<symbol id="ic-safety" viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5.25 3.5 10.15 8 11.36C16.5 22.15 20 17.25 20 12V6L12 2Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><polyline points="9,12 11,14 15,10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Check circle -->
+<symbol id="ic-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8 12.5l3 3 5-5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- X / Cross -->
+<symbol id="ic-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Star -->
+<symbol id="ic-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Camera / Instagram -->
+<symbol id="ic-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="13" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Music note / TikTok -->
+<symbol id="ic-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Share / Facebook -->
+<symbol id="ic-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- YouTube -->
+<symbol id="ic-youtube" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="currentColor" stroke-width="1.8" fill="none"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Arrow right -->
+<symbol id="ic-arrow-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><polyline points="12,5 19,12 12,19" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Plus (FAQ open) -->
+<symbol id="ic-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Gear / Quality -->
+<symbol id="ic-gear" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 5.5 Q12 2 15.5 5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8.5 18.5 Q12 22 15.5 18.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Marker / pin (alternate) -->
+<symbol id="ic-marker" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 2C7.58 2 4 5.58 4 10c0 6 8 12 8 12s8-6 8-12c0-4.42-3.58-8-8-8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Thermometer / Temperature -->
+<symbol id="ic-temp" viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- City / Building -->
+<symbol id="ic-city" viewBox="0 0 24 24"><rect x="3" y="9" width="13" height="13" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M16 9V6l5-2v15H16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="13" x2="9" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="7" y1="17" x2="9" y2="17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="11" y1="13" x2="13" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Tools / Coordinator -->
+<symbol id="ic-tools" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs>
+</svg>
+
+<nav id="mainNav">
+  <a class='nav-logo' href='/arizona/' style='position:relative;display:inline-block;'>
+    <img src="../images/logo-nav-black.png" alt="Yak N Sup" class="nav-logo-img" style="height:46px;display:block;">
+  </a>
+  <ul class="nav-links">
+    
+    <li><a href='/arizona/rentals'>Rentals</a></li>
+    <li class="nav-dropdown">
+      <a href='/arizona/experiences'>Special Events</a>
+      <div class="dropdown-menu">
+        <a href='/arizona/experiences#guided'>Guided Canyon Tours</a>
+        <a href='/arizona/experiences#moonlight'>Full Moon Paddle</a>
+        <a href='/arizona/experiences#sunset'>Sunset Paddle</a>
+        <div class="dropdown-divider"></div>
+        <a href='/arizona/experiences'>Full Calendar →</a>
+      </div>
+    </li>
+    <li><a href='/arizona/groups'>Groups</a></li>
+    <li><a href='/arizona/about'>About</a></li>
+    <li><a href='/arizona/blog'>Blog</a></li>
+    <li><a href='/arizona/faq'>FAQs</a></li>
+    <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-book">Book Now</a>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href='/locations/canyon-lake'>Canyon Lake Marina, AZ</a>
+  <a href='/arizona/rentals'>Rentals &amp; Pricing</a>
+  <a href='/arizona/experiences'>Special Events</a>
+  <a href='/arizona/groups'>For Groups</a>
+  <a href='/arizona/about'>About Us</a>
+  <a href='/arizona/blog'>Blog</a>
+  <a href='/arizona/faq'>FAQs</a>
+  <a href='/arizona/gift-cards'>Gift Cards</a>
+  <a href='/arizona/contact'>Contact</a>
+  <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="m-book">Book Now</a>
+</div>
+
+<div class="groups-hero">
+  <img src="../images/picspicpi/51-488A5648.jpg" alt="Group paddling through Arizona canyon">
+  <div class="groups-hero-overlay"></div>
+  <div class="groups-hero-content">
+    <span class="section-tag" style="color:var(--orange);">For Groups</span>
+    <h1>Bring the<br><span class="gold">Whole Crew</span></h1>
+    <p>From 10 to 100+ people. We handle the details so you just show up and have a great time.</p>
+  </div>
+</div>
+
+<!-- GROUP TYPES -->
+<section class="group-types">
+  <div class="center">
+    <span class="section-tag">Who We Do This For</span>
+    <h2 style="font-family:'Sunday Romantic',serif;font-size:clamp(32px,6vw,52px);color:var(--gold);">Every Kind of Group</h2>
+    <p class="section-sub" style="margin:0 auto 48px;">We've done it all. Here's what we're great at:</p>
+  </div>
+  <div class="group-types-grid">
+    <div class="group-type-card">
+      <div class="gt-icon"><svg viewBox="0 0 24 24" style="width:32px;height:32px;stroke:var(--deep-blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      <h3>Bachelorette & Bachelor</h3>
+      <p>The ultimate day on the water before the big day. Paddling, laughing, and making memories. We'll make sure the group of honor has the best time.</p>
+    </div>
+    <div class="group-type-card">
+      <div class="gt-icon"><svg viewBox="0 0 24 24" style="width:32px;height:32px;stroke:var(--deep-blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="12"/></svg></div>
+      <h3>Corporate & Team Building</h3>
+      <p>Get your team off their screens and onto the water. Nothing builds camaraderie like paddling together. We handle the logistics — you take the credit.</p>
+    </div>
+    <div class="group-type-card">
+      <div class="gt-icon"><svg viewBox="0 0 24 24" style="width:32px;height:32px;stroke:var(--deep-blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><line x1="12" y1="7" x2="12" y2="21"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
+      <h3>Birthday Celebrations</h3>
+      <p>Make this birthday unforgettable. Group paddle, good vibes, and the birthday person rides free during their birthday week. We'll customize the experience for you.</p>
+    </div>
+    <div class="group-type-card">
+      <div class="gt-icon"><svg viewBox="0 0 24 24" style="width:32px;height:32px;stroke:var(--deep-blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <h3>School & Youth Groups</h3>
+      <p>Safe, fun, and educational. Our guides are trained to work with youth groups — from elementary school field trips to high school adventures and summer camps.</p>
+    </div>
+    <div class="group-type-card">
+      <div class="gt-icon"><svg viewBox="0 0 24 24" style="width:32px;height:32px;stroke:var(--deep-blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
+      <h3>Church & Community</h3>
+      <p>A great way to bring your community together outside the walls. We love working with faith-based and civic groups looking for something different.</p>
+    </div>
+    <div class="group-type-card">
+      <div class="gt-icon"><svg viewBox="0 0 24 24" style="width:32px;height:32px;stroke:var(--deep-blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+      <h3>Reunions & Celebrations</h3>
+      <p>Family reunion, class reunion, retirement party — any reason to celebrate on the water is a good one. We'll make it easy and memorable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="center">
+    <span class="section-tag">Process</span>
+    <h2 style="font-family:'Sunday Romantic',serif;font-size:clamp(32px,6vw,52px);">How Group Booking Works</h2>
+    <p class="section-sub" style="margin:0 auto 48px;">Simple from start to finish.</p>
+  </div>
+  <div class="hiw-steps">
+    <div class="hiw-step"><div class="hiw-num">1</div><h4>Submit Inquiry</h4><p>Fill out the form below with your group size, date, and location. We'll get back to you within 24 hours.</p></div>
+    <div class="hiw-step"><div class="hiw-num">2</div><h4>We Plan It</h4><p>Your coordinator builds out the experience — route, timing, equipment, and any add-ons you want.</p></div>
+    <div class="hiw-step"><div class="hiw-num">3</div><h4>Confirm & Book</h4><p>Review the plan, lock in your date with a deposit, and send the booking link to your group.</p></div>
+    <div class="hiw-step"><div class="hiw-num">4</div><h4>Show Up & Paddle</h4><p>Arrive, get a briefing, grab your gear, and have the best time. We handle everything else.</p></div>
+  </div>
+</section>
+
+<!-- PERKS -->
+<section class="perks-section">
+  <div class="center">
+    <span class="section-tag" style="color:var(--gold);">What's Included</span>
+    <h2 style="color:white;font-family:'Sunday Romantic',serif;font-size:clamp(32px,6vw,52px);">Everything You Need, Handled</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.75);margin:0 auto 48px;">Group packages include more than just the boats.</p>
+  </div>
+  <div class="perks-grid">
+    <div class="perk-card"><svg viewBox="0 0 24 24" style="width:28px;height:28px;stroke:rgba(255,255,255,0.9);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="17" cy="8" r="2.5"/><path d="M21 21v-2a3.5 3.5 0 0 0-2.5-3.4"/></svg><div><h4>Dedicated Coordinator</h4><p>One person manages your event from inquiry to launch — available for questions, adjustments, and day-of support.</p></div></div>
+    <div class="perk-card"><svg viewBox="0 0 24 24" style="width:28px;height:28px;stroke:rgba(255,255,255,0.9);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0" aria-hidden="true"><path d="M12 3L8 7V20H16V7L12 3Z"/><line x1="12" y1="3" x2="12" y2="20"/><path d="M8 9H5C4 9 3 10 3 11V20H8"/><path d="M16 9H19C20 9 21 10 21 11V20H16"/></svg><div><h4>All Equipment Included</h4><p>Every participant gets a craft, paddle, and PFD. We size everything in advance based on your headcount.</p></div></div>
+    <div class="perk-card"><svg viewBox="0 0 24 24" style="width:28px;height:28px;stroke:rgba(255,255,255,0.9);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0" aria-hidden="true"><polygon points="3,6 9,3 15,6 21,3 21,18 15,21 9,18 3,21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg><div><h4>Custom Route Planning</h4><p>We'll plan a route that fits your group's skill level, time frame, and goals — scenic, adventurous, or somewhere in between.</p></div></div>
+    <div class="perk-card"><svg viewBox="0 0 24 24" style="width:28px;height:28px;stroke:rgba(255,255,255,0.9);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0" aria-hidden="true"><path d="M12 2L4 6v6c0 5.25 3.5 10.15 8 11.36C16.5 22.15 20 17.25 20 12V6L12 2Z"/><polyline points="9,12 11,14 15,10"/></svg><div><h4>Safety Briefing for All</h4><p>Every group gets a thorough safety and paddling briefing before hitting the water. No experience needed.</p></div></div>
+    <div class="perk-card"><svg viewBox="0 0 24 24" style="width:28px;height:28px;stroke:rgba(255,255,255,0.9);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><div><h4>Photo-Worthy Moments</h4><p>Canyon Lake's dramatic scenery makes for incredible group photos. We know all the best spots — just ask.</p></div></div>
+    <div class="perk-card"><svg viewBox="0 0 24 24" style="width:28px;height:28px;stroke:rgba(255,255,255,0.9);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0" aria-hidden="true"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><div><h4>Stunning Scenery Guaranteed</h4><p>Canyon Lake's dramatic 800-foot canyon walls make for an unforgettable group backdrop. Every turn is a photo op.</p></div></div>
+  </div>
+</section>
+
+<!-- INQUIRY FORM -->
+<section class="inquiry-section">
+  <div class="inquiry-wrap">
+    <div class="inquiry-info">
+      <span class="section-tag">Get Started</span>
+      <h2>Inquire About Your Group</h2>
+      <p>Fill out the form and we'll get back to you within 24 hours with availability and a custom quote. For urgent inquiries, text us at (480) 420-8144.</p>
+      <ul>
+        <li>Groups of 10 to 100+ people</li>
+        <li>Available at Canyon Lake Marina, AZ</li>
+        <li>Custom timing, routing, and experience planning</li>
+        <li>Flexible booking for weekdays and weekends</li>
+        <li>Special rates for large groups</li>
+      </ul>
+      <p style="font-size:14px;"><strong>Prefer to talk?</strong><br>Text: <a href="tel:+14804208144" style="color:var(--orange);">(480) 420-8144</a><br>Email: <a href="mailto:hello@yaknsup.com" style="color:var(--orange);">hello@yaknsup.com</a></p>
+    </div>
+    <div class="inquiry-form">
+      <h3>Group Inquiry Form</h3>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="jane@email.com"></div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="(555) 555-5555"></div>
+      <div class="form-row">
+        <div class="form-group"><label>Group Size</label>
+          <select><option>10–20 people</option><option>21–40 people</option><option>41–75 people</option><option>75–100 people</option><option>100+ people</option></select>
+        </div>
+        <div class="form-group"><label>Preferred Timing</label>
+          <select><option>Weekday</option><option>Weekend</option><option>Flexible</option></select>
+        </div>
+      </div>
+      <div class="form-group"><label>Preferred Date(s)</label><input type="text" placeholder="e.g. July 12, or flexible in August"></div>
+      <div class="form-group"><label>Type of Event</label>
+        <select><option>Bachelorette / Bachelor</option><option>Corporate / Team Building</option><option>Birthday Celebration</option><option>School / Youth Group</option><option>Church / Community</option><option>Family Reunion</option><option>Other</option></select>
+      </div>
+      <div class="form-group"><label>Tell Us About Your Group</label><textarea placeholder="Any details, special requests, or questions..."></textarea></div>
+      <button class="btn-primary form-submit" onclick="alert('Thanks! We\'ll be in touch within 24 hours.')">Submit Inquiry</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a class='footer-logo' href='/arizona/'><img src="../images/logo-nav-white.png" alt="Yak N Sup" class="footer-logo-img" style="mix-blend-mode:screen;width:200px;height:auto;display:block;margin:0 auto 14px;"></a>
+      <p>Kayak and paddleboard rentals, special events, and good times on the water at Canyon Lake Marina, Arizona.</p>
+      <div class="newsletter"><input type="email" placeholder="Get updates & deals"><button>Subscribe</button></div>
+    </div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href='/arizona/about'>About Us</a></li><li><a href='/arizona/blog'>Blog</a></li>
+    <li><a href='/arizona/blog'>Blog</a>
+  <a href='/arizona/faq'>FAQs</a></li>
+      <li><a href='/arizona/gift-cards'>Gift Cards</a></li><li><a href='/arizona/contact'>Contact Us</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Explore</h4><ul>
+      <li><a href='/locations/canyon-lake'>Canyon Lake Marina, AZ</a></li>
+      <li><a href='/arizona/rentals'>Rentals & Pricing</a></li>
+      <li><a href='/arizona/experiences'>Special Events</a></li>
+      <li><a href='/arizona/passes'>Season Passes</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="mailto:hello@yaknsup.com">hello@yaknsup.com</a></li>
+      <li><a href="tel:+14804208144">(480) 420-8144</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Yak N Sup. All rights reserved.</p>
+    <div class="social-links" style="display:flex;gap:16px;font-size:13px;opacity:0.75;"><a href="https://instagram.com/Yaknsupaz" style="color:inherit;text-decoration:none;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" style="display:inline-block;vertical-align:middle"><title>Instagram</title><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="https://tiktok.com/@Yaknsupaz" style="color:inherit;text-decoration:none;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><title>TikTok</title><path d="M14 3c.3 2.4 1.9 4.3 4.5 4.6v3c-1.7 0-3.2-.5-4.5-1.4v6.1a5.6 5.6 0 1 1-5.6-5.6c.3 0 .7 0 1 .1v3.1a2.6 2.6 0 1 0 1.6 2.4V3H14Z"/></svg></a><a href="https://facebook.com/Yaknsupaz" style="color:inherit;text-decoration:none;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><title>Facebook</title><path d="M15 8h-2a2 2 0 0 0-2 2v11M8 13h6"/></svg></a><span style="opacity:0.5;">@Yaknsupaz</span></div>
+  </div>
+</footer>
+<script>
+(function(){
+  var nav = document.getElementById('mainNav');
+  if(!nav) return;
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, {passive:true});
+  var btn = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ menu.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+<!-- FareHarbor Lightframe API -->
+<script src="https://fareharbor.com/embeds/api/v1/?autolightboxall=yes"></script>
+</body>
+</html>

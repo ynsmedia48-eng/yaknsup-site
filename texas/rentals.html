@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rentals & More – Yak N Sup | Hidden Cove, Frisco Texas</title>
+<meta name="description" content="Kayak and SUP rentals, day passes, and fishing kayaks at Hidden Cove Marina on Lake Lewisville, Frisco TX. Transparent pricing, easy online booking.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rentals & Pricing – Yak N Sup | Lake Lewisville, Frisco TX">
+<meta property="og:description" content="Kayak and SUP rentals, day passes, and fishing kayaks at Hidden Cove Marina on Lake Lewisville, Frisco TX. Transparent pricing, easy online booking.">
+<meta property="og:image" content="https://yaknsup.com/images/picspicpi/R6__9613.jpg">
+<meta property="og:url" content="https://yaknsup.com/texas/rentals.html">
+<link rel="canonical" href="https://yaknsup.com/texas/rentals.html">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<style>
+.craft-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1100px; margin: 0 auto; }
+.craft-card { background: white; border-radius: 20px; border: 1px solid var(--border); overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; }
+.craft-card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,0.1); }
+.craft-img { height: 220px; overflow: hidden; position: relative; flex-shrink: 0; }
+.craft-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.4s; }
+.craft-card:hover .craft-img img { transform: scale(1.04); }
+.craft-img-placeholder {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  background: linear-gradient(145deg, var(--deep-blue) 0%, var(--heritage) 100%);
+}
+.craft-img-placeholder svg { width: 52px; height: 52px; stroke: rgba(255,255,255,0.65); fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.craft-img-placeholder span { font-family: 'Oswald', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+.craft-body { padding: 24px 28px; display: flex; flex-direction: column; flex: 1; }
+.craft-body h3 { font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--deep-blue); margin-bottom: 8px; }
+.craft-body .craft-desc { font-size: 14px; color: var(--mid); margin-bottom: 20px; line-height: 1.65; flex: 1; min-height: 0; }
+.craft-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; margin-bottom: 12px; }
+.tag-popular { background: var(--heritage) !important; color: white !important; }
+.tag-guided { background: #e8f0f8; color: #2D6EA3; }
+.tag-fishing { background: var(--deep-blue) !important; color: white !important; }
+.tag-gift { background: #f0e4f8; color: #6a3a8a; }
+.tag-camp { background: #e4f0e8; color: #2a6a3a; }
+.tag-soon { background: rgba(200,95,36,0.12); color: var(--orange); }
+
+.whats-included {
+  background-color: var(--dark-warm);
+  background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.62)), url('../images/picspicpi/R6__9509.jpg');
+  background-size: cover; background-position: center 30%;
+  color: white; }
+.included-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
+.included-item { text-align: center; padding: 28px 20px; background: rgba(255,255,255,0.08); border: 1px solid rgba(138,180,198,0.25); border-radius: 16px; }
+.included-item h4 { font-family: 'Sunday Romantic', serif; font-size: 18px; margin-bottom: 8px; color: var(--gold); letter-spacing: 0.04em; }
+.included-item p { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.6; }
+
+.policies-section { background: var(--cream); }
+.policies-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 900px; margin: 0 auto; }
+.policy-card { background: white; border-radius: 16px; padding: 28px; border: 1px solid var(--border); }
+.policy-card h4 { font-family: 'Sunday Romantic', serif; font-size: 19px; margin-bottom: 10px; color: var(--deep-blue); display: flex; align-items: center; gap: 10px; letter-spacing: 0.04em; }
+.policy-card h4 svg { stroke: var(--heritage); }
+.policy-card p, .policy-card li { font-size: 14px; color: var(--mid); line-height: 1.7; }
+.policy-card ul { padding-left: 18px; }
+
+.cash-banner { background: var(--sky); padding: 56px 48px; text-align: center; }
+.cash-banner h3 { font-family: 'Sunday Romantic', serif; font-size: 44px; font-weight: 900; margin-bottom: 14px; line-height: 1.1; letter-spacing: 0.03em; color: white; }
+.cash-banner p { font-size: 17px; color: var(--deep-blue); font-weight: 600; line-height: 1.6; max-width: 480px; margin: 0 auto; }
+.cash-code { display: inline-block; background: var(--deep-blue); border: 2px solid var(--deep-blue); padding: 12px 36px; border-radius: 100px; font-weight: 800; font-size: 22px; letter-spacing: 4px; margin-top: 24px; color: white; }
+
+.waiver-section { background: var(--cream); text-align: center; }
+.waiver-box { max-width: 600px; margin: 0 auto; background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 48px 40px; }
+.waiver-box h3 { font-family: 'Sunday Romantic', serif; font-size: 26px; margin-bottom: 12px; letter-spacing: 0.04em; }
+.waiver-box p { font-size: 15px; color: var(--mid); margin-bottom: 24px; line-height: 1.7; }
+
+/* Coming-soon card overlay */
+.coming-soon-overlay {
+  position: absolute; inset: 0;
+  background: rgba(27,61,88,0.55);
+  display: flex; align-items: center; justify-content: center;
+}
+.coming-soon-badge {
+  background: var(--orange); color: white;
+  font-family: 'Oswald', sans-serif; font-size: 12px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: 8px 20px; border-radius: 100px;
+}
+.craft-body-disabled { opacity: 0.65; }
+.craft-body-disabled .btn-primary { pointer-events: none; background: var(--border); color: var(--mid); }
+
+@media (max-width: 960px) {
+  .craft-grid { grid-template-columns: repeat(2, 1fr); }
+  .included-grid { grid-template-columns: repeat(2, 1fr); }
+  .policies-grid { grid-template-columns: 1fr; }
+  .cash-banner { padding: 32px 20px; }
+}
+@media (max-width: 600px) {
+  .craft-grid { grid-template-columns: 1fr; }
+}
+@font-face { font-family: 'Sunday Romantic'; src: url('../fonts/SundayRomantic.otf') format('opentype'); font-weight: normal; font-style: normal; font-display: swap; }
+/* Rentals hero */
+.page-hero {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.52)),
+    url('../images/picspicpi/R6__9613.jpg') !important;
+  background-position: center 40% !important;
+}
+.section-tag {
+  font-family: 'Oswald', sans-serif; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase; font-size: 12px;
+  color: var(--orange); display: block; margin-bottom: 8px;
+}
+.craft-card { border-top: 3px solid var(--deep-blue) !important; }
+
+/* -- LOCATION BAR -- */
+.loc-bar {
+  position: fixed; top: 72px; left: 0; right: 0; z-index: 99;
+  height: 36px; padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: Oswald, sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+.loc-bar-tx { background: var(--orange) !important; color: white !important; transition: none !important; }
+.loc-bar-pin { display: flex; align-items: center; gap: 6px; }
+.loc-bar-switch { display: flex; align-items: center; gap: 6px; color: inherit; text-decoration: none; opacity: 0.7; transition: opacity 0.2s; }
+.loc-bar-switch:hover { opacity: 1; }
+.page-hero, .exp-hero, .page-hero-sm { margin-top: 108px !important; }
+</style>
+</head>
+<body>
+<!-- LOCATION BAR -->
+<div class="loc-bar loc-bar-tx">
+  <span class="loc-bar-pin">
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+    Hidden Cove, Texas
+  </span>
+  <a class='loc-bar-switch' href='/'>
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+    Switch Location
+  </a>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" id="svg-sprite" style="display:none;position:absolute;width:0;height:0;" aria-hidden="true">
+<defs>
+<symbol id="ic-vest" viewBox="0 0 24 24"><path d="M12 3L8 7V20H16V7L12 3Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="3" x2="12" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8 9H5C4 9 3 10 3 11V20H8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M16 9H19C20 9 21 10 21 11V20H16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<symbol id="ic-paddle" viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 6.5 Q12 3 15.5 6.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8.5 17.5 Q12 21 15.5 17.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="ic-safety" viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5.25 3.5 10.15 8 11.36C16.5 22.15 20 17.25 20 12V6L12 2Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><polyline points="9,12 11,14 15,10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-location" viewBox="0 0 24 24"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<symbol id="ic-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="13" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<symbol id="ic-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<symbol id="ic-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+</defs>
+</svg>
+
+<nav id="mainNav">
+  <a class='nav-logo' href='/texas/' style='position:relative;display:inline-block;'>
+    <img src="../images/logo-nav-black.png" alt="Yak N Sup" class="nav-logo-img" style="height:46px;display:block;">
+  </a>
+  <ul class="nav-links">
+    <li><a href='/texas/rentals'>Rentals</a></li>
+    <li class="nav-dropdown">
+      <a href='/texas/experiences'>Special Events</a>
+      <div class="dropdown-menu">
+        <a href='/texas/experiences'>What's Coming →</a>
+      </div>
+    </li>
+    <li><a href='/texas/groups'>Groups</a></li>
+    <li><a href='/texas/about'>About</a></li>
+    <li><a href='/texas/blog'>Blog</a></li>
+    <li><a href='/texas/faq'>FAQs</a></li>
+    <a href="https://fareharbor.com/yaknsup-frisco/items/" target="_blank" class="btn-book">Book Now</a>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href='/texas/'>Hidden Cove Marina, TX</a>
+  <a href='/texas/rentals'>Rentals</a>
+  <a href='/texas/experiences'>Special Events</a>
+  <a href='/texas/groups'>For Groups</a>
+  <a href='/texas/about'>About Us</a>
+  <a href='/texas/blog'>Blog</a>
+  <a href='/texas/faq'>FAQs</a>
+  <a href='/texas/gift-cards'>Gift Cards</a>
+  <a href='/texas/contact'>Contact</a>
+  <a href="https://fareharbor.com/yaknsup-frisco/items/" target="_blank" class="m-book">Book Now</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero" style="margin-top:108px;">
+  <p class="breadcrumb"><a href='/texas/'>Home</a> › Rentals</p>
+  <h1>Rentals &amp;<br><span class="gold">More</span></h1>
+  <p>Kayaks, paddle boards, gift cards, campground rentals, bikes, and fishing kayaks on Lake Lewisville. All gear included — no experience needed.</p>
+</div>
+
+<!-- CRAFT CARDS -->
+<section style="background:var(--cream);">
+  <div class="center">
+    <span class="section-tag">Everything We Offer</span>
+    <h2 class="sec-title"><span class="gold">Rentals & More</span></h2>
+    <p class="section-sub" style="margin:0 auto 48px;">From solo kayaks to overnight stays — everything you need for the perfect lake day at Hidden Cove on Lake Lewisville.</p>
+  </div>
+  <div class="craft-grid">
+
+    <!-- Kayaks -->
+    <div class="craft-card">
+      <div class="craft-img">
+        <img src="../images/picspicpi/R6__9523.jpg" alt="Kayaking on Lake Lewisville Texas" style="object-position:center 40%;">
+      </div>
+      <div class="craft-body">
+        <span class="craft-tag tag-popular">Most Popular</span>
+        <h3>Kayaks</h3>
+        <p class="craft-desc">Explore Lake Lewisville's coves and open water at your own pace. Stable, easy to paddle, and perfect for any experience level. PFD and paddle included.</p>
+        <a href="https://fareharbor.com/yaknsup-frisco/items/" target="_blank" class="btn-primary" style="width:100%;text-align:center;display:block;margin-top:auto;">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Paddle Boards -->
+    <div class="craft-card">
+      <div class="craft-img">
+        <img src="../images/picspicpi/R6__9719.jpg" alt="Stand-up paddleboarding on Lake Lewisville Texas" style="object-position:center 40%;">
+      </div>
+      <div class="craft-body">
+        <span class="craft-tag tag-guided">SUP</span>
+        <h3>Paddle Boards</h3>
+        <p class="craft-desc">Stand up, kneel, or just float in the Texas sun. Hard and inflatable boards available. A full-body workout that doesn't feel like one — for first-timers and seasoned paddlers alike.</p>
+        <a href="https://fareharbor.com/yaknsup-frisco/items/" target="_blank" class="btn-primary" style="width:100%;text-align:center;display:block;margin-top:auto;">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Gift Cards -->
+    <div class="craft-card">
+      <div class="craft-img">
+        <img src="../images/picspicpi/R6__2499.jpg" alt="Couple kayaking on Lake Lewisville" style="object-position:center 40%;">
+      </div>
+      <div class="craft-body">
+        <span class="craft-tag tag-gift">Gift</span>
+        <h3>Gift Card</h3>
+        <p class="craft-desc">Give someone a lake day they'll never forget. Gift cards are available in any amount, never expire, and are valid for any rental or experience we offer.</p>
+        <a href="https://fareharbor.com/yaknsup-frisco/items/" target="_blank" class="btn-primary" style="width:100%;text-align:center;display:block;margin-top:auto;">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Campground Rental -->
+    <div class="craft-card">
+      <div class="craft-img">
+        <img src="../images/picspicpi/110-488A0887.jpg" alt="Lakeside campground at Hidden Cove Lake Lewisville" style="object-position:center center;">
+      </div>
+      <div class="craft-body">
+        <span class="craft-tag tag-camp">Overnight</span>
+        <h3>Campground Rental</h3>
+        <p class="craft-desc">Wake up 10 steps from the water. Our lakeside campground at Hidden Cove puts you right at the launch. Bring the tent — spots fill up fast on weekends. Call to reserve yours.</p>
+        <a href="https://fareharbor.com/yaknsup-frisco/items/" target="_blank" class="btn-primary" style="width:100%;text-align:center;display:block;margin-top:auto;">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Bikes — Coming Soon -->
+    <div class="craft-card">
+      <div class="craft-img" style="position:relative;">
+        <div class="craft-img-placeholder">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="17" r="3"/><circle cx="19" cy="17" r="3"/><path d="M5 17L9 5h7l3 7H5M9 5h7"/></svg>
+          <span>Coming Soon</span>
+        </div>
+      </div>
+      <div class="craft-body craft-body-disabled">
+        <span class="craft-tag tag-soon">Coming Soon</span>
+        <h3>Bikes</h3>
+        <p class="craft-desc">Explore the trails around Hidden Cove Park on two wheels. Bike rentals are coming soon — stay tuned for launch details.</p>
+        <a href="#" class="btn-primary" style="width:100%;text-align:center;display:block;margin-top:auto;">Coming Soon</a>
+      </div>
+    </div>
+
+    <!-- Fishing Kayaks — Coming Soon -->
+    <div class="craft-card">
+      <div class="craft-img" style="position:relative;">
+        <div class="craft-img-placeholder">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="20" x2="20" y2="4"/><path d="M20 4 Q22 8 18 10"/><circle cx="17.5" cy="11" r="1.5"/></svg>
+          <span>Coming Soon</span>
+        </div>
+      </div>
+      <div class="craft-body craft-body-disabled">
+        <span class="craft-tag tag-soon">Coming Soon</span>
+        <h3>Fishing Kayaks</h3>
+        <p class="craft-desc">Lake Lewisville is loaded with bass, catfish, and crappie. Fishing kayaks with rod holders and gear mounts are coming soon to Hidden Cove.</p>
+        <a href="#" class="btn-primary" style="width:100%;text-align:center;display:block;margin-top:auto;">Coming Soon</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CASH DISCOUNT BANNER -->
+<div class="cash-banner">
+  <h3>Paying with Cash?</h3>
+  <p>Use the promo code below at checkout for a discount on any rental.</p>
+  <div class="cash-code">YNSCASH</div>
+</div>
+
+<!-- WHAT'S INCLUDED -->
+<section class="whats-included">
+  <div class="center">
+    <span class="section-tag" style="color:var(--orange);">Every Rental Includes</span>
+    <h2 style="color:white;font-family:'Sunday Romantic',serif;font-size:clamp(32px,6vw,52px);line-height:1.05;letter-spacing:0.04em;">Everything You Need</h2>
+    <p class="section-sub" style="color:white;margin:0 auto 48px;">Just show up. We handle the rest.</p>
+  </div>
+  <div class="included-grid">
+    <div class="included-item">
+      <div style="margin-bottom:12px;"><svg style="width:34px;height:34px;stroke:var(--gold);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle;" aria-hidden="true"><use href="#ic-vest"/></svg></div>
+      <h4>Life Jacket (PFD)</h4>
+      <p>Properly fitted personal flotation device for every person on the water.</p>
+    </div>
+    <div class="included-item">
+      <div style="margin-bottom:12px;"><svg style="width:34px;height:34px;stroke:var(--gold);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle;" aria-hidden="true"><use href="#ic-paddle"/></svg></div>
+      <h4>Paddle</h4>
+      <p>Adjustable paddle sized for your height. Kayak or SUP paddle depending on your craft.</p>
+    </div>
+    <div class="included-item">
+      <div style="margin-bottom:12px;"><svg style="width:34px;height:34px;stroke:var(--gold);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle;" aria-hidden="true"><use href="#ic-safety"/></svg></div>
+      <h4>Safety Briefing</h4>
+      <p>Quick rundown of paddle technique, safety guidelines, and the best spots to explore on Lake Lewisville.</p>
+    </div>
+    <div class="included-item">
+      <div style="margin-bottom:12px;"><svg style="width:34px;height:34px;stroke:var(--gold);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle;" aria-hidden="true"><use href="#ic-location"/></svg></div>
+      <h4>Local Knowledge</h4>
+      <p>Our crew knows Lake Lewisville and Hidden Cove inside out. Ask us where to go — we'll point you in the right direction.</p>
+    </div>
+  </div>
+</section>
+
+<!-- POLICIES -->
+<section class="policies-section">
+  <div class="center">
+    <span class="section-tag">Good to Know</span>
+    <h2 class="sec-title">Rental Policies</h2>
+    <p class="section-sub" style="margin:0 auto 48px;">We keep it simple. Here's what you need to know before you show up.</p>
+  </div>
+  <div class="policies-grid">
+    <div class="policy-card">
+      <h4>Reservations</h4>
+      <ul>
+        <li>Online booking recommended, especially on weekends</li>
+        <li>Walk-ups welcome based on availability</li>
+        <li>Arrive 15 minutes before your reserved start time</li>
+        <li>Note: Hidden Cove Park charges a $20/vehicle entry fee at the gate</li>
+      </ul>
+    </div>
+    <div class="policy-card">
+      <h4>Cancellations</h4>
+      <ul>
+        <li>Full refund if cancelled 24+ hours in advance</li>
+        <li>Within 24 hours — reschedule for a future date</li>
+        <li>No-shows are non-refundable</li>
+        <li>Weather cancellations are always fully refunded</li>
+      </ul>
+    </div>
+    <div class="policy-card">
+      <h4>What to Bring</h4>
+      <ul>
+        <li>Clothes and shoes you're okay getting wet</li>
+        <li>Sunscreen, sunglasses, and a hat</li>
+        <li>Water bottle (stay hydrated out there)</li>
+        <li>Leave flip-flops at home — they fall off</li>
+      </ul>
+    </div>
+    <div class="policy-card">
+      <h4>Age & Weight</h4>
+      <ul>
+        <li>Kids welcome — they ride with an adult in a tandem</li>
+        <li>All paddlers must wear a PFD on the water</li>
+        <li>Weight limits vary by craft — ask at check-in</li>
+        <li>Minors must have a waiver signed by a parent/guardian</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- WAIVER -->
+<section class="waiver-section">
+  <div class="waiver-box">
+    <div style="margin-bottom:16px;"><svg style="width:52px;height:52px;stroke:var(--deep-blue);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-safety"/></svg></div>
+    <h3>Sign Your Waiver in Advance</h3>
+    <p>Save time at check-in by completing your liability waiver online before you arrive. Takes about 2 minutes. Required for all participants.</p>
+    <a href="https://fareharbor.com/yaknsup-frisco/items/" target="_blank" class="btn-primary">Sign Waiver & Book</a>
+  </div>
+</section>
+
+<!-- EXPERIENCES CTA -->
+<section style="background:var(--deep-blue);padding:72px 48px;text-align:center;">
+  <div class="center">
+    <span style="font-family:'Oswald',sans-serif;font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px;">More Than Just Rentals</span>
+    <h2 style="font-family:'Sunday Romantic',serif;font-size:clamp(36px,5vw,56px);color:white;letter-spacing:0.04em;line-height:1.05;margin:0 0 20px;">Guided Tours & Special Events</h2>
+    <p style="font-size:18px;color:rgba(255,255,255,0.82);max-width:520px;margin:0 auto 36px;line-height:1.65;">Sunset Paddles, Full Moon Tours, and more — if you want something more than a standard rental, we've got experiences worth showing up for at Hidden Cove.</p>
+    <a class='btn-primary' href='/texas/experiences' style='font-size:15px;padding:15px 40px;'>View All Experiences</a>
+  </div>
+</section>
+
+<!-- BIRTHDAY PERK -->
+<section style="
+  position:relative;
+  background-color:var(--dark-warm);
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.52) 50%, rgba(0,0,0,0.78) 100%),
+    url('../images/picspicpi/31-488A5568.jpg');
+  background-size:cover;
+  background-position:center 10%;
+  padding:88px 48px 80px;
+  text-align:center;
+  overflow:hidden;">
+  <span style="font-family:'Oswald',sans-serif;font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px;">A Little Gift From Us</span>
+  <h2 style="font-family:'Sunday Romantic', serif;font-size:clamp(42px,6vw,64px);color:white;letter-spacing:0.04em;line-height:1.05;margin:0 0 20px;">Birthday Perk</h2>
+  <p style="font-size:18px;color:rgba(255,255,255,0.88);max-width:480px;margin:0 auto 32px;line-height:1.65;">Get <strong style="color:var(--gold);">1 free 2-hour rental</strong> during your birthday week. Just mention it when you book — we'll take care of the rest.</p>
+  <a href="https://fareharbor.com/yaknsup-frisco/items/" target="_blank" class="btn-primary" style="font-size:15px;padding:15px 36px;">Book Your Birthday Rental</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a class='footer-logo' href='/texas/'><img src="../images/logo-nav-white.png" alt="Yak N Sup" class="footer-logo-img" style="mix-blend-mode:screen;width:200px;height:auto;display:block;margin:0 auto 14px;"></a>
+      <p>Kayak and paddleboard rentals, special events, and good times on the water at Hidden Cove Marina, Lake Lewisville, Texas.</p>
+      <div class="newsletter"><input type="email" placeholder="Get updates & deals"><button>Subscribe</button></div>
+    </div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href='/texas/about'>About Us</a></li>
+      <li><a href='/texas/blog'>Blog</a></li>
+      <li><a href='/texas/faq'>FAQs</a></li>
+      <li><a href='/texas/gift-cards'>Gift Cards</a></li>
+      <li><a href='/texas/contact'>Contact Us</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Explore</h4><ul>
+      <li><a href='/texas/'>Hidden Cove Marina, TX</a></li>
+      <li><a href='/texas/rentals'>Rentals</a></li>
+      <li><a href='/texas/experiences'>Special Events</a></li>
+      <li><a href='/texas/groups'>Group Bookings</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="mailto:hello@yaknsup.com">hello@yaknsup.com</a></li>
+      <li><a href="tel:+19726459191">(972) 645-9191</a></li>
+      <li style="margin-top:12px;color:rgba(255,255,255,0.4);font-size:13px;">Hidden Cove Marina<br>20400 Hackberry Creek Park Rd #200<br>Frisco, TX 75036</li>
+      <li style="font-size:12px;color:rgba(255,255,255,0.35);margin-top:4px;">$20 park fee at gate</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Yak N Sup. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://instagram.com/yaknsuptexas" style="color:inherit;text-decoration:none;font-size:13px;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" style="display:inline-block;vertical-align:middle"><title>Instagram</title><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://tiktok.com/@yaknsuptexas" style="color:inherit;text-decoration:none;font-size:13px;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><title>TikTok</title><path d="M14 3c.3 2.4 1.9 4.3 4.5 4.6v3c-1.7 0-3.2-.5-4.5-1.4v6.1a5.6 5.6 0 1 1-5.6-5.6c.3 0 .7 0 1 .1v3.1a2.6 2.6 0 1 0 1.6 2.4V3H14Z"/></svg></a>
+      <a href="https://facebook.com/yaknsuptexas" style="color:inherit;text-decoration:none;font-size:13px;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><title>Facebook</title><path d="M15 8h-2a2 2 0 0 0-2 2v11M8 13h6"/></svg></a>
+      <span style="font-size:13px;opacity:0.5;">@yaknsuptexas</span>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var nav = document.getElementById('mainNav');
+  if(!nav) return;
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, {passive:true});
+  var btn = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ menu.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+<!-- FareHarbor Lightframe API -->
+<script src="https://fareharbor.com/embeds/api/v1/?autolightboxall=yes"></script>
+</body>
+</html>

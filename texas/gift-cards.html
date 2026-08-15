@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gift Cards – Yak N Sup</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<style>
+.gc-page { margin-top:108px; }
+.gc-hero { 
+  background-color:var(--dark-warm);
+  background-image: linear-gradient(rgba(0,0,0,0.58),rgba(0,0,0,0.58)), url('../images/exp-social.jpg');
+  background-size:cover; background-position:center 30%;
+  color:white; padding:80px 48px; text-align:center; position:relative; overflow:hidden; }
+.gc-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 60%); }
+.gc-hero-inner { position:relative; z-index:1; max-width:600px; margin:0 auto; }
+.gc-hero h1 { font-family:'Sunday Romantic', serif; font-size:clamp(44px,7vw,80px); line-height:1; margin-bottom:16px; color:white; }
+.gc-hero p { font-size:18px; color:rgba(255,255,255,0.88); line-height:1.7; }
+.gc-hero-emoji { font-size:72px; margin-bottom:20px; display:block; }
+.gc-main { background:var(--card); padding:80px 48px; }
+.gc-layout { display:grid; grid-template-columns:1fr 1fr; gap:64px; max-width:960px; margin:0 auto; align-items:start; }
+.gc-amounts h2 { font-family:'Sunday Romantic', serif; font-size:32px; margin-bottom:8px; }
+.gc-amounts p { font-size:15px; color:var(--mid); margin-bottom:32px; }
+.amount-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:24px; }
+.amount-btn { padding:20px; background:var(--card); border:2px solid var(--border); border-radius:16px; font-family:'Sunday Romantic', serif; font-size:24px; cursor:pointer; transition:all 0.2s; text-align:center; }
+.amount-btn:hover, .amount-btn.selected { border-color:var(--orange); background:var(--orange-pale); color:var(--orange); }
+.custom-amount { display:flex; gap:10px; margin-bottom:28px; }
+.custom-amount input { flex:1; padding:14px 16px; border:2px solid var(--border); border-radius:12px; font-size:16px; font-family:'Lato',sans-serif; outline:none; }
+.custom-amount input:focus { border-color:var(--orange); }
+.gc-perks { list-style:none; margin-bottom:32px; }
+.gc-perks li { padding:10px 0; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:10px; font-size:14px; color:var(--mid); }
+.gc-perks li:last-child { border:none; }
+.gc-perks li::before { content:'&#10003;'; color:var(--orange); font-weight:800; }
+.gc-form { background:var(--card); border:1px solid var(--border); border-radius:24px; padding:36px; }
+.gc-form h3 { font-family:'Sunday Romantic', serif; font-size:28px; margin-bottom:24px; }
+.form-group { margin-bottom:16px; }
+.form-group label { display:block; font-size:13px; font-weight:600; margin-bottom:6px; }
+.form-group input, .form-group textarea { width:100%; padding:12px 16px; border:1px solid var(--border); border-radius:12px; font-family:'Lato',sans-serif; font-size:14px; background:white; outline:none; transition:border 0.2s; }
+.form-group input:focus, .form-group textarea:focus { border-color:var(--orange); }
+.form-group textarea { min-height:80px; resize:vertical; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.gc-preview { background:linear-gradient(135deg, #C85A2A, #E06830, #123F6B); border-radius:16px; padding:28px; color:white; margin-bottom:20px; text-align:center; }
+.gc-preview h4 { font-family:'Sunday Romantic', serif; font-size:28px; margin-bottom:4px; }
+.gc-preview p { font-size:13px; opacity:0.8; }
+.gc-preview .gc-amount-display { font-family:'Sunday Romantic', serif; font-size:52px; line-height:1; margin:12px 0; }
+@media (max-width:960px) {
+  .gc-hero { padding:56px 20px; }
+  .gc-main { padding:56px 20px; }
+  .gc-layout { grid-template-columns:1fr; gap:32px; }
+}
+@font-face { font-family: 'Sunday Romantic'; src: url('../fonts/SundayRomantic.otf') format('opentype'); font-weight: normal; font-style: normal; font-display: swap; }
+/* Blue accents */
+.gc-amounts h2 { color: var(--deep-blue) !important; }
+.amount-btn { border-color: var(--border) !important; }
+.amount-btn:hover, .amount-btn.selected { border-color: var(--orange) !important; }
+.gc-perks li::before { color: var(--heritage) !important; }
+.gc-form h3 { color: var(--deep-blue) !important; }
+.gc-form { border-top: 3px solid var(--deep-blue) !important; }
+
+/* -- LOCATION BAR -- */
+.loc-bar {
+  position: fixed; top: 72px; left: 0; right: 0; z-index: 99;
+  height: 36px; padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: Oswald, sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+.loc-bar-tx { background: var(--orange) !important; color: white !important; transition: none !important; }
+.loc-bar-pin { display: flex; align-items: center; gap: 6px; }
+.loc-bar-switch {
+  display: flex; align-items: center; gap: 6px;
+  color: inherit; text-decoration: none; opacity: 0.75; transition: opacity 0.2s;
+}
+.loc-bar-switch:hover { opacity: 1; }
+.page-hero, .exp-hero, .page-hero-sm { margin-top: 108px !important; }
+</style>
+</head>
+<body>
+<!-- LOCATION BAR -->
+<div class="loc-bar loc-bar-tx">
+  <span class="loc-bar-pin">
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+    Hidden Cove, Texas
+  </span>
+  <a class='loc-bar-switch' href='/'>
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+    Switch Location
+  </a>
+</div>
+
+<nav id="mainNav">
+  <a class='nav-logo' href='/texas/' style='position:relative;display:inline-block;'>
+    <img src="../images/logo-nav-black.png" alt="Yak N Sup" class="nav-logo-img" style="height:46px;display:block;">
+  </a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <a href='/texas/#locations'>Locations</a>
+      <div class="dropdown-menu">
+        <a href='/locations/canyon-lake'>Hidden Cove — TX</a>
+        <div class="dropdown-divider"></div>
+        <a href='/locations/hidden-cove'>Hidden Cove, TX</a>
+      </div>
+    </li>
+    <li><a href='/texas/rentals'>Rentals</a></li>
+    <li class="nav-dropdown">
+      <a href='/texas/experiences'>Special Events</a>
+      <div class="dropdown-menu">
+        <a href='/texas/experiences#guided'>Guided Canyon Tours</a>
+        <a href='/texas/experiences#moonlight'>Full Moon Paddle</a>
+        <a href='/texas/experiences#sunset'>Sunset Paddle</a>
+        <div class="dropdown-divider"></div>
+        <a href='/texas/experiences'>Full Calendar →</a>
+      </div>
+    </li>
+    <li><a href='/texas/groups'>Groups</a></li>
+    <li><a href='/texas/about'>About</a></li>
+    <li><a href='/texas/blog'>Blog</a></li>
+    <li><a href='/texas/faq'>FAQs</a></li>
+    <a href="https://fareharbor.com/yaknsup-frisco/items/" target="_blank" class="btn-book">Book Now</a>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href='/locations/canyon-lake'>Hidden Cove, TX</a>
+  <a href='/texas/rentals'>Rentals &amp; Pricing</a>
+  <a href='/texas/experiences'>Special Events</a>
+  <a href='/texas/groups'>For Groups</a>
+  <a href='/texas/about'>About Us</a>
+  <a href='/texas/blog'>Blog</a>
+  <a href='/texas/faq'>FAQs</a>
+  <a href='/texas/gift-cards'>Gift Cards</a>
+  <a href='/texas/contact'>Contact</a>
+  <a href="https://fareharbor.com/yaknsup-frisco/items/" target="_blank" class="m-book">Book Now</a>
+</div>
+
+<div class="gc-page">
+  <div class="gc-hero">
+    <div class="gc-hero-inner">
+      
+      <h1>Give the Gift<br><span class="gold">of the Water</span></h1>
+      <p>Yak N Sup gift cards are valid for any rental, guided experience, or season pass at Hidden Cove Marina, TX. Perfect for any occasion — or no occasion at all.</p>
+    </div>
+  </div>
+  <div class="gc-main">
+    <div class="gc-layout">
+      <div class="gc-amounts">
+        <h2>Choose an Amount</h2>
+        <p>Gift cards never expire and can be used for any rental, experience, or pass at Hidden Cove Marina.</p>
+        <div class="amount-grid">
+          <div class="amount-btn" onclick="selectAmount(35,this)">$35</div>
+          <div class="amount-btn selected" onclick="selectAmount(75,this)">$75</div>
+          <div class="amount-btn" onclick="selectAmount(110,this)">$110</div>
+          <div class="amount-btn" onclick="selectAmount(150,this)">$150</div>
+        </div>
+        <div class="custom-amount">
+          <input type="number" placeholder="Custom amount" min="10" id="customAmt" oninput="updatePreview(this.value)">
+          <button class="btn-sm" onclick="selectCustom()">Set</button>
+        </div>
+        <ul class="gc-perks">
+          <li>Valid at Hidden Cove Marina, Lake Lewisville, TX</li>
+          <li>Redeemable for any rental, experience, or season pass</li>
+          <li>Never expires — use it whenever</li>
+          <li>Delivered digitally by email (instant)</li>
+          <li>Physical card available — contact us to arrange</li>
+        </ul>
+        <div class="gc-preview">
+          <h4>Yak N Sup Gift Card</h4>
+          <p>Hidden Cove Marina, TX · Never expires</p>
+          <div class="gc-amount-display" id="gcAmountDisplay">$75</div>
+          <p>The gift of getting on the water </p>
+        </div>
+      </div>
+      <div class="gc-form">
+        <h3>Gift Cards Coming Soon</h3>
+        <p style="font-size:14px;color:var(--mid);margin-bottom:24px;">Online gift card purchases for Hidden Cove Marina, TX are coming soon. In the meantime, contact us directly and we'll take care of you.</p>
+        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:28px;">
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--deep-blue);color:white;font-family:'Oswald',sans-serif;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+            <div><strong style="display:block;margin-bottom:2px;color:var(--deep-blue);">Call or text us</strong><span style="font-size:13px;color:var(--mid);">Let us know the amount and who it's for.</span></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--deep-blue);color:white;font-family:'Oswald',sans-serif;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+            <div><strong style="display:block;margin-bottom:2px;color:var(--deep-blue);">We process payment securely</strong><span style="font-size:13px;color:var(--mid);">Any amount. We'll handle the rest.</span></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--deep-blue);color:white;font-family:'Oswald',sans-serif;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+            <div><strong style="display:block;margin-bottom:2px;color:var(--deep-blue);">Gift card delivered by email</strong><span style="font-size:13px;color:var(--mid);">Sent to the recipient instantly. Valid for any rental or experience at Hidden Cove.</span></div>
+          </div>
+        </div>
+        <div style="background:var(--orange-pale);border:1px solid #e8c8b8;border-radius:12px;padding:14px 16px;margin-bottom:24px;">
+          <p style="font-size:13px;color:#923510;margin:0;"><strong>Online purchase coming soon.</strong> For now, reach out and we'll get it sorted fast.</p>
+        </div>
+        <a href="tel:+19726459191" class="btn-primary" style="width:100%;text-align:center;display:block;font-size:16px;padding:18px 24px;">Call Us — (972) 645-9191</a>
+        <a class='btn-outline' href='/texas/contact' style='width:100%;text-align:center;display:block;font-size:15px;padding:14px 24px;margin-top:12px;'>Send a Message</a>
+        <p style="font-size:12px;color:var(--mid);margin-top:14px;text-align:center;">We respond fast — usually same day.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><a class='footer-logo' href='/texas/'><img src="../images/logo-nav-white.png" alt="Yak N Sup" class="footer-logo-img" style="mix-blend-mode:screen;width:200px;height:auto;display:block;margin:0 auto 14px;"></a><p>Kayak and paddleboard rentals, guided experiences, and good times on the water at Hidden Cove Marina, Lake Lewisville, TX.</p><div class="newsletter"><input type="email" placeholder="Get updates"><button>Subscribe</button></div></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href='/texas/about'>About Us</a></li><li><a href='/texas/blog'>Blog</a></li>
+    <li><a href='/texas/faq'>FAQs</a></li><li><a href='/texas/gift-cards'>Gift Cards</a></li><li><a href='/texas/contact'>Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Explore</h4><ul><li><a href='/locations/hidden-cove'>Hidden Cove Marina, TX</a></li><li><a href='/texas/rentals'>Rentals</a></li><li><a href='/texas/experiences'>Special Events</a></li><li><a href='/texas/passes'>Season Passes</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@yaknsup.com">hello@yaknsup.com</a></li><li><a href="tel:+19726459191">(972) 645-9191</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Yak N Sup. All rights reserved.</p><div class="social-links" style="display:flex;gap:16px;font-size:13px;opacity:0.75;"><a href="https://instagram.com/yaknsuptexas" style="color:inherit;text-decoration:none;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" style="display:inline-block;vertical-align:middle"><title>Instagram</title><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="https://tiktok.com/@yaknsuptexas" style="color:inherit;text-decoration:none;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><title>TikTok</title><path d="M14 3c.3 2.4 1.9 4.3 4.5 4.6v3c-1.7 0-3.2-.5-4.5-1.4v6.1a5.6 5.6 0 1 1-5.6-5.6c.3 0 .7 0 1 .1v3.1a2.6 2.6 0 1 0 1.6 2.4V3H14Z"/></svg></a><a href="https://facebook.com/yaknsuptexas" style="color:inherit;text-decoration:none;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><title>Facebook</title><path d="M15 8h-2a2 2 0 0 0-2 2v11M8 13h6"/></svg></a><span style="opacity:0.5;">@yaknsuptexas</span></div></div>
+</footer>
+<script>
+let selectedAmt = 75;
+function selectAmount(amt, el) {
+  selectedAmt = amt;
+  document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+  updatePreview(amt);
+}
+function updatePreview(val) {
+  if(val) {
+    document.getElementById('gcAmountDisplay').textContent = '$' + val;
+    document.getElementById('btnAmount').textContent = val;
+  }
+}
+function selectCustom() {
+  const val = document.getElementById('customAmt').value;
+  if(val) updatePreview(val);
+}
+</script>
+<script>
+(function(){
+  var nav = document.getElementById('mainNav');
+  if(!nav) return;
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, {passive:true});
+  var btn = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ menu.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+<!-- FareHarbor Lightframe API -->
+<script src="https://fareharbor.com/embeds/api/v1/?autolightboxall=yes"></script>
+</body>
+</html>

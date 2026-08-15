@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog – Kayaking & Paddleboarding Tips at Canyon Lake, AZ | Yak N Sup</title>
+<meta name="description" content="Paddling tips, Canyon Lake guides, seasonal advice, and event recaps from the Yak N Sup crew at Canyon Lake Marina, Arizona.">
+<link rel="canonical" href="https://yaknsup.com/arizona/blog.html">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+
+<!-- ══ SCHEMA: Blog + LocalBusiness ══════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Yak N Sup Blog — Canyon Lake, Arizona",
+  "description": "Paddling guides, Canyon Lake tips, event recaps and local water adventures from Yak N Sup at Canyon Lake Marina, AZ.",
+  "url": "https://yaknsup.com/arizona/blog.html",
+  "publisher": {
+    "@type": "LocalBusiness",
+    "name": "Yak N Sup — Canyon Lake Marina",
+    "url": "https://yaknsup.com/arizona/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "16802 AZ-88",
+      "addressLocality": "Tortilla Flat",
+      "addressRegion": "AZ",
+      "postalCode": "85190",
+      "addressCountry": "US"
+    },
+    "telephone": "+14804208144",
+    "priceRange": "$$",
+    "servesCuisine": "Kayak & Paddleboard Rentals"
+  }
+}
+</script>
+
+<style>
+@font-face { font-family: 'Sunday Romantic'; src: url('../fonts/SundayRomantic.otf') format('opentype'); font-weight: normal; font-style: normal; font-display: swap; }
+
+/* ── LOCATION BAR ───────────────────────────── */
+.loc-bar {
+  position: fixed; top: 72px; left: 0; right: 0; z-index: 99;
+  height: 36px; padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: Oswald, sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+.loc-bar-az { background: var(--orange) !important; color: white !important; transition: none !important; }
+.loc-bar-pin { display: flex; align-items: center; gap: 6px; }
+.loc-bar-switch { display: flex; align-items: center; gap: 6px; color: inherit; text-decoration: none; opacity: 0.7; transition: opacity 0.2s; }
+.loc-bar-switch:hover { opacity: 1; }
+.page-hero, .blog-hero { margin-top: 108px !important; }
+
+/* ── BLOG HERO ──────────────────────────────── */
+.blog-hero {
+  background-color: var(--dark-warm);
+  background-image: linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.58)), url('../images/picspicpi/488A0764.jpg');
+  background-size: 150%; background-position: 100% 55%;
+  padding: 80px 48px 72px; text-align: center; color: white; position: relative; overflow: hidden;
+}
+.blog-hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(200,95,36,0.18) 0%, transparent 65%); pointer-events: none; }
+.blog-hero-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+.blog-hero h1 { font-family: 'Sunday Romantic', serif; font-size: clamp(44px,7vw,80px); line-height: 1; color: white; margin-bottom: 14px; }
+.blog-hero p { font-size: 17px; color: rgba(255,255,255,0.82); line-height: 1.7; margin-bottom: 28px; }
+.blog-eyebrow { font-family: Oswald, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 12px; }
+
+/* ── CATEGORY FILTER ────────────────────────── */
+.blog-filter { background: var(--card); border-bottom: 1px solid var(--border); padding: 20px 48px; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.filter-btn { font-family: Oswald, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 8px 18px; border-radius: 100px; border: 2px solid var(--border); background: white; color: var(--mid); cursor: pointer; transition: all 0.2s; text-decoration: none; }
+.filter-btn:hover, .filter-btn.active { border-color: var(--orange); background: var(--orange); color: white; }
+
+/* ── FEATURED POST ──────────────────────────── */
+.blog-main { background: var(--bg); padding: 64px 48px; }
+.blog-wrap { max-width: 1100px; margin: 0 auto; }
+.featured-label { font-family: Oswald, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--orange); display: block; margin-bottom: 16px; }
+.featured-post {
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 0;
+  background: white; border-radius: 24px; overflow: hidden;
+  border: 1px solid var(--border); margin-bottom: 64px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  text-decoration: none; color: inherit; transition: box-shadow 0.25s, transform 0.25s;
+}
+.featured-post:hover { box-shadow: 0 8px 40px rgba(0,0,0,0.13); transform: translateY(-2px); }
+.feat-img { position: relative; min-height: 380px; background: linear-gradient(135deg, #1B3D58 0%, #2B5E7C 40%, #C85F24 100%); overflow: hidden; }
+.feat-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.feat-cat-badge { position: absolute; top: 20px; left: 20px; background: var(--orange); color: white; font-family: Oswald, sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 5px 12px; border-radius: 100px; }
+.feat-body { padding: 48px 40px; display: flex; flex-direction: column; justify-content: center; }
+.feat-meta { font-size: 12px; color: var(--mid); margin-bottom: 16px; display: flex; gap: 12px; align-items: center; }
+.feat-meta-dot { width: 3px; height: 3px; background: var(--mid); border-radius: 50%; }
+.feat-body h2 { font-family: 'Sunday Romantic', serif; font-size: clamp(28px, 3vw, 36px); line-height: 1.1; color: var(--deep-blue); margin-bottom: 14px; }
+.feat-body p { font-size: 15px; color: var(--mid); line-height: 1.75; margin-bottom: 24px; }
+.read-more { display: inline-flex; align-items: center; gap: 8px; font-family: Oswald, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--orange); text-decoration: none; }
+.read-more:hover { gap: 12px; }
+
+/* ── POST GRID ──────────────────────────────── */
+.section-label-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
+.section-label-row h3 { font-family: 'Sunday Romantic', serif; font-size: 28px; color: var(--deep-blue); }
+.posts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 56px; }
+.post-card { background: white; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); text-decoration: none; color: inherit; transition: box-shadow 0.2s, transform 0.2s; display: flex; flex-direction: column; }
+.post-card:hover { box-shadow: 0 6px 28px rgba(0,0,0,0.1); transform: translateY(-3px); }
+.post-img { height: 200px; position: relative; overflow: hidden; }
+.post-img-bg { width: 100%; height: 100%; object-fit: cover; }
+.post-img-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.post-cat { position: absolute; top: 14px; left: 14px; background: var(--deep-blue); color: white; font-family: Oswald, sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; }
+.post-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.post-meta { font-size: 11px; color: var(--mid); margin-bottom: 10px; }
+.post-body h4 { font-family: 'Sunday Romantic', serif; font-size: 28px; line-height: 1.2; color: var(--deep-blue); margin-bottom: 10px; flex: 1; }
+.post-body p { font-size: 15px; color: var(--mid); line-height: 1.7; margin-bottom: 16px; }
+.post-read { font-family: Oswald, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--orange); }
+
+/* ── SEO CONTENT BLOCK ──────────────────────── */
+.blog-seo-block { background: var(--card); border-radius: 20px; padding: 40px; border: 1px solid var(--border); margin-bottom: 56px; }
+.blog-seo-block h3 { font-family: 'Sunday Romantic', serif; font-size: 28px; color: var(--deep-blue); margin-bottom: 16px; }
+.blog-seo-block p { font-size: 15px; color: var(--mid); line-height: 1.8; margin-bottom: 12px; }
+.blog-seo-block p:last-child { margin-bottom: 0; }
+
+/* ── NEWSLETTER ─────────────────────────────── */
+.blog-newsletter { background: var(--sky); border-radius: 24px; padding: 48px 40px; text-align: center; margin-bottom: 56px; }
+.blog-newsletter h3 { font-family: 'Sunday Romantic', serif; font-size: 32px; color: white; margin-bottom: 10px; }
+.blog-newsletter p { font-size: 15px; color: rgba(255,255,255,0.85); margin-bottom: 24px; }
+.nl-form { display: flex; gap: 10px; max-width: 420px; margin: 0 auto; }
+.nl-form input { flex: 1; padding: 13px 16px; border-radius: 100px; border: none; font-family: Lato, sans-serif; font-size: 14px; outline: none; }
+.nl-form button { background: var(--orange); color: white; border: none; padding: 13px 24px; border-radius: 100px; font-family: Oswald, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
+.nl-form button:hover { background: var(--orange-lt); }
+
+/* ── TOPICS SIDEBAR STRIP ───────────────────── */
+.topic-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 56px; }
+.topic-card { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 20px; text-align: center; text-decoration: none; color: inherit; transition: all 0.2s; }
+.topic-card:hover { border-color: var(--orange); background: var(--orange-pale); }
+.topic-icon { font-size: 28px; margin-bottom: 8px; display: block; }
+.topic-card h5 { font-family: Oswald, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--deep-blue); margin-bottom: 4px; }
+.topic-card p { font-size: 11px; color: var(--mid); }
+
+@media (max-width: 900px) {
+  .blog-hero { padding: 56px 20px; }
+  .blog-filter { padding: 16px 20px; }
+  .blog-main { padding: 48px 20px; }
+  .featured-post { grid-template-columns: 1fr; }
+  .feat-img { min-height: 240px; }
+  .feat-body { padding: 28px 24px; }
+  .posts-grid { grid-template-columns: 1fr 1fr; }
+  .topic-strip { grid-template-columns: 1fr 1fr; }
+  .nl-form { flex-direction: column; }
+}
+@media (max-width: 600px) {
+  .posts-grid { grid-template-columns: 1fr; }
+  .topic-strip { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- LOCATION BAR -->
+<div class="loc-bar loc-bar-az">
+  <span class="loc-bar-pin">
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+    Canyon Lake, Arizona
+  </span>
+  <a class='loc-bar-switch' href='/'>
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+    Switch Location
+  </a>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a class='nav-logo' href='/arizona/' style='position:relative;display:inline-block;'>
+    <img src="../images/logo-nav-white.png" alt="Yak N Sup" class="nav-logo-img white-logo" style="position:absolute;top:0;left:0;height:46px;width:auto;">
+    <img src="../images/logo-nav-black.png" alt="Yak N Sup" class="nav-logo-img blue-logo" style="height:46px;width:auto;display:block;mix-blend-mode:multiply;">
+  </a>
+  <ul class="nav-links">
+    <li><a href='/arizona/rentals'>Rentals</a></li>
+    <li class="nav-dropdown">
+      <a href='/arizona/experiences'>Special Events</a>
+      <div class="dropdown-menu">
+        <a href='/arizona/experiences#guided'>Guided Canyon Tours</a>
+        <a href='/arizona/experiences#moonlight'>Full Moon Paddle</a>
+        <a href='/arizona/experiences#sunset'>Sunset Paddle</a>
+        <div class="dropdown-divider"></div>
+        <a href='/arizona/experiences'>Full Calendar →</a>
+      </div>
+    </li>
+    <li><a href='/arizona/groups'>Groups</a></li>
+    <li><a href='/arizona/about'>About</a></li>
+    <li><a href='/arizona/blog' style='color:var(--gold);'>Blog</a></li>
+    <li><a href='/arizona/faq'>FAQs</a></li>
+    <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-book">Book Now</a>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href='/arizona/rentals'>Rentals &amp; Pricing</a>
+  <a href='/arizona/experiences'>Special Events</a>
+  <a href='/arizona/groups'>For Groups</a>
+  <a href='/arizona/about'>About Us</a>
+  <a href='/arizona/blog'>Blog</a>
+  <a href='/arizona/faq'>FAQs</a>
+  <a href='/arizona/gift-cards'>Gift Cards</a>
+  <a href='/arizona/contact'>Contact</a>
+  <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="m-book">Book Now</a>
+</div>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <div class="blog-hero-inner">
+    <span class="blog-eyebrow">From the Dock</span>
+    <h1>Life's Better<br><span class="gold">on the Water.</span></h1>
+    <p>Paddling tips, Canyon Lake guides, event recaps, and everything you need to make the most of your time out here.</p>
+  </div>
+</div>
+
+<!-- CATEGORY FILTER -->
+<div class="blog-filter">
+  <a href="#" class="filter-btn active">All Posts</a>
+  <a href="#" class="filter-btn">Paddling Tips</a>
+  <a href="#" class="filter-btn">Canyon Lake Guide</a>
+  <a href="#" class="filter-btn">Special Events</a>
+  <a href="#" class="filter-btn">Gear &amp; Safety</a>
+  <a href="#" class="filter-btn">Family &amp; Groups</a>
+  <a href="#" class="filter-btn">Seasonal</a>
+</div>
+
+<!-- MAIN BLOG CONTENT -->
+<div class="blog-main">
+  <div class="blog-wrap">
+
+    <!-- FEATURED POST — CLOSURE ALERT -->
+    <span class="featured-label">⚠️ Must Read — Canyon Lake Closure 2026</span>
+    <a class='featured-post' href='/arizona/blog/canyon-lake-closing-2026'>
+      <div class="feat-img">
+        <img src="../images/picspicpi/1-488A8608.jpg" alt="Canyon Lake Arizona closure 2026 dam safety inspection" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;">
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,#1B3D58 0%,#2B5E7C 40%,#C85F24 100%);z-index:-1;"></div>
+        <span class="feat-cat-badge">Seasonal · Urgent</span>
+      </div>
+      <div class="feat-body">
+        <div class="feat-meta">
+          <span>June 2026</span>
+          <span class="feat-meta-dot"></span>
+          <span>6 min read</span>
+          <span class="feat-meta-dot"></span>
+          <span>Canyon Lake, AZ</span>
+        </div>
+        <h2>Canyon Lake Is Closing for 16 Weeks Starting September 16, 2026</h2>
+        <p>SRP and the Bureau of Reclamation will lower Canyon Lake by 54 feet starting September 16 for critical dam safety inspections — a process that only happens every 20 years. Here's everything you need to know, and why you should come paddle before the closure begins.</p>
+        <span class="read-more">Read the Full Post →</span>
+      </div>
+    </a>
+
+    <!-- TOPIC STRIP -->
+    <div class="topic-strip">
+      <a href="#wildlife" class="topic-card">
+        <span class="topic-icon">🦌</span>
+        <h5>Wildlife</h5>
+        <p>Bighorn sheep, herons &amp; more</p>
+      </a>
+      <a href="#history" class="topic-card">
+        <span class="topic-icon">🏜️</span>
+        <h5>Canyon Lake</h5>
+        <p>History, hidden spots, local guides</p>
+      </a>
+      <a href="#seasonal" class="topic-card">
+        <span class="topic-icon">🍂</span>
+        <h5>Seasonal</h5>
+        <p>Best times to paddle, weather tips</p>
+      </a>
+      <a href="#groups" class="topic-card">
+        <span class="topic-icon">🎉</span>
+        <h5>Groups &amp; Events</h5>
+        <p>Bachelorette, corporate, parties</p>
+      </a>
+    </div>
+
+    <!-- ALL POSTS -->
+    <div class="section-label-row">
+      <h3>All Posts</h3>
+    </div>
+
+    <div class="posts-grid">
+
+      <a class='post-card' href='/arizona/blog/best-day-trips-from-phoenix-scottsdale'>
+        <div class="post-img">
+          <img src="../images/picspicpi/60-488A0741.jpg" alt="Canyon Lake day trip from Phoenix Scottsdale Arizona" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,#1B3D58 0%,#C85F24 100%);z-index:-1;"></div>
+          <span class="post-cat">Local Guide</span>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">June 2026 · 7 min read</div>
+          <h4>The Best Day Trip from Phoenix or Scottsdale Is One Most People Haven't Taken</h4>
+          <p>45 minutes east, inside the Superstition Mountains. Canyon Lake, the Apache Trail, Tortilla Flat — the full itinerary.</p>
+          <span class="post-read">Read More →</span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/arizona/blog/kayaking-near-phoenix-scottsdale'>
+        <div class="post-img">
+          <img src="../images/picspicpi/R6__9521.jpg" alt="Kayaking near Phoenix Scottsdale Canyon Lake Arizona" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,#2B5E7C 0%,#1B3D58 100%);z-index:-1;"></div>
+          <span class="post-cat">Local Guide</span>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">June 2026 · 5 min read</div>
+          <h4>The Best Kayaking Near Phoenix and Scottsdale Is at Canyon Lake</h4>
+          <p>What we offer, why Canyon Lake is different from anything else near the city, and how to book.</p>
+          <span class="post-read">Read More →</span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/arizona/blog/first-time-kayaking-canyon-lake'>
+        <div class="post-img">
+          <img src="../images/picspicpi/488A0767.jpg" alt="First time kayaking Canyon Lake Arizona beginner" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,#C85F24 0%,#2B5E7C 100%);z-index:-1;"></div>
+          <span class="post-cat">Beginners Guide</span>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">June 2026 · 6 min read</div>
+          <h4>Your First Time Kayaking at Canyon Lake: What to Expect, Start to Finish</h4>
+          <p>Step by step — from parking lot to water and back. Every first-timer question, answered.</p>
+          <span class="post-read">Read More →</span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/arizona/blog/what-to-bring-canyon-lake'>
+        <div class="post-img">
+          <img src="../images/picspicpi/488A8881.jpg" alt="Packing for Canyon Lake kayaking Arizona" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,#C85F24 0%,#D4A53C 100%);z-index:-1;"></div>
+          <span class="post-cat">Gear Guide</span>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">June 2026 · 5 min read</div>
+          <h4>What to Bring to Canyon Lake (The Complete Packing List)</h4>
+          <p>Water, sunscreen, snacks, a hat, quick-dry clothes — everything you need for a great day. The #1 mistake first-timers make is not packing enough.</p>
+          <span class="post-read">Read More →</span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/arizona/blog/boulder-recreation-beginners-guide'>
+        <div class="post-img">
+          <img src="../images/picspicpi/10-488A8771.jpg" alt="Boulder Recreation Area Canyon Lake Arizona calm water paddle" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,#1B3D58 0%,#2B5E7C 100%);z-index:-1;"></div>
+          <span class="post-cat">Canyon Lake Guide</span>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">June 2026 · 5 min read</div>
+          <h4>Boulder Recreation: The Best Beginner Paddle Spot at Canyon Lake</h4>
+          <p>No motorized boats, calm protected water, 5 minutes from the dock. The perfect starting point for first-timers and families.</p>
+          <span class="post-read">Read More →</span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/arizona/blog/bighorn-sheep-spotting-canyon-lake'>
+        <div class="post-img">
+          <img src="../images/picspicpi/bighorn-sheep.png" alt="Desert bighorn sheep on the canyon walls at Canyon Lake Arizona" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,#C85F24 0%,#D4A53C 100%);z-index:-1;"></div>
+          <span class="post-cat" id="wildlife">Wildlife</span>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">February 2025 · 5 min read</div>
+          <h4>Bighorn Sheep Spotting at Canyon Lake: Paddle Through History</h4>
+          <p>Massive curved horns, standing still on a ledge fifty feet above you. Where to look, when to go, and how to spot them respectfully.</p>
+          <span class="post-read">Read More →</span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/arizona/blog/la-barge-tortilla-creek'>
+        <div class="post-img">
+          <img src="../images/picspicpi/3-488A8691.jpg" alt="La Barge Creek and Tortilla Creek at Canyon Lake Arizona" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,#2B5E7C 0%,#1B3D58 100%);z-index:-1;"></div>
+          <span class="post-cat">Canyon Lake Guide</span>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">January 2025 · 6 min read</div>
+          <h4>La Barge and Tortilla Creek: Canyon Lake's Hidden Paddling Spots</h4>
+          <p>Most visitors only see the main lake. Hidden coves, herons, bighorn sheep, and red rock formations — only accessible by kayak or paddleboard.</p>
+          <span class="post-read">Read More →</span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/arizona/blog/canyon-lake-history'>
+        <div class="post-img">
+          <img src="../images/picspicpi/64-488A0746.jpg" alt="Canyon Lake Arizona history and paddling" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,#D4A53C 0%,#1B3D58 100%);z-index:-1;"></div>
+          <span class="post-cat" id="history">History</span>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">January 2025 · 6 min read</div>
+          <h4>Canyon Lake: A Rich History and Paddling Paradise</h4>
+          <p>Built in 1925, used for WWII military training, and now one of Arizona's most beloved outdoor destinations. The full story.</p>
+          <span class="post-read">Read More →</span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/arizona/blog/fall-paddling-canyon-lake'>
+        <div class="post-img">
+          <img src="../images/picspicpi/488A0802.jpg" alt="Fall paddling at Canyon Lake Arizona" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,#C85F24 0%,#D4A53C 60%,#1B3D58 100%);z-index:-1;"></div>
+          <span class="post-cat" id="seasonal">Seasonal</span>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">January 2025 · 4 min read</div>
+          <h4>Fall Paddling at Canyon Lake: A Serene Escape</h4>
+          <p>Calm water, cooler weather, fewer crowds, and sunsets that look like a painting. Why fall is our favorite season.</p>
+          <span class="post-read">Read More →</span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/arizona/blog/bachelorette-bachelor-party-canyon-lake'>
+        <div class="post-img">
+          <img src="../images/picspicpi/51-488A5648.jpg" alt="Bachelorette and bachelor party kayaking at Canyon Lake" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,#2B5E7C 0%,#C85F24 100%);z-index:-1;"></div>
+          <span class="post-cat" id="groups">Groups &amp; Events</span>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">January 2025 · 5 min read</div>
+          <h4>Canyon Lake: The Perfect Bachelorette or Bachelor Party Adventure</h4>
+          <p>Done with the same old bar crawl? Canyon Lake is the adventure your group actually wants — and will actually remember.</p>
+          <span class="post-read">Read More →</span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/arizona/blog/skeleton-cave-massacre'>
+        <div class="post-img">
+          <img src="../images/picspicpi/R6__9629.jpg" alt="Skeleton Cave Canyon Lake history" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,#111A22 0%,#1B3D58 100%);z-index:-1;"></div>
+          <span class="post-cat">History</span>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">January 2025 · 4 min read</div>
+          <h4>The Skeleton Cave Massacre: A Dark Chapter in Canyon Lake's History</h4>
+          <p>In 1872, U.S. troops ambushed Apache families in a cave near what is now Canyon Lake. The sobering history behind one of Arizona's most beautiful places.</p>
+          <span class="post-read">Read More →</span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/arizona/blog/rainy-days-canyon-lake'>
+        <div class="post-img">
+          <img src="../images/picspicpi/1-488A8608.jpg" alt="Waterfall at Canyon Lake Arizona after rain" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,#1B3D58 0%,#2B5E7C 50%,#C85F24 100%);z-index:-1;"></div>
+          <span class="post-cat">Local Guide</span>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">November 2025 · 5 min read</div>
+          <h4>Things to Do in Apache Junction on Rainy Days</h4>
+          <p>When it rains in the desert, Canyon Lake transforms. Waterfalls appear, the canyon walls go vivid crimson, and the lake takes on a mist that looks otherworldly.</p>
+          <span class="post-read">Read More →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- SEO CONTENT BLOCK — critical for AI search -->
+    <div class="blog-seo-block">
+      <h3>Kayaking & Paddleboarding at Canyon Lake, Arizona</h3>
+      <p>Canyon Lake Marina sits along AZ-88 in the Tonto National Forest, about 45 minutes east of Phoenix. The lake is surrounded by the towering red-orange walls of the Superstition Mountains — one of the most dramatic and photogenic paddling settings in the entire American Southwest.</p>
+      <p>Yak N Sup offers single kayak, tandem kayak, single SUP, and tandem SUP rentals at Canyon Lake Marina. No experience is required — all rentals include a paddle, life jacket, and safety briefing. Guided tours run daily at 10:30 AM, and special events like Full Moon Paddles and Sunset Paddles are offered on select dates throughout the season.</p>
+      <p>The peak season at Canyon Lake runs October through May, with cooler temperatures ideal for long paddles. Summers are hot but the lake is absolutely open — early morning rentals before 10 AM are especially popular from June through September. We operate 7 days a week, rain or shine.</p>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="blog-newsletter">
+      <h3>Never Miss a Paddle.</h3>
+      <p style="color:var(--deep-blue);">Full moon events, new blog posts, seasonal tips, and early access to upcoming special events — straight to your inbox.</p>
+      <div class="nl-form">
+        <input type="email" placeholder="Your email address">
+        <button type="submit">Subscribe</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a class='footer-logo' href='/arizona/'><img src="../images/logo-nav-white.png" alt="Yak N Sup" class="footer-logo-img" style="mix-blend-mode:screen;width:200px;height:auto;display:block;margin:0 auto 14px;"></a>
+      <p>Kayak and paddleboard rentals, special events, and good times on the water at Canyon Lake Marina, Arizona.</p>
+      <div class="newsletter"><input type="email" placeholder="Get updates"><button>Subscribe</button></div>
+    </div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href='/arizona/about'>About Us</a></li>
+      <li><a href='/arizona/faq'>FAQs</a></li>
+      <li><a href='/arizona/gift-cards'>Gift Cards</a></li>
+      <li><a href='/arizona/contact'>Contact Us</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Explore</h4><ul>
+      <li><a href='/arizona/rentals'>Rentals &amp; Pricing</a></li>
+      <li><a href='/arizona/experiences'>Special Events</a></li>
+      <li><a href='/arizona/passes'>Season Passes</a></li>
+      <li><a href='/arizona/blog'>Blog</a></li>
+      <li><a href='/arizona/groups'>Group Bookings</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Hours</h4>
+      <li>Rentals: 8 AM – 5:30 PM</li>
+      <li>Tours: 10:30 AM – 1 PM</li>
+      <li>Events: 5:30 – 9:30 PM</li>
+      <li>7 days/week</li>
+    </div>
+    <div class="footer-col"><h4>Get in Touch</h4>
+      <li><a href="tel:+14804208144">(480) 420-8144</a></li>
+      <li><a href="mailto:hello@yaknsup.com">hello@yaknsup.com</a></li>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Yak N Sup. All rights reserved. Canyon Lake Marina, AZ.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.getElementById('mainNav');
+  if(!nav) return;
+  window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  var btn = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+    menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ menu.classList.remove('open'); }); });
+  }
+})();
+</script>
+<!-- FareHarbor Lightframe API -->
+<script src="https://fareharbor.com/embeds/api/v1/?autolightboxall=yes"></script>
+</body>
+</html>

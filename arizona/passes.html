@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Season Passes – Yak N Sup</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<style>
+.pass-page-hero { margin-top:108px;
+  background-color: var(--dark-warm);
+  background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url('../images/location-az.jpg');
+  background-size: cover; background-position: center 40%;
+  color:white; padding:80px 48px; text-align:center; position:relative; overflow:hidden; }
+.pass-page-hero h1 { color: white !important; }
+.pass-page-hero .sec-label { color: var(--gold) !important; }
+.pass-page-hero p { color: rgba(255,255,255,0.82) !important; }
+.pass-page-hero::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 60% 70% at 20% 50%, rgba(200,90,42,0.25) 0%, transparent 55%), radial-gradient(ellipse 50% 60% at 80% 50%, rgba(42,143,168,0.2) 0%, transparent 55%); }
+.pass-page-hero-inner { position:relative; z-index:1; max-width:640px; margin:0 auto; }
+.pass-page-hero h1 { font-family:'Sunday Romantic', serif; font-size:clamp(44px,7vw,80px); line-height:0.95; margin-bottom:16px; }
+.pass-page-hero p { font-size:18px; opacity:0.8; line-height:1.7; }
+
+.passes-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; max-width:1050px; margin:0 auto; }
+.pass-card { border-radius:24px; overflow:hidden; border:1px solid var(--border); background:white; display:flex; flex-direction:column; transition:transform 0.2s, box-shadow 0.2s; }
+.pass-card:hover { transform:translateY(-6px); box-shadow:0 20px 60px rgba(0,0,0,0.12); }
+.pass-card.featured { border-color:var(--orange); box-shadow:0 0 0 2px var(--orange); }
+.pass-header { padding:32px 28px 24px; background:var(--card); border-bottom:1px solid var(--border); text-align:center; }
+.pass-card.featured .pass-header { background:var(--orange); color:white; }
+.pass-badge { display:inline-block; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:5px 14px; border-radius:100px; margin-bottom:12px; }
+.pass-card:not(.featured) .pass-badge { background:var(--orange-pale); color:var(--orange); }
+.pass-card.featured .pass-badge { background:rgba(255,255,255,0.2); color:white; }
+.pass-name { font-family:'Sunday Romantic', serif; font-size:28px; margin-bottom:8px; }
+.pass-price { font-family:'Sunday Romantic', serif; font-size:52px; line-height:1; }
+.pass-price-sub { font-size:14px; opacity:0.65; margin-top:4px; }
+.pass-body { padding:28px; flex:1; display:flex; flex-direction:column; }
+.pass-features { list-style:none; margin-bottom:28px; flex:1; }
+.pass-features li { padding:10px 0; border-bottom:1px solid var(--border); display:flex; align-items:flex-start; gap:10px; font-size:15px; color:var(--mid); line-height:1.5; }
+.pass-features li:last-child { border:none; }
+.pass-features li::before { content:'&#10003;'; color:var(--orange); font-weight:800; flex-shrink:0; margin-top:1px; }
+.pass-card.featured .pass-features li::before { color:var(--orange); }
+.pass-cta { width:100%; text-align:center; display:block; }
+
+.compare-section { background:var(--tan); }
+.compare-table { width:100%; max-width:900px; margin:0 auto; border-collapse:collapse; background:white; border-radius:20px; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,0.06); }
+.compare-table th { background:var(--dark-warm); color:white; padding:16px 20px; font-family:'Sunday Romantic', serif; font-size:17px; font-weight:400; text-align:center; }
+.compare-table th:first-child { text-align:left; }
+.compare-table td { padding:14px 20px; border-bottom:1px solid var(--border); font-size:14px; text-align:center; color:var(--mid); }
+.compare-table td:first-child { text-align:left; font-weight:500; color:var(--deep-blue); }
+.compare-table tr:last-child td { border:none; }
+.compare-table tr:hover td { background:var(--card); }
+.check { color:#2D6EA3; font-size:18px; }
+.cross { color:#aaa; font-size:16px; }
+
+.pass-faq { background:var(--card); }
+.pass-faq-wrap { max-width:680px; margin:0 auto; }
+.faq-item { border-bottom:1px solid var(--border); }
+.faq-q { width:100%; text-align:left; background:none; border:none; padding:20px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; font-family:'Lato',sans-serif; font-size:15px; font-weight:600; color:var(--deep-blue); }
+.faq-q:hover { color:var(--orange); }
+.faq-icon { font-size:20px; color:var(--orange); flex-shrink:0; transition:transform 0.3s; }
+.faq-item.open .faq-icon { transform:rotate(45deg); }
+.faq-a { max-height:0; overflow:hidden; transition:max-height 0.35s ease, padding 0.3s; font-size:14px; color:var(--mid); line-height:1.75; }
+.faq-item.open .faq-a { max-height:300px; padding-bottom:18px; }
+
+@media (max-width:960px) {
+  .pass-page-hero { padding:56px 20px; }
+  .passes-grid { grid-template-columns:1fr; max-width:440px; }
+  .compare-table { font-size:12px; }
+  .compare-table th, .compare-table td { padding:12px; }
+}
+@font-face { font-family: 'Sunday Romantic'; src: url('../fonts/SundayRomantic.otf') format('opentype'); font-weight: normal; font-style: normal; font-display: swap; }
+.section-tag {
+  font-family: 'Oswald', sans-serif; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase; font-size: 12px;
+  color: var(--orange); display: block; margin-bottom: 8px;
+}
+/* Blue accents */
+.pass-card { border-top: 4px solid var(--deep-blue) !important; }
+.pass-card.featured { border-top-color: var(--orange) !important; }
+.pass-header { background: var(--cream) !important; }
+.pass-card.featured .pass-header { background: var(--deep-blue) !important; }
+.pass-badge { background: rgba(43,94,124,0.15); color: var(--deep-blue); }
+.pass-card.featured .pass-badge { background: rgba(255,255,255,0.2); color: white; }
+.pass-price { color: var(--deep-blue) !important; }
+.pass-card.featured .pass-price { color: white !important; }
+.compare-table th { background: var(--deep-blue) !important; }
+.check { color: var(--heritage) !important; }
+.pass-features li::before { content: "✓"; color: var(--heritage); font-weight: 700; display: inline; margin-right: 8px; }
+
+/* -- LOCATION BAR -- */
+.loc-bar {
+  position: fixed; top: 72px; left: 0; right: 0; z-index: 99;
+  height: 36px; padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: Oswald, sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+.loc-bar-az { background: var(--orange) !important; color: white !important; transition: none !important; }
+.loc-bar-pin { display: flex; align-items: center; gap: 6px; }
+.loc-bar-switch {
+  display: flex; align-items: center; gap: 6px;
+  color: inherit; text-decoration: none; opacity: 0.7; transition: opacity 0.2s;
+}
+.loc-bar-switch:hover { opacity: 1; }
+.page-hero, .exp-hero, .page-hero-sm { margin-top: 108px !important; }
+</style>
+</head>
+<body>
+<!-- LOCATION BAR -->
+<div class="loc-bar loc-bar-az">
+  <span class="loc-bar-pin">
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+    Canyon Lake, Arizona
+  </span>
+  <a class='loc-bar-switch' href='/'>
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+    Switch Location
+  </a>
+</div>
+
+
+<nav id="mainNav">
+  <a class='nav-logo' href='/arizona/' style='position:relative;display:inline-block;'>
+    <img src="../images/logo-nav-black.png" alt="Yak N Sup" class="nav-logo-img" style="height:46px;display:block;">
+  </a>
+  <ul class="nav-links">
+    
+    <li><a href='/arizona/rentals'>Rentals</a></li>
+    <li class="nav-dropdown">
+      <a href='/arizona/experiences'>Special Events</a>
+      <div class="dropdown-menu">
+        <a href='/arizona/experiences#guided'>Guided Canyon Tours</a>
+        <a href='/arizona/experiences#moonlight'>Full Moon Paddle</a>
+        <a href='/arizona/experiences#sunset'>Sunset Paddle</a>
+        <div class="dropdown-divider"></div>
+        <a href='/arizona/experiences'>Full Calendar →</a>
+      </div>
+    </li>
+    <li><a href='/arizona/groups'>Groups</a></li>
+    <li><a href='/arizona/about'>About</a></li>
+    <li><a href='/arizona/blog'>Blog</a></li>
+    <li><a href='/arizona/faq'>FAQs</a></li>
+    <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-book">Book Now</a>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href='/locations/canyon-lake'>Canyon Lake Marina, AZ</a>
+  <a href='/arizona/rentals'>Rentals &amp; Pricing</a>
+  <a href='/arizona/experiences'>Special Events</a>
+  <a href='/arizona/groups'>For Groups</a>
+  <a href='/arizona/about'>About Us</a>
+  <a href='/arizona/blog'>Blog</a>
+  <a href='/arizona/faq'>FAQs</a>
+  <a href='/arizona/gift-cards'>Gift Cards</a>
+  <a href='/arizona/contact'>Contact</a>
+  <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="m-book">Book Now</a>
+</div>
+
+<div class="pass-page-hero">
+  <div class="pass-page-hero-inner">
+    <span class="section-tag" style="color:var(--orange);">Season Passes</span>
+    <h1>Unlimited<br><span class="gold">Adventure</span></h1>
+    <p>Your all-access pass to the water — valid at both Canyon Lake Marina, AZ. Go as much as you want, all season long.</p>
+  </div>
+</div>
+
+<section style="background:white;">
+  <div class="center">
+    <span class="section-tag">Choose Your Pass</span>
+    <h2>Find the Right Fit</h2>
+    <p class="section-sub" style="margin:0 auto 48px;">The more you paddle, the more you save. Valid at Canyon Lake Marina, AZ — more locations coming soon.</p>
+  </div>
+  <div class="passes-grid">
+
+    <div class="pass-card">
+      <div class="pass-header">
+        <span class="pass-badge">Starter</span>
+        <div class="pass-name">Day Tripper</div>
+        <div class="pass-price">$199</div>
+        <div class="pass-price-sub">per season</div>
+      </div>
+      <div class="pass-body">
+        <ul class="pass-features">
+          <li>10 single kayak or SUP day rentals (2 hrs each)</li>
+          <li>Valid at Canyon Lake Marina, AZ · More locations coming soon</li>
+          <li>10% off all special events</li>
+          <li>Early access to event announcements</li>
+          <li>No blackout dates</li>
+        </ul>
+        <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-outline-blue pass-cta">Get Day Tripper Pass</a>
+      </div>
+    </div>
+
+    <div class="pass-card featured">
+      <div class="pass-header">
+        <span class="pass-badge">Most Popular</span>
+        <div class="pass-name">Season Pass</div>
+        <div class="pass-price">$299</div>
+        <div class="pass-price-sub">per season</div>
+      </div>
+      <div class="pass-body">
+        <ul class="pass-features">
+          <li>Unlimited single kayak & SUP rentals</li>
+          <li>Valid at Canyon Lake Marina, AZ · More locations coming soon</li>
+          <li>20% off all special events & events</li>
+          <li>Priority booking on full moon paddles</li>
+          <li>Member-only events & early access</li>
+          <li>15% off renewal next season</li>
+        </ul>
+        <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-primary pass-cta">Get Season Pass</a>
+      </div>
+    </div>
+
+    <div class="pass-card">
+      <div class="pass-header">
+        <span class="pass-badge">Premium</span>
+        <div class="pass-name">All Access</div>
+        <div class="pass-price">$449</div>
+        <div class="pass-price-sub">per season</div>
+      </div>
+      <div class="pass-body">
+        <ul class="pass-features">
+          <li>Unlimited rentals — any craft, any duration</li>
+          <li>Includes tandem kayaks & fishing kayaks</li>
+          <li>30% off all special events & events</li>
+          <li>2 included guided tour tickets per season</li>
+          <li>Priority booking on all events</li>
+          <li>Transferable — share with a family member</li>
+          <li>15% off renewal next season</li>
+        </ul>
+        <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-outline-blue pass-cta">Get All Access Pass</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="compare-section">
+  <div class="center">
+    <span class="section-tag">Compare</span>
+    <h2>Side by Side</h2>
+    <p class="section-sub" style="margin:0 auto 48px;">Not sure which pass is right for you? Here's the full breakdown.</p>
+  </div>
+  <div style="overflow-x:auto;">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Day Tripper<br><span style="font-family:Inter;font-size:13px;font-weight:400;">$199</span></th>
+          <th>Season Pass<br><span style="font-family:Inter;font-size:13px;font-weight:400;">$299</span></th>
+          <th>All Access<br><span style="font-family:Inter;font-size:13px;font-weight:400;">$449</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Single Kayak & SUP</td><td>10 rentals</td><td class="check">&#10003; Unlimited</td><td class="check">&#10003; Unlimited</td></tr>
+        <tr><td>Tandem Kayak</td><td class="cross">&#10007;</td><td class="cross">&#10007;</td><td class="check">&#10003; Unlimited</td></tr>
+        <tr><td>Fishing Kayaks</td><td class="cross">&#10007;</td><td class="cross">&#10007;</td><td class="check">&#10003; Unlimited</td></tr>
+        <tr><td>Valid at Canyon Lake Marina, AZ</td><td class="check">&#10003;</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+        <tr><td>Discount on Special Events</td><td>10% off</td><td>20% off</td><td>30% off</td></tr>
+        <tr><td>Included Tour Tickets</td><td class="cross">&#10007;</td><td class="cross">&#10007;</td><td>2 per season</td></tr>
+        <tr><td>Priority Booking</td><td class="cross">&#10007;</td><td>Full Moon only</td><td class="check">&#10003; All events</td></tr>
+        <tr><td>Member-Only Events</td><td class="cross">&#10007;</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+        <tr><td>Transferable to Family</td><td class="cross">&#10007;</td><td class="cross">&#10007;</td><td class="check">&#10003;</td></tr>
+        <tr><td>Renewal Discount</td><td class="cross">&#10007;</td><td>15% off</td><td>15% off</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- PASS FAQ -->
+<section class="pass-faq">
+  <div class="center">
+    <span class="section-tag">Questions</span>
+    <h2>Pass FAQs</h2>
+    <p class="section-sub" style="margin:0 auto 40px;">Everything you need to know before you buy.</p>
+  </div>
+  <div class="pass-faq-wrap">
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">When does the season pass expire? <span class="faq-icon">+</span></button><div class="faq-a">Canyon Lake peak season runs October through May, though we operate year-round weather permitting. Your pass is valid for the full season from purchase date. Exact dates are confirmed at purchase.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Will my pass be valid at future locations? <span class="faq-icon">+</span></button><div class="faq-a">We're growing and more locations are coming soon. We'll communicate pass validity at new locations to all current pass holders when the time comes — stay tuned.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is the pass transferable? <span class="faq-icon">+</span></button><div class="faq-a">The Day Tripper and Season Pass are non-transferable and tied to one person. The All Access pass can be shared with one family member who lives in the same household.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do I still need to book in advance with a pass? <span class="faq-icon">+</span></button><div class="faq-a">Yes — we recommend booking online even as a pass holder to guarantee your spot, especially on weekends. Season Pass and All Access holders get priority booking on select events.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can I buy a pass as a gift? <span class="faq-icon">+</span></button><div class="faq-a">Absolutely. You can purchase a pass as a gift and we'll send a gift certificate the recipient can redeem online. Alternatively, check out our gift cards which can be used toward any purchase.</div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a class='footer-logo' href='/arizona/'><img src="../images/logo-nav-white.png" alt="Yak N Sup" class="footer-logo-img" style="mix-blend-mode:screen;width:200px;height:auto;display:block;margin:0 auto 14px;"></a>
+      <p>Kayak and paddleboard rentals, special events, and good times on the water at Canyon Lake Marina, Arizona.</p>
+      <div class="newsletter"><input type="email" placeholder="Get updates & deals"><button>Subscribe</button></div>
+    </div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href='/arizona/about'>About Us</a></li><li><a href='/arizona/blog'>Blog</a></li><li><a href='/arizona/faq'>FAQs</a></li><li><a href='/arizona/gift-cards'>Gift Cards</a></li><li><a href='/arizona/contact'>Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Explore</h4><ul>
+      <li><a href='/locations/canyon-lake'>Canyon Lake Marina, AZ</a></li>
+      <li><a href='/arizona/rentals'>Rentals & Pricing</a></li>
+      <li><a href='/arizona/experiences'>Special Events</a></li>
+      <li><a href='/arizona/passes'>Season Passes</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@yaknsup.com">hello@yaknsup.com</a></li><li><a href="tel:+14804208144">(480) 420-8144</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Yak N Sup. All rights reserved.</p><div class="social-links" style="display:flex;gap:16px;font-size:13px;opacity:0.75;"><a href="https://instagram.com/Yaknsupaz" style="color:inherit;text-decoration:none;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" style="display:inline-block;vertical-align:middle"><title>Instagram</title><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="https://tiktok.com/@Yaknsupaz" style="color:inherit;text-decoration:none;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><title>TikTok</title><path d="M14 3c.3 2.4 1.9 4.3 4.5 4.6v3c-1.7 0-3.2-.5-4.5-1.4v6.1a5.6 5.6 0 1 1-5.6-5.6c.3 0 .7 0 1 .1v3.1a2.6 2.6 0 1 0 1.6 2.4V3H14Z"/></svg></a><a href="https://facebook.com/Yaknsupaz" style="color:inherit;text-decoration:none;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><title>Facebook</title><path d="M15 8h-2a2 2 0 0 0-2 2v11M8 13h6"/></svg></a><span style="opacity:0.5;">@Yaknsupaz</span></div></div>
+</footer>
+<script>function toggleFaq(btn){const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');}</script>
+<script>
+(function(){
+  var nav = document.getElementById('mainNav');
+  if(!nav) return;
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, {passive:true});
+  var btn = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ menu.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+<!-- FareHarbor Lightframe API -->
+<script src="https://fareharbor.com/embeds/api/v1/?autolightboxall=yes"></script>
+</body>
+</html>

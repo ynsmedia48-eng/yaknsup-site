@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yak N Sup – Kayak & Paddleboard Rentals | Arizona & Texas</title>
+<meta name="description" content="Yak N Sup offers kayak and paddleboard rentals at Canyon Lake Marina, AZ and Hidden Cove Marina on Lake Lewisville, TX. Choose your location and book today.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yak N Sup – Kayak & Paddleboard Rentals | Arizona & Texas">
+<meta property="og:description" content="Yak N Sup offers kayak and paddleboard rentals at two locations — Canyon Lake, Arizona and Lake Lewisville, Texas. Choose your adventure.">
+<meta property="og:image" content="https://yaknsup.com/images/picspicpi/488A0802.jpg">
+<meta property="og:url" content="https://yaknsup.com/">
+<link rel="canonical" href="https://yaknsup.com/">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: 'Sunday Romantic';
+  src: url('fonts/SundayRomantic.otf') format('opentype');
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --deep-blue: #1B3D58;
+  --orange: #C85F24;
+  --gold: #D4A53C;
+  --dark: #0E0C07;
+}
+
+html, body {
+  width: 100%; height: 100%;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+  background: var(--dark);
+}
+
+/* ─── GRAIN OVERLAY ─────────────────────── */
+body::after {
+  content: '';
+  position: fixed; inset: 0; z-index: 200;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.08'/%3E%3C/svg%3E");
+  background-size: 300px 300px;
+  mix-blend-mode: overlay;
+}
+
+/* ─── LOGO ───────────────────────────────── */
+.center-logo {
+  position: fixed;
+  top: 36px; left: 50%; transform: translateX(-50%);
+  z-index: 150;
+  display: flex; flex-direction: column; align-items: center; gap: 0;
+  pointer-events: none;
+  animation: logoIn 1.2s cubic-bezier(0.16,1,0.3,1) both;
+  animation-delay: 0.6s;
+}
+.center-logo img {
+  height: 48px;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+  drop-shadow: 0 2px 20px rgba(0,0,0,0.6);
+}
+@keyframes logoIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(-12px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ─── SPLIT WRAPPER ──────────────────────── */
+.split {
+  display: flex;
+  width: 100vw; height: 100vh;
+}
+
+/* ─── SIDES ──────────────────────────────── */
+.side {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  flex: 1;
+  transition: flex 0.7s cubic-bezier(0.76,0,0.24,1);
+}
+
+.split:has(.side-az:hover) .side-az { flex: 1.7; }
+.split:has(.side-az:hover) .side-tx { flex: 0.6; }
+.split:has(.side-tx:hover) .side-tx { flex: 1.7; }
+.split:has(.side-tx:hover) .side-az { flex: 0.6; }
+
+/* ─── BACKGROUNDS ────────────────────────── */
+.side-bg {
+  position: absolute; inset: -4%;
+  transition: transform 0.8s cubic-bezier(0.76,0,0.24,1);
+  will-change: transform;
+}
+.side:hover .side-bg { transform: scale(1.04); }
+
+/* AZ — photo */
+.side-az .side-bg {
+  background:
+    linear-gradient(155deg,
+      rgba(10,18,30,0.72) 0%,
+      rgba(18,50,90,0.45) 35%,
+      rgba(14,12,7,0.85) 100%),
+    url('images/location-az.jpg') center/cover no-repeat;
+}
+
+/* TX — cinematic sunset gradient, no photo needed */
+.side-tx .side-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 20%, rgba(212,165,60,0.35) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 80% at 30% 80%, rgba(200,95,36,0.4) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 80% 60%, rgba(180,60,12,0.3) 0%, transparent 50%),
+    linear-gradient(175deg,
+      #0A0805 0%,
+      #160C06 18%,
+      #2A1008 36%,
+      #4A1E08 52%,
+      #7A3210 64%,
+      #B04A18 76%,
+      #C86024 86%,
+      #D4943C 100%
+    );
+  animation: txPulse 8s ease-in-out infinite alternate;
+}
+@keyframes txPulse {
+  0%   { filter: brightness(0.92) saturate(1.0); }
+  100% { filter: brightness(1.08) saturate(1.15); }
+}
+
+/* ─── ATMOSPHERIC EFFECTS ────────────────── */
+/* AZ — cool blue vignette edge */
+.side-az::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    radial-gradient(ellipse 120% 120% at 100% 50%, transparent 40%, rgba(8,18,32,0.7) 100%),
+    linear-gradient(to bottom, rgba(8,16,28,0.4) 0%, transparent 30%, transparent 60%, rgba(8,16,28,0.7) 100%);
+  pointer-events: none;
+  transition: opacity 0.6s;
+}
+.side-az:hover::before { opacity: 0.6; }
+
+/* TX — warm glow vignette */
+.side-tx::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    radial-gradient(ellipse 120% 120% at 0% 50%, transparent 40%, rgba(10,5,2,0.75) 100%),
+    linear-gradient(to bottom, rgba(10,5,2,0.5) 0%, transparent 30%, transparent 60%, rgba(10,5,2,0.75) 100%);
+  pointer-events: none;
+  transition: opacity 0.6s;
+}
+.side-tx:hover::before { opacity: 0.6; }
+
+/* ─── DIVIDER ────────────────────────────── */
+.divider {
+  position: absolute; top: 0; right: 0; bottom: 0;
+  width: 1px; z-index: 10;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255,255,255,0.12) 20%,
+    rgba(255,255,255,0.22) 50%,
+    rgba(255,255,255,0.12) 80%,
+    transparent 100%
+  );
+  transition: opacity 0.4s;
+}
+.split:hover .divider { opacity: 0.4; }
+
+/* ─── HUGE STATE NAME ────────────────────── */
+.side-big-state {
+  position: absolute; z-index: 6;
+  left: 0; right: 0;
+  top: 14%;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(64px, 12vw, 160px);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1;
+  pointer-events: none;
+  transition: transform 0.7s cubic-bezier(0.16,1,0.3,1), opacity 0.5s;
+  animation: fadeUp 1.1s cubic-bezier(0.16,1,0.3,1) both;
+  animation-delay: 0.8s;
+}
+.side:hover .side-big-state { transform: translateY(-6px); }
+
+.side-az .side-big-state {
+  color: rgba(255,255,255,0.82);
+  text-shadow:
+    0 2px 0 rgba(0,0,0,0.15),
+    0 0 80px rgba(140,190,220,0.3),
+    0 0 160px rgba(100,160,200,0.15);
+}
+.side-tx .side-big-state {
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255,200,140,0.55);
+  text-stroke: 2px rgba(255,200,140,0.55);
+  text-shadow: 0 0 120px rgba(212,165,60,0.35);
+}
+.side-tx:hover .side-big-state {
+  color: rgba(253,234,200,0.85);
+  -webkit-text-stroke: 0px transparent;
+  text-shadow:
+    0 2px 0 rgba(0,0,0,0.2),
+    0 0 80px rgba(200,95,36,0.4);
+}
+
+/* ─── CONTENT ────────────────────────────── */
+.side-content {
+  position: absolute; inset: 0; z-index: 5;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: flex-end;
+  padding: 80px 40px 80px;
+  text-align: center;
+}
+
+/* ─── STATE LABEL ────────────────────────── */
+.side-state {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+  transition: opacity 0.4s;
+  animation: fadeUp 1s cubic-bezier(0.16,1,0.3,1) both;
+  animation-delay: 1.0s;
+}
+.side:hover .side-state { opacity: 1; }
+.side-state-line {
+  height: 1px; width: 32px;
+  background: rgba(255,255,255,0.35);
+  transition: width 0.5s cubic-bezier(0.16,1,0.3,1);
+}
+.side:hover .side-state-line { width: 48px; }
+.side-state-text {
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 5px; text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
+  white-space: nowrap;
+}
+
+/* ─── MAIN NAME ──────────────────────────── */
+.side-name {
+  font-family: 'Sunday Romantic', serif;
+  font-size: clamp(52px, 6.5vw, 88px);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  color: white;
+  margin-bottom: 0;
+  transition: all 0.5s cubic-bezier(0.16,1,0.3,1);
+  text-shadow: 0 2px 40px rgba(0,0,0,0.5);
+  animation: fadeUp 1s cubic-bezier(0.16,1,0.3,1) both;
+  animation-delay: 1.1s;
+}
+.side-az .side-name { color: white; }
+.side-tx .side-name { color: #FDEAC8; }
+.side:hover .side-name {
+  transform: translateY(-4px);
+  text-shadow: 0 4px 60px rgba(0,0,0,0.4);
+}
+
+/* ─── LOCATION SUBLABEL ──────────────────── */
+.side-loc {
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 3.5px; text-transform: uppercase;
+  margin-top: 14px; margin-bottom: 28px;
+  transition: opacity 0.4s, transform 0.5s;
+  animation: fadeUp 1s cubic-bezier(0.16,1,0.3,1) both;
+  animation-delay: 1.2s;
+}
+.side-az .side-loc { color: rgba(138,180,198,0.85); }
+.side-tx .side-loc { color: rgba(212,165,60,0.9); }
+
+/* ─── REVEAL BLOCK — hidden until hover ─── */
+.side-reveal {
+  display: flex; flex-direction: column; align-items: center;
+  max-width: 280px;
+  opacity: 0; transform: translateY(14px);
+  transition: opacity 0.45s cubic-bezier(0.16,1,0.3,1), transform 0.45s cubic-bezier(0.16,1,0.3,1);
+  pointer-events: none;
+}
+.side:hover .side-reveal {
+  opacity: 1; transform: translateY(0);
+  pointer-events: auto;
+}
+
+.side-desc {
+  font-size: 14px; line-height: 1.75;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+/* ─── CTA ────────────────────────────────── */
+.side-cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 30px; border-radius: 100px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  transition: all 0.25s;
+  white-space: nowrap;
+}
+.side-az .side-cta {
+  background: white; color: var(--deep-blue);
+  border: 2px solid white;
+}
+.side-az:hover .side-cta:hover {
+  background: transparent; color: white;
+}
+.side-tx .side-cta {
+  background: var(--orange); color: white;
+  border: 2px solid var(--orange);
+  box-shadow: 0 0 32px rgba(200,95,36,0.45);
+}
+.side-tx:hover .side-cta:hover {
+  background: #DC6F30; border-color: #DC6F30;
+}
+
+.cta-arrow {
+  width: 14px; height: 14px;
+  stroke: currentColor; fill: none;
+  stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.side-cta:hover .cta-arrow { transform: translateX(4px); }
+
+/* ─── STATUS BADGES ──────────────────────── */
+.side-badge {
+  position: absolute; top: 48px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 8;
+  font-family: 'Oswald', sans-serif;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  padding: 6px 16px; border-radius: 100px;
+  white-space: nowrap;
+  animation: fadeDown 1s cubic-bezier(0.16,1,0.3,1) both;
+  animation-delay: 1.4s;
+}
+.badge-open {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.8);
+  backdrop-filter: blur(8px);
+}
+.badge-dot {
+  display: inline-block; width: 6px; height: 6px;
+  background: #4ade80; border-radius: 50%;
+  margin-right: 7px; vertical-align: middle;
+  box-shadow: 0 0 8px rgba(74,222,128,0.8);
+  animation: blink 2s ease-in-out infinite;
+}
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.badge-soon {
+  background: rgba(200,95,36,0.25);
+  border: 1px solid rgba(200,95,36,0.45);
+  color: rgba(255,200,140,0.95);
+  backdrop-filter: blur(8px);
+}
+
+/* ─── BOTTOM SCROLL HINT ─────────────────── */
+.pick-hint {
+  position: fixed; bottom: 28px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  font-family: 'Oswald', sans-serif;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  white-space: nowrap;
+  pointer-events: none;
+  animation: fadeUp 1s both;
+  animation-delay: 2s;
+  transition: opacity 0.4s;
+}
+.split:hover ~ .pick-hint { opacity: 0; }
+
+/* ─── WATER SHIMMER (AZ side bottom) ─────── */
+.water-shimmer {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 120px; z-index: 2; pointer-events: none;
+  background: linear-gradient(to top, rgba(20,60,100,0.4) 0%, transparent 100%);
+  overflow: hidden;
+}
+.water-shimmer::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    rgba(138,180,198,0.06) 2px,
+    transparent 4px,
+    transparent 40px
+  );
+  animation: shimmerMove 4s linear infinite;
+}
+@keyframes shimmerMove {
+  from { transform: translateX(0); }
+  to   { transform: translateX(40px); }
+}
+
+/* ─── LOAD ANIMATIONS ────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+.side-az {
+  animation: slideInLeft 1.1s cubic-bezier(0.16,1,0.3,1) both;
+  animation-delay: 0.1s;
+}
+.side-tx {
+  animation: slideInRight 1.1s cubic-bezier(0.16,1,0.3,1) both;
+  animation-delay: 0.2s;
+}
+@keyframes slideInLeft {
+  from { clip-path: inset(0 100% 0 0); opacity: 0.4; }
+  to   { clip-path: inset(0 0% 0 0); opacity: 1; }
+}
+@keyframes slideInRight {
+  from { clip-path: inset(0 0 0 100%); opacity: 0.4; }
+  to   { clip-path: inset(0 0 0 0%); opacity: 1; }
+}
+
+/* ─── MOBILE (mobile-first stacked layout) ─── */
+@media (max-width: 700px) {
+  html, body { overflow: visible; height: auto; }
+
+  /* Logo scrolls with the page instead of floating over content */
+  .center-logo { position: absolute; top: 26px; }
+  .center-logo img { height: 34px; }
+
+  .split { flex-direction: column; height: auto; min-height: 0; }
+
+  /* Each panel grows to fit its content and stacks it in normal flow */
+  .side {
+    flex: none !important;
+    height: auto;
+    min-height: 86vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 92px 26px 62px;
+  }
+  .side-az, .side-tx { animation: none; clip-path: none; opacity: 1; }
+
+  /* Badge: in flow at the top of the stack (was absolute) */
+  .side-badge {
+    position: relative;
+    top: auto; left: auto; transform: none;
+    animation: none;
+    margin-bottom: 20px;
+  }
+
+  /* Giant state name: in flow, sized down, sits above the script name */
+  .side-big-state {
+    position: relative;
+    top: auto; left: auto; right: auto; transform: none;
+    animation: none;
+    font-size: clamp(40px, 13vw, 66px);
+    margin-bottom: 2px;
+  }
+  .side:hover .side-big-state { transform: none; }
+
+  /* Content: normal flow, no absolute overlap */
+  .side-content {
+    position: relative;
+    inset: auto;
+    padding: 0;
+    justify-content: center;
+  }
+  .side-name { font-size: clamp(40px, 12vw, 58px); }
+  .side:hover .side-name { transform: none; }
+  .side-loc { margin-top: 12px; margin-bottom: 22px; }
+
+  /* CTA + description always visible (no hover on touch) */
+  .side-reveal { opacity: 1; transform: none; pointer-events: auto; max-width: 320px; }
+  .side-desc { font-size: 14px; }
+
+  .pick-hint { display: none; }
+  .water-shimmer { display: none; }
+}
+
+/* ─── :has() FALLBACK (Safari < 15.4) ─────── */
+@supports not (selector(:has(a))) {
+  .side:hover { flex: 1.7; }
+  .side { transition: flex 0.7s cubic-bezier(0.76,0,0.24,1); }
+}
+</style>
+</head>
+<body>
+
+<!-- LOGO -->
+<div class="center-logo">
+  <img src="images/logo-nav-white.png" alt="Yak N Sup"
+       onerror="this.src='images/logo-nav-black.png'">
+</div>
+
+<!-- SPLIT SCREEN -->
+<div class="split" id="split">
+
+  <!-- ── ARIZONA ── -->
+  <a class='side side-az' href='/arizona/'>
+    <div class="side-bg"></div>
+    <div class="divider"></div>
+    <div class="water-shimmer"></div>
+
+    <span class="side-badge badge-open">
+      <span class="badge-dot"></span>Open Now
+    </span>
+
+    <div class="side-big-state">Arizona</div>
+
+    <div class="side-content">
+      <h2 class="side-name">Canyon Lake</h2>
+      <p class="side-loc">Canyon Lake Marina · AZ</p>
+      <div class="side-reveal">
+        <p class="side-desc">Kayak rentals, guided canyon tours, full moon paddles, SUPs, and fishing kayaks on one of the most dramatic lakes in the Southwest.</p>
+        <span class="side-cta">
+          Enter Arizona
+          <svg class="cta-arrow" viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </a>
+
+  <!-- ── TEXAS ── -->
+  <a class='side side-tx' href='/texas/'>
+    <div class="side-bg"></div>
+
+    <span class="side-badge badge-open"><span class="badge-dot"></span>Open Now</span>
+
+    <div class="side-big-state">Texas</div>
+
+    <div class="side-content">
+      <h2 class="side-name">Hidden Cove</h2>
+      <p class="side-loc">Lake Lewisville · TX</p>
+      <div class="side-reveal">
+        <p class="side-desc">Rentals, sunset paddles, and lake days on Lake Lewisville. Now open at Hidden Cove — show up, paddle, enjoy.</p>
+        <span class="side-cta">
+          Enter Texas
+          <svg class="cta-arrow" viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+<p class="pick-hint">Hover to explore &nbsp;·&nbsp; Click to enter</p>
+
+<script>
+// Fallback for browsers without :has() support
+(function(){
+  var split = document.getElementById('split');
+  var az = split.querySelector('.side-az');
+  var tx = split.querySelector('.side-tx');
+  if (!CSS.supports('selector(:has(a))')) {
+    az.addEventListener('mouseenter', function(){ az.style.flex='1.7'; tx.style.flex='0.6'; });
+    az.addEventListener('mouseleave', function(){ az.style.flex=''; tx.style.flex=''; });
+    tx.addEventListener('mouseenter', function(){ tx.style.flex='1.7'; az.style.flex='0.6'; });
+    tx.addEventListener('mouseleave', function(){ tx.style.flex=''; az.style.flex=''; });
+  }
+})();
+</script>
+<!-- FareHarbor Lightframe API -->
+<script src="https://fareharbor.com/embeds/api/v1/?autolightboxall=yes"></script>
+</body>
+</html>

@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yak N Sup – Lake Days Done Right | Canyon Lake, Arizona</title>
+<meta name="description" content="Kayak and paddleboard rentals at Canyon Lake Marina, Arizona. No experience needed — show up, paddle, enjoy. Book online today near Mesa and Phoenix.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yak N Sup – Kayak & SUP Rentals | Canyon Lake, Arizona">
+<meta property="og:description" content="Kayak and paddleboard rentals at Canyon Lake Marina, Arizona. No experience needed — show up, paddle, enjoy. Near Mesa and Phoenix.">
+<meta property="og:image" content="https://yaknsup.com/images/picspicpi/R6__9521.jpg">
+<meta property="og:url" content="https://yaknsup.com/arizona/">
+<link rel="canonical" href="https://yaknsup.com/arizona/">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: 'Sunday Romantic';
+  src: url('../fonts/SundayRomantic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* -- LOCATION BAR -- */
+.loc-bar {
+  position: fixed; top: 72px; left: 0; right: 0; z-index: 99;
+  height: 36px; padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: Oswald, sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+.loc-bar-az { background: var(--orange) !important; color: white !important; transition: none !important; }
+.loc-bar-az .loc-bar-switch { color: white !important; opacity: 0.85; }
+.loc-bar-az .loc-bar-switch:hover { opacity: 1; }
+.loc-bar-az svg { stroke: white !important; }
+.loc-bar-pin { display: flex; align-items: center; gap: 6px; }
+.loc-bar-switch {
+  display: flex; align-items: center; gap: 6px;
+  color: inherit; text-decoration: none; opacity: 0.7; transition: opacity 0.2s;
+}
+.loc-bar-switch:hover { opacity: 1; }
+.page-hero, .exp-hero, .page-hero-sm { margin-top: 108px !important; }
+</style>
+<style>
+/* ─── RESET & BRAND VARS ─────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  /* Deep blue — text, icons, stamps only. Never a section fill. */
+  --deep-blue:#1B3D58;
+  --heritage:#2A5E7C;
+  /* Sky kept for tiny accents only — not section backgrounds */
+  --sky:#8AB4C6;
+  --sky-dk:#6A9DB2;
+
+  /* Burnt orange — primary CTAs and accents */
+  --orange:#C85F24;
+  --orange-lt:#DC6F30;
+  --orange-pale:#F2D8C8;   /* very light peachy section bg */
+
+  /* Gold — warm accents and highlight sections */
+  --gold:#D4A53C;
+  --gold-pale:#F0E4B0;
+
+  /* ── WARM SECTION FILLS ─────────────────
+     These replace sky blue in all section
+     backgrounds. Feels like aged canvas,
+     sun-faded parchment, vintage print.
+  ─────────────────────────────────────── */
+  --tan:#D8C9AC;           /* warm tan — main strip color, like canvas */
+  --tan-lt:#E4D8BC;        /* lighter tan for alternating sections */
+  --parchment:#EDE0C4;
+  --denim:#8CBDD8;        /* muted vintage denim blue — faded signage, not digital */
+
+  /* Base creams */
+  --cream:#F5F2EB;
+  --cream-dk:#EAE4D4;
+  --text:#1A1C14;
+  --mid:#52503C;
+  --border:#CEC09A;
+  --card:#FDFAF4;
+  --dark-warm:#1C1A0E;
+}
+
+/* ─── REDUCED MOTION SUPPORT ─────────── */
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;}
+  .reveal,.card-reveal{opacity:1!important;transform:none!important;}
+}
+
+html{scroll-behavior:smooth;}
+body{font-family:'Lato',sans-serif;color:var(--text);background:var(--cream);line-height:1.6;overflow-x:hidden;}
+
+/* ─── CUSTOM SVG ICONS ───────────────── */
+.icon{
+  display:inline-block;width:24px;height:24px;
+  stroke:currentColor;fill:none;
+  stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;
+  vertical-align:middle;flex-shrink:0;
+}
+.icon-sm{width:18px;height:18px;}
+.icon-lg{width:32px;height:32px;stroke-width:1.6;}
+/* Icon colors */
+.icon-blue{color:var(--deep-blue);}
+.icon-orange{color:var(--orange);}
+.icon-gold{color:var(--gold);}
+.icon-white{color:white;}
+.icon-cream{color:var(--cream);}
+/* Icons inside step boxes and trust cards inherit color */
+.step-icon-box .icon{width:28px;height:28px;stroke-width:1.6;stroke:white;fill:none;}
+.trust-icon{display:flex;align-items:center;justify-content:flex-start;flex-shrink:0;}
+.trust-icon .icon{width:26px;height:26px;stroke-width:1.6;}
+.tc-blue .trust-icon .icon{stroke:rgba(255,255,255,0.85);fill:none;}
+.tc-heritage .trust-icon .icon{stroke:rgba(255,255,255,0.85);fill:none;}
+.tc-cream .trust-icon .icon{stroke:var(--deep-blue);fill:none;}
+.act-icon{display:flex;align-items:center;justify-content:flex-start;margin-bottom:3px;}
+.act-icon .icon{width:22px;height:22px;stroke-width:1.8;stroke:rgba(255,255,255,0.9);fill:none;}
+/* Location detail icons */
+.loc-details .icon{width:16px;height:16px;stroke-width:1.8;color:var(--orange);flex-shrink:0;margin-top:1px;}
+/* Hero location chip icons */
+.hero-loc .icon{width:12px;height:12px;stroke-width:2;color:rgba(255,255,255,0.75);margin-right:4px;}
+/* Social icons */
+.social-icon{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;display:block;}
+/* Stars keep as text */
+
+/* ─── GRAIN TEXTURE ──────────────────── */
+/* Base grain — visible on light sections */
+.grain{position:relative;}
+.grain::after{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.68' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='0.12'/%3E%3C/svg%3E");
+  background-size:200px 200px;mix-blend-mode:multiply;border-radius:inherit;
+}
+/* Heavy grain — on cream/warm sections for more vintage feel */
+.grain-heavy{position:relative;}
+.grain-heavy::after{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23g)' opacity='0.16'/%3E%3C/svg%3E");
+  background-size:180px 180px;mix-blend-mode:multiply;border-radius:inherit;
+}
+/* Dark grain for blue sections — overlay blend for more visible effect */
+.grain-dark{position:relative;}
+.grain-dark::after{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='0.1'/%3E%3C/svg%3E");
+  background-size:200px 200px;mix-blend-mode:overlay;border-radius:inherit;
+}
+
+/* ─── TRANSPARENT PHOTO OVERLAY ──────────
+   Used in a few background sections to add
+   life and depth without changing layout.
+   Always behind content, always subtle.
+─────────────────────────────────────────── */
+.section-bg-photo{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  pointer-events:none;z-index:0;
+  /* opacity + mix-blend-mode set per instance */
+}
+/* All section direct children above the photo */
+.plan-intro > *,
+.steps-section > *,
+.trust-section > *,
+.faq-section > *{position:relative;z-index:2;}
+
+/* ─── VINTAGE PHOTO FILTER ───────────────
+   Applies to all real lake photos sitewide.
+   Warmer, slightly richer, soft vintage tone.
+─────────────────────────────────────────── */
+.hero-photo,
+.loc-feat-img img,
+.exp-img,
+.act-card img,
+.groups-img,
+.photo-strip-item img,
+.popup-img,
+.final-cta-bg img{
+  filter:contrast(1.06) saturate(1.14) brightness(1.02) sepia(0.06);
+}
+
+/* ─── CREAM SECTION DEPTH ────────────────
+   Adds tonal variation to large cream areas
+   so they feel tactile, not flat.
+─────────────────────────────────────────── */
+/* Subtle vignette on location section */
+.location-section::before{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 80% 60% at 50% 100%, rgba(0,0,0,0.04) 0%, transparent 70%);
+}
+.location-section{position:relative;}
+.location-section > *{position:relative;z-index:1;}
+
+/* Cream sections get visible grain overlay */
+.location-section::after,
+.experiences-section::after,
+.faq-section::after,
+.partners-section::after{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.68' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23g)' opacity='0.11'/%3E%3C/svg%3E");
+  background-size:180px 180px;mix-blend-mode:multiply;
+}
+.experiences-section{position:relative;}
+.faq-section{position:relative;}
+.partners-section{position:relative;}
+/* Water ripple lines — sky sections */
+.water-bg{position:relative;overflow:hidden;}
+.water-bg::before{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='60'%3E%3Cpath d='M0 30 Q50 10 100 30 Q150 50 200 30 Q250 10 300 30 Q350 50 400 30' stroke='rgba(18,63,107,0.12)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M0 46 Q50 26 100 46 Q150 66 200 46 Q250 26 300 46 Q350 66 400 46' stroke='rgba(18,63,107,0.07)' stroke-width='1' fill='none'/%3E%3Cpath d='M0 18 Q50 8 100 18 Q150 28 200 18 Q250 8 300 18 Q350 28 400 18' stroke='rgba(18,63,107,0.05)' stroke-width='0.75' fill='none'/%3E%3C/svg%3E");
+  background-size:400px 60px;
+}
+/* Warm water ripples for gold/orange sections */
+.water-bg-warm::before{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='60'%3E%3Cpath d='M0 30 Q50 10 100 30 Q150 50 200 30 Q250 10 300 30 Q350 50 400 30' stroke='rgba(180,100,20,0.1)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M0 46 Q50 26 100 46 Q150 66 200 46 Q250 26 300 46 Q350 66 400 46' stroke='rgba(180,100,20,0.06)' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+  background-size:400px 60px;
+}
+
+/* ─── SCROLL REVEAL ──────────────────── */
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity 0.65s ease,transform 0.65s ease;
+}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity 0.65s ease,transform 0.65s ease;}
+.reveal-left.visible{opacity:1;transform:translateX(0);}
+.reveal-right{opacity:0;transform:translateX(28px);transition:opacity 0.65s ease,transform 0.65s ease;}
+.reveal-right.visible{opacity:1;transform:translateX(0);}
+/* stagger children */
+.stagger-children > *{
+  opacity:0;transform:translateY(22px);
+  transition:opacity 0.55s ease,transform 0.55s ease;
+}
+.stagger-children.visible > *{opacity:1;transform:translateY(0);}
+.stagger-children.visible > *:nth-child(1){transition-delay:0s;}
+.stagger-children.visible > *:nth-child(2){transition-delay:0.1s;}
+.stagger-children.visible > *:nth-child(3){transition-delay:0.2s;}
+.stagger-children.visible > *:nth-child(4){transition-delay:0.3s;}
+.stagger-children.visible > *:nth-child(5){transition-delay:0.35s;}
+.stagger-children.visible > *:nth-child(6){transition-delay:0.4s;}
+/* scale in for stamps/badges */
+.scale-in{opacity:0;transform:scale(0.85) rotate(-4deg);transition:opacity 0.5s ease,transform 0.5s ease;}
+.scale-in.visible{opacity:1;transform:scale(1) rotate(0deg);}
+
+/* ─── NAV ────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:var(--cream);
+  border-bottom:1px solid rgba(212,196,154,0.4);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 20px;height:64px;
+  transition:background 0.35s ease,border-color 0.35s ease,box-shadow 0.35s ease;
+}
+nav.scrolled{
+  background:var(--cream);
+  border-bottom:2px solid var(--border);
+  box-shadow:0 2px 20px rgba(18,63,107,0.09);
+  backdrop-filter:blur(8px);
+}
+.nav-logo{text-decoration:none;display:flex;align-items:center;}
+/* Slightly larger logo — more brand presence */
+.nav-logo-img{height:46px;width:auto;display:block;transition:opacity 0.3s;}
+.nav-logo-img.white-logo{display:none;}
+.nav-logo-img.blue-logo{opacity:1;}
+.nav-links{display:none;}
+.btn-book{
+  display:none;background:var(--orange);color:white;
+  padding:10px 22px;border-radius:100px;text-decoration:none;
+  font-family:'Lato',sans-serif;font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;
+  transition:background 0.2s,transform 0.15s;
+}
+.btn-book:hover{background:var(--orange-lt);transform:translateY(-1px);}
+.nav-links .btn-book,.nav-links a.btn-book{color:white!important;}
+.hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:none;}
+.hamburger span{display:block;width:24px;height:2px;background:var(--deep-blue);border-radius:2px;transition:background 0.3s;}
+.mobile-menu{
+  display:none;position:fixed;top:64px;left:0;right:0;bottom:0;
+  background:var(--cream);z-index:190;overflow-y:auto;
+  padding:12px 20px 40px;flex-direction:column;
+  transform:translateX(100%);transition:transform 0.3s ease;
+}
+.mobile-menu.open{display:flex;transform:translateX(0);}
+.mobile-menu a{
+  display:block;padding:15px 4px;border-bottom:1px solid var(--border);
+  font-family:'Oswald',sans-serif;font-size:18px;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;color:var(--deep-blue);
+  text-decoration:none;transition:color 0.15s,padding-left 0.2s;
+}
+.mobile-menu a:hover{color:var(--orange);padding-left:8px;}
+.mobile-menu .m-book{margin-top:16px;background:var(--orange);color:white!important;text-align:center;border-radius:12px;padding:18px;transition:background 0.2s;}
+.mobile-menu .m-book:hover{background:var(--orange-lt);}
+
+/* ─── HERO ANIMATION SEQUENCE ─────────── */
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+@keyframes heroStampIn{from{opacity:0;transform:scale(0.8) rotate(-6deg);}to{opacity:1;transform:scale(1) rotate(0deg);}}
+@keyframes heroPhotoIn{from{opacity:0;transform:scale(1.04);}to{opacity:1;transform:scale(1);}}
+@keyframes waveIn{from{opacity:0;width:0;}to{opacity:1;width:100px;}}
+
+.hero-photo{animation:heroPhotoIn 1.2s ease 0.1s both;}
+.hero-eyebrow{animation:heroFadeUp 0.7s ease 0.5s both;}
+.hero h1{animation:heroFadeUp 0.9s ease 0.75s both;}
+.wavy-line{animation:waveIn 0.6s ease 1.2s both;}
+.hero-sub{animation:heroFadeUp 0.7s ease 1.3s both;}
+.hero-btns{animation:heroFadeUp 0.7s ease 1.5s both;}
+.hero-locs{animation:heroFadeUp 0.5s ease 1.7s both;}
+.hero-stamp{animation:heroStampIn 0.5s ease 2s both;}
+.hero-sun{animation:heroFadeUp 1s ease 0.3s both;}
+
+/* ─── BUTTONS ─────────────────────────── */
+.btn-primary{
+  display:inline-block;background:var(--orange);color:white;
+  padding:14px 28px;border-radius:100px;text-decoration:none;
+  font-family:'Lato',sans-serif;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;
+  transition:background 0.2s,transform 0.18s,box-shadow 0.2s;border:none;cursor:pointer;
+}
+.btn-primary:hover{background:var(--orange-lt);transform:translateY(-2px);box-shadow:0 6px 20px rgba(214,106,44,0.35);}
+.btn-primary:active{transform:translateY(0);box-shadow:none;}
+.btn-outline-white{
+  display:inline-block;background:transparent;color:white;
+  padding:13px 26px;border-radius:100px;text-decoration:none;
+  font-family:'Lato',sans-serif;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;
+  border:2px solid rgba(255,255,255,0.6);transition:all 0.2s;
+}
+.btn-outline-white:hover{background:rgba(255,255,255,0.12);border-color:white;}
+.btn-outline-blue{
+  display:inline-block;background:transparent;color:var(--deep-blue);
+  padding:13px 26px;border-radius:100px;text-decoration:none;
+  font-family:'Lato',sans-serif;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;
+  border:2px solid var(--deep-blue);transition:all 0.2s;
+}
+.btn-outline-blue:hover{background:var(--deep-blue);color:white;transform:translateY(-1px);}
+.btn-sm{
+  display:inline-block;padding:9px 18px;background:var(--deep-blue);color:white;
+  border-radius:100px;font-family:'Lato',sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:1px;text-transform:uppercase;text-decoration:none;
+  transition:background 0.2s,transform 0.15s;border:none;cursor:pointer;
+}
+.btn-sm:hover{background:var(--orange);transform:translateY(-1px);}
+
+/* ─── SECTION BASE ───────────────────── */
+section{padding:56px 20px;}
+.sec-label{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:3px;text-transform:uppercase;font-size:12px;color:var(--orange);display:block;margin-bottom:8px;}
+.sec-title{font-family:'Sunday Romantic',serif;font-size:clamp(26px,7vw,46px);line-height:1.05;color:var(--text);margin-bottom:12px;}
+.sec-sub{font-size:15px;color:var(--mid);margin-bottom:32px;line-height:1.75;max-width:520px;}
+.center{text-align:center;}
+.center .sec-sub{margin-left:auto;margin-right:auto;}
+.wavy-line{width:100px;height:8px;margin:8px 0 16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 10'%3E%3Cpath d='M0 5 Q10 0 20 5 Q30 10 40 5 Q50 0 60 5 Q70 10 80 5' stroke='%23D66A2C' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x center;background-size:80px 10px;}
+
+/* ─── HERO ───────────────────────────── */
+.hero{margin-top:100px;position:relative;height:calc(100svh - 100px);min-height:520px;overflow:hidden;display:flex;align-items:flex-end;}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.52) 0%,rgba(0,0,0,0.18) 20%,rgba(0,0,0,0.08) 45%,rgba(0,0,0,0.82) 100%);}
+.hero-sun{position:absolute;top:-40px;right:-40px;z-index:2;width:280px;height:280px;opacity:0.1;pointer-events:none;}
+.hero-content{position:relative;z-index:3;color:white;padding:0 20px 44px;width:100%;}
+.hero-eyebrow{font-family:'Oswald',sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;opacity:0.8;margin-bottom:10px;display:block;}
+.hero h1{font-family:'Sunday Romantic',serif;font-size:clamp(44px,12vw,88px);line-height:0.97;margin-bottom:6px;}
+.hero h1 .gold{color:var(--gold);display:block;}
+.hero-sub{font-size:15px;opacity:0.88;max-width:360px;line-height:1.65;}
+.hero-btns{display:flex;flex-direction:column;gap:10px;max-width:300px;margin-top:20px;}
+.hero-btns a{text-align:center;}
+.hero-locs{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
+.hero-loc{font-family:'Oswald',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.22);padding:6px 12px;border-radius:100px;color:rgba(255,255,255,0.85);}
+.hero-stamp{
+  position:absolute;bottom:44px;right:20px;z-index:3;
+  width:96px;height:96px;
+  /* Deep Lake Blue vintage stamp on a slight cream tint */
+  background:rgba(18,63,107,0.65);
+  backdrop-filter:blur(2px);
+  color:rgba(244,232,212,0.92);
+  border-radius:50%;border:2.5px solid rgba(244,232,212,0.65);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:10px;
+  font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:1px;text-transform:uppercase;line-height:1.25;font-size:9px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.25);
+}
+.hero-stamp::before{content:'';position:absolute;inset:5px;border-radius:50%;border:1px solid rgba(244,232,212,0.25);}
+.hs-icon{font-size:16px;margin:2px 0;display:block;}
+.hs-main{font-size:10px;display:block;}
+
+/* ─── PLAN YOUR VISIT INTRO ──────────── */
+/* ─── DENIM BLUE STRIP TREATMENT ─────────
+   Muted vintage denim blue — matches the
+   "Paddle More. Stress Less." brand image.
+   Deep navy headline, orange accent, cream body.
+─────────────────────────────────────────── */
+.plan-intro{
+  background:var(--sky);
+  padding:40px 20px;position:relative;overflow:hidden;
+}
+/* grain on the denim strip */
+.plan-intro::after{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='0.09'/%3E%3C/svg%3E");
+  background-size:200px 200px;mix-blend-mode:multiply;
+}
+.plan-intro-inner{position:relative;z-index:2;max-width:700px;}
+.plan-intro .sec-label{color:rgba(255,255,255,0.6);letter-spacing:3px;}
+.plan-intro h2{
+  font-family:'Sunday Romantic',serif;
+  font-size:clamp(26px,5vw,44px);
+  color:white;
+  margin-bottom:8px;line-height:1.05;
+}
+.plan-intro p{font-size:15px;color:rgba(255,255,255,0.78);line-height:1.7;}
+
+/* ─── HOW IT WORKS ───────────────────── */
+/* Dark photo background — canyon lake scene visible behind the cards */
+.steps-section{
+  background-color:var(--cream);
+  position:relative;
+}
+.steps-section .sec-label{color:var(--orange);}
+.steps-section h2.sec-title{color:var(--deep-blue);}
+.steps-grid{display:flex;flex-direction:column;gap:12px;}
+.step-card{
+  background:var(--card);border-radius:14px;padding:22px 20px;
+  border:1.5px solid var(--border);
+  /* warm orange top-border accent — feels outdoor, not SaaS */
+  border-top:3px solid var(--orange);
+  display:flex;align-items:flex-start;gap:16px;
+  transition:transform 0.25s ease,box-shadow 0.25s ease;
+  position:relative;overflow:hidden;
+  /* subtle warm inner shadow */
+  box-shadow:0 2px 8px rgba(180,100,20,0.06), inset 0 1px 0 rgba(255,255,255,0.8);
+}
+.step-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(18,63,107,0.1),inset 0 1px 0 rgba(255,255,255,0.8);}
+/* Visible step number — feels vintage and purposeful */
+.step-card::after{content:attr(data-num);position:absolute;right:-4px;bottom:-10px;font-family:'Sunday Romantic',serif;font-size:88px;color:rgba(18,63,107,0.06);line-height:1;pointer-events:none;letter-spacing:-4px;}
+.step-icon-box{
+  width:52px;height:52px;border-radius:14px;flex-shrink:0;
+  background:var(--deep-blue);
+  display:flex;align-items:center;justify-content:center;
+  transition:background 0.2s;
+  /* slight inner light on icon box */
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.12), 0 2px 8px rgba(18,63,107,0.2);
+}
+.step-card:hover .step-icon-box{background:var(--orange);}
+.step-num{font-family:'Oswald',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:3px;}
+.step-card h3{font-family:'Oswald',sans-serif;font-size:17px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;color:var(--deep-blue);margin-bottom:4px;}
+.step-card p{font-size:13px;color:var(--mid);line-height:1.6;}
+
+/* ─── LOCATION ───────────────────────── */
+.location-section{background:var(--card);}
+.location-feature{border-radius:20px;overflow:hidden;border:2px solid var(--border);max-width:900px;margin:0 auto;text-decoration:none;color:var(--text);display:block;transition:box-shadow 0.3s ease,transform 0.3s ease;box-shadow:0 4px 16px rgba(18,63,107,0.07);}
+.location-feature:hover{box-shadow:0 16px 48px rgba(18,63,107,0.14);transform:translateY(-3px);}
+.loc-feat-img{position:relative;height:240px;overflow:hidden;}
+.loc-feat-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;display:block;}
+.location-feature:hover .loc-feat-img img{transform:scale(1.04);}
+.loc-feat-badge{position:absolute;top:14px;left:14px;background:var(--deep-blue);color:white;font-family:'Oswald',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:100px;}
+.loc-feat-body{padding:24px 22px 28px;background:var(--card);}
+.loc-feat-body h3{font-family:'Sunday Romantic',serif;font-size:26px;color:var(--deep-blue);margin-bottom:8px;}
+.loc-feat-body p{font-size:14px;color:var(--mid);margin-bottom:16px;line-height:1.65;}
+.loc-details{list-style:none;margin-bottom:20px;}
+.loc-details li{font-size:13px;color:var(--mid);padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:flex-start;}
+.loc-details li:last-child{border:none;}
+.loc-cta{font-family:'Oswald',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);display:inline-flex;align-items:center;gap:6px;transition:gap 0.2s;}
+.location-feature:hover .loc-cta{gap:10px;}
+.loc-coming-soon{border-radius:14px;border:2px dashed var(--border);padding:22px 20px;max-width:900px;margin:16px auto 0;background:var(--cream);display:flex;align-items:center;gap:16px;}
+.loc-cs-label{font-family:'Oswald',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--mid);opacity:0.7;margin-bottom:4px;}
+.loc-cs h4{font-family:'Oswald',sans-serif;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--mid);margin-bottom:3px;}
+.loc-cs p{font-size:13px;color:var(--mid);opacity:0.7;}
+
+/* ─── PHOTO STRIP ────────────────────── */
+.photo-strip{display:grid;grid-template-columns:repeat(3,1fr);height:180px;overflow:hidden;}
+.photo-strip-item{overflow:hidden;position:relative;}
+.photo-strip-item img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.5s ease;}
+.photo-strip-item:hover img{transform:scale(1.06);}
+.photo-strip-item:not(:last-child){border-right:3px solid var(--cream);}
+
+/* ─── ACTIVITIES — dark photo transition mid-page ── */
+.activities-section{
+  background-color:var(--cream);
+  position:relative;
+}
+.activities-section .sec-label{color:var(--orange);}
+.activities-section h2.sec-title{color:var(--deep-blue);}
+.activities-section .sec-sub{color:var(--mid);}
+.act-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.act-card{border-radius:14px;overflow:hidden;position:relative;aspect-ratio:3/4;text-decoration:none;color:white;display:block;transition:transform 0.3s ease,box-shadow 0.3s ease;box-shadow:0 4px 12px rgba(18,63,107,0.12);}
+.act-card:hover{transform:scale(1.02) translateY(-2px);box-shadow:0 12px 32px rgba(18,63,107,0.2);}
+.act-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;}
+.act-card:hover img{transform:scale(1.04);}
+.act-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.04) 20%,rgba(0,0,0,0.82) 100%);}
+.act-content{position:absolute;bottom:0;left:0;right:0;padding:14px 14px 18px;}
+.act-badge{position:absolute;top:10px;left:10px;font-family:'Oswald',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:100px;color:white;}
+.badge-orange{background:var(--orange);}
+.badge-blue{background:var(--heritage);}
+.badge-sky{background:var(--sky);color:var(--deep-blue);}
+.act-icon{font-size:20px;margin-bottom:3px;}
+.act-content h3{font-family:'Oswald',sans-serif;font-size:16px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:2px;}
+.act-price{font-size:12px;opacity:0.82;}
+
+/* ─── EXPERIENCES ────────────────────── */
+.experiences-section{background:var(--card);}
+.exp-grid{display:flex;flex-direction:column;gap:16px;}
+.exp-card{
+  border-radius:16px;overflow:hidden;
+  border:1.5px solid var(--border);
+  background:var(--cream);
+  display:flex;flex-direction:column;
+  /* layered warm shadow for depth */
+  box-shadow:0 2px 8px rgba(180,100,20,0.08), 0 1px 0 rgba(255,255,255,0.6) inset;
+  transition:transform 0.3s ease,box-shadow 0.3s ease;
+}
+.exp-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(18,63,107,0.11);}
+.exp-img{height:180px;width:100%;object-fit:cover;display:block;transition:transform 0.5s ease;}
+.exp-card:hover .exp-img{transform:scale(1.03);}
+.exp-body{padding:18px 20px 22px;flex:1;display:flex;flex-direction:column;}
+.exp-tag{font-family:'Oswald',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:5px;display:block;}
+.exp-body h3{font-family:'Oswald',sans-serif;font-size:19px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;color:var(--deep-blue);margin-bottom:6px;}
+.exp-body p{font-size:13px;color:var(--mid);margin-bottom:16px;line-height:1.65;flex:1;}
+
+/* ─── GROUP FEATURE — parchment, warm, on-brand ─ */
+/* ─── GROUPS — sky blue with deep photo on left ── */
+.groups-feature{
+  background-color:var(--cream);
+  position:relative;overflow:hidden;
+}
+.groups-feature-inner{display:flex;flex-direction:column;max-width:1100px;margin:0 auto;position:relative;z-index:2;}
+.groups-img{
+  width:100%;height:260px;object-fit:cover;object-position:center top;display:block;flex-shrink:0;
+  filter:contrast(1.06) saturate(1.1) brightness(1.02) sepia(0.05);
+}
+/* Text all white on dark photo */
+.groups-copy{padding:36px 20px;}
+.groups-copy .sec-label{color:var(--orange);}
+.groups-copy h2{
+  font-family:'Sunday Romantic',serif;font-size:clamp(26px,6vw,44px);
+  color:var(--deep-blue);margin-bottom:12px;line-height:1.05;
+}
+.groups-copy p{font-size:15px;color:var(--mid);margin-bottom:20px;line-height:1.75;}
+.groups-list{list-style:none;margin-bottom:28px;}
+.groups-list li{
+  padding:10px 0;
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:10px;
+  font-size:14px;color:var(--text);
+  font-family:'Lato',sans-serif;
+}
+.groups-list li:last-child{border:none;}
+.groups-list li::before{
+  content:'';
+  display:block;width:6px;height:6px;border-radius:50%;
+  background:var(--orange);flex-shrink:0;
+}
+.groups-btns{display:flex;flex-direction:column;gap:10px;}
+.btn-outline-gold{
+  display:inline-block;background:transparent;color:var(--deep-blue);
+  padding:13px 24px;border-radius:100px;font-family:'Lato',sans-serif;
+  font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;
+  border:2px solid rgba(27,61,88,0.4);transition:all 0.2s;text-decoration:none;
+}
+.btn-outline-gold:hover{background:var(--deep-blue);color:white;border-color:var(--deep-blue);}
+
+/* ─── TRUST INTRO STRIP — Denim blue, same treatment ── */
+.trust-intro-strip{
+  background:var(--sky);
+  padding:36px 20px;position:relative;overflow:hidden;
+}
+/* subtle water ripple lines matching the brand image */
+.trust-intro-strip::before{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='60'%3E%3Cpath d='M0 30 Q50 10 100 30 Q150 50 200 30 Q250 10 300 30 Q350 50 400 30' stroke='rgba(27,61,88,0.12)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M0 46 Q50 26 100 46 Q150 66 200 46 Q250 26 300 46 Q350 66 400 46' stroke='rgba(27,61,88,0.07)' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+  background-size:400px 60px;
+}
+.trust-intro-strip::after{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='0.09'/%3E%3C/svg%3E");
+  background-size:200px 200px;mix-blend-mode:multiply;
+}
+.trust-intro-inner{position:relative;z-index:2;max-width:700px;}
+.trust-intro-strip .sec-label{color:var(--orange);}
+.trust-intro-strip h2{
+  font-family:'Sunday Romantic',serif;
+  font-size:clamp(26px,5vw,44px);
+  color:white;margin-bottom:8px;line-height:1.05;
+}
+.trust-intro-strip p{font-size:15px;color:rgba(255,255,255,0.78);line-height:1.7;}
+
+/* ─── TRUST CARDS — Warm cream, not blue ── */
+.trust-section{background:var(--card);position:relative;}
+.trust-section::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='0.1'/%3E%3C/svg%3E");
+  background-size:200px 200px;mix-blend-mode:multiply;}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:900px;margin:0 auto;position:relative;z-index:1;}
+.trust-card{border-radius:14px;padding:22px 18px;display:flex;align-items:flex-start;gap:14px;transition:transform 0.25s ease,box-shadow 0.25s ease;}
+.trust-card:hover{transform:translateY(-2px);}
+/* Deep Blue — strong anchor card */
+.trust-card.tc-blue{background:var(--deep-blue);box-shadow:0 4px 14px rgba(18,63,107,0.25);}
+/* Cream card — light relief */
+.trust-card.tc-cream{background:var(--card);border:1.5px solid var(--border);}
+/* Heritage Blue — mid blue */
+.trust-card.tc-heritage{background:var(--heritage);box-shadow:0 4px 14px rgba(45,110,163,0.2);}
+/* Burnt Orange card — warm accent */
+.trust-card.tc-orange{background:var(--orange);box-shadow:0 4px 14px rgba(214,106,44,0.25);}
+/* Golden Sand card — warm mid tone */
+.trust-card.tc-gold{background:var(--gold);box-shadow:0 4px 14px rgba(180,140,40,0.2);}
+.trust-icon{font-size:26px;flex-shrink:0;}
+.trust-card h4{font-family:'Oswald',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;}
+.trust-card.tc-blue h4{color:var(--gold);}
+.trust-card.tc-heritage h4{color:rgba(255,255,255,0.92);}
+.trust-card.tc-cream h4{color:var(--deep-blue);}
+.trust-card.tc-orange h4{color:white;}
+.trust-card.tc-gold h4{color:var(--deep-blue);}
+.trust-card p{font-size:13px;line-height:1.6;}
+.trust-card.tc-blue p{color:rgba(255,255,255,0.72);}
+.trust-card.tc-heritage p{color:rgba(255,255,255,0.78);}
+.trust-card.tc-cream p{color:var(--mid);}
+.trust-card.tc-orange p{color:rgba(255,255,255,0.82);}
+.trust-card.tc-gold p{color:rgba(30,40,50,0.75);}
+/* icon colors in new card types */
+.tc-orange .trust-icon .icon{stroke:rgba(255,255,255,0.85);fill:none;}
+.tc-gold .trust-icon .icon{stroke:var(--deep-blue);fill:none;}
+
+/* ─── REVIEWS ─────────────────────────── */
+/* Reviews — photo with dark overlay, warm cards float on top */
+.reviews-section{
+  background-color:var(--dark-warm);
+  background-image:
+    linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
+    url('../images/canyon-group.jpg');
+  background-size:cover;
+  background-position:center 40%;
+  position:relative;overflow:hidden;
+}
+/* Grain over the dark photo */
+.reviews-section::before{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23g)' opacity='0.08'/%3E%3C/svg%3E");
+  background-size:180px 180px;mix-blend-mode:overlay;
+}
+/* Section heading text goes white/gold on dark */
+.reviews-section .sec-label{color:var(--gold);}
+.reviews-section h2.sec-title{color:white;}
+.reviews-inner{position:relative;z-index:2;}
+.reviews-scroll{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;}
+.reviews-scroll::-webkit-scrollbar{display:none;}
+.review-card{min-width:280px;flex-shrink:0;scroll-snap-align:start;background:var(--card);border-radius:14px;padding:20px 22px;border:1.5px solid var(--border);display:flex;flex-direction:column;box-shadow:0 2px 8px rgba(18,63,107,0.06);transition:transform 0.25s ease,box-shadow 0.25s ease;}
+.review-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(18,63,107,0.1);}
+.stars{color:var(--orange);font-size:14px;letter-spacing:2px;margin-bottom:10px;}
+.review-card blockquote{font-size:14px;color:var(--mid);line-height:1.75;font-style:italic;margin-bottom:16px;flex:1;}
+.reviewer{display:flex;align-items:center;gap:10px;}
+.reviewer-av{width:36px;height:36px;border-radius:50%;background:var(--heritage);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:14px;flex-shrink:0;font-family:'Oswald',sans-serif;}
+.reviewer-name{font-size:13px;font-weight:700;color:var(--deep-blue);}
+.reviewer-source{font-size:11px;color:var(--mid);}
+
+/* ─── PARTNERS PLACEHOLDER ─────────────── */
+.partners-section{background:var(--card);padding:40px 20px;}
+.partners-placeholder{border:2px dashed var(--border);border-radius:14px;padding:32px 20px;text-align:center;background:var(--cream);}
+.partners-placeholder strong{font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:1px;text-transform:uppercase;color:var(--deep-blue);}
+.partners-placeholder p{margin-top:6px;font-size:13px;color:var(--mid);}
+
+/* ─── FAQ ─────────────────────────────── */
+.faq-section{background:var(--cream);}
+.faq-wrap{max-width:680px;margin:0 auto;}
+.faq-item{border-bottom:2px solid var(--border);}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:16px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;color:var(--text);gap:12px;transition:color 0.2s;}
+.faq-q:hover{color:var(--orange);}
+.faq-icon{font-size:20px;color:var(--orange);flex-shrink:0;transition:transform 0.3s ease;}
+.faq-item.open .faq-icon{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s ease;font-size:14px;color:var(--mid);line-height:1.8;}
+.faq-item.open .faq-a{max-height:280px;padding-bottom:16px;}
+
+/* ─── FINAL CTA ───────────────────────── */
+.final-cta{position:relative;overflow:hidden;min-height:320px;display:flex;align-items:center;}
+.final-cta-bg{position:absolute;inset:0;}
+.final-cta-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;transition:transform 8s ease;}
+.final-cta:hover .final-cta-bg img{transform:scale(1.04);}
+.final-cta-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.58) 100%);}
+.final-cta-overlay::after{content:'';position:absolute;inset:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='0.06'/%3E%3C/svg%3E");background-size:200px 200px;mix-blend-mode:overlay;}
+.final-cta-content{position:relative;z-index:2;padding:56px 20px;color:white;width:100%;text-align:center;}
+.final-cta-content h2{font-family:'Sunday Romantic',serif;font-size:clamp(28px,7vw,52px);color:white;margin-bottom:12px;line-height:1.05;}
+.final-cta-content p{font-size:15px;opacity:0.82;max-width:440px;margin:0 auto 28px;line-height:1.7;}
+.final-cta-btns{display:flex;flex-direction:column;gap:10px;align-items:center;}
+
+/* ─── FOOTER — photo with dark overlay, never a flat solid ── */
+footer{
+  background-color:var(--dark-warm);
+  background-image:
+    linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78)),
+    url('../images/location-az.jpg');
+  background-size:cover;
+  background-position:center 40%;
+  color:white;padding:48px 20px 28px;position:relative;overflow:hidden;
+}
+footer::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.68' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23g)' opacity='0.12'/%3E%3C/svg%3E");background-size:180px 180px;mix-blend-mode:overlay;}
+footer>*{position:relative;z-index:1;}
+.footer-logo-img{width:200px;height:auto;display:block;margin:0 auto 14px;mix-blend-mode:screen;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:24px;line-height:1.7;}
+.newsletter{display:flex;gap:8px;margin-bottom:32px;}
+.newsletter input{flex:1;padding:11px 16px;border-radius:100px;min-width:0;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:white;font-size:14px;font-family:'Lato',sans-serif;outline:none;transition:border 0.2s;}
+.newsletter input:focus{border-color:rgba(255,255,255,0.5);}
+.newsletter input::placeholder{color:rgba(255,255,255,0.35);}
+.newsletter button{padding:11px 16px;background:var(--orange);color:white;border:none;border-radius:100px;font-family:'Lato',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background 0.2s;}
+.newsletter button:hover{background:var(--orange-lt);}
+/* Gift card strip — warm orange, not blue */
+.footer-gift-strip{background:var(--orange);margin:0 -20px 32px;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.footer-gift-strip p{font-size:13px;color:rgba(255,255,255,0.88);}
+.footer-gift-strip a{font-family:'Lato',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);text-decoration:none;white-space:nowrap;transition:color 0.2s;}
+.footer-gift-strip a:hover{color:white;}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px;}
+.footer-col h4{font-family:'Oswald',sans-serif;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:12px;}
+.footer-col ul{list-style:none;}
+.footer-col li{margin-bottom:8px;font-size:13px;color:rgba(255,255,255,0.5);}
+.footer-col a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:13px;transition:color 0.2s;}
+.footer-col a:hover{color:var(--orange);}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;border-top:1px solid rgba(255,255,255,0.1);padding-top:18px;}
+.footer-bottom p{font-size:11px;color:rgba(255,255,255,0.3);}
+.social-row{display:flex;gap:14px;}
+.social-row a{color:rgba(255,255,255,0.55);font-size:20px;text-decoration:none;transition:color 0.25s,transform 0.2s;}
+.social-row a:hover{color:var(--orange);transform:translateY(-2px);}
+
+/* ─── POP-UP ──────────────────────────── */
+.popup-overlay{
+  position:fixed;inset:0;z-index:999;
+  background:rgba(18,63,107,0.55);
+  display:flex;align-items:flex-end;justify-content:center;
+  padding:0 0 20px;
+  opacity:0;pointer-events:none;
+  transition:opacity 0.4s ease;
+}
+.popup-overlay.visible{opacity:1;pointer-events:all;}
+.popup-box{
+  background:var(--cream);border-radius:20px 20px 16px 16px;
+  max-width:480px;width:calc(100% - 32px);
+  overflow:hidden;position:relative;
+  transform:translateY(40px);
+  transition:transform 0.4s ease;
+  box-shadow:0 20px 60px rgba(18,63,107,0.25);
+}
+.popup-overlay.visible .popup-box{transform:translateY(0);}
+.popup-img{height:160px;width:100%;object-fit:cover;object-position:center 30%;display:block;}
+.popup-body{padding:24px 24px 28px;}
+.popup-badge-label{display:inline-block;background:var(--deep-blue);color:white;font-family:'Oswald',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:12px;}
+.popup-body h3{font-family:'Sunday Romantic',serif;font-size:22px;color:var(--deep-blue);margin-bottom:6px;line-height:1.1;}
+.popup-body p{font-size:14px;color:var(--mid);margin-bottom:20px;line-height:1.65;}
+.popup-close{
+  position:absolute;top:12px;right:14px;z-index:10;
+  background:rgba(18,63,107,0.55);color:white;border:none;border-radius:50%;
+  width:32px;height:32px;font-size:18px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:background 0.2s;line-height:1;
+}
+.popup-close:hover{background:rgba(18,63,107,0.85);}
+
+/* ─── DESKTOP ─────────────────────────── */
+@media(min-width:768px){
+  nav{padding:0 48px;height:72px;}
+  .nav-logo-img{height:42px;}
+  .hamburger{display:none;}
+  .btn-book{display:inline-block;}
+  .nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+  .nav-links a{font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--deep-blue);text-decoration:none;transition:color 0.2s;}
+  .nav-links a:hover{color:var(--orange);}
+  .nav-dropdown{position:relative;}
+  .nav-dropdown>a::after{content:' ▾';font-size:10px;opacity:0.6;}
+  .dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:var(--cream);border:2px solid var(--border);border-radius:12px;min-width:230px;box-shadow:0 8px 28px rgba(18,63,107,0.14);overflow:hidden;padding:6px 0;}
+  .nav-dropdown:hover .dropdown-menu{display:block;}
+  .dropdown-menu a{display:block;padding:11px 18px;font-family:'Oswald',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--deep-blue)!important;text-decoration:none;transition:background 0.15s;}
+  .dropdown-menu a:hover{background:var(--cream-dk);color:var(--orange)!important;}
+  .dropdown-divider{height:1px;background:var(--border);margin:4px 0;}
+
+  .hero{margin-top:108px;height:calc(100vh - 108px);}
+  .hero-content{padding:0 56px 64px;max-width:680px;}
+  .hero h1{font-size:clamp(64px,8vw,96px);}
+  .hero-sub{font-size:17px;max-width:420px;}
+  .hero-btns{flex-direction:row;max-width:none;}
+  .hero-btns a{text-align:left;}
+  .hero-stamp{width:114px;height:114px;right:56px;bottom:64px;font-size:10px;}
+  .hero-sun{width:360px;height:360px;}
+
+  .plan-intro{padding:44px 48px;}
+  section{padding:80px 48px;}
+  .sec-title{font-size:46px;}
+
+  .steps-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  .step-card{flex-direction:column;}
+  .loc-feat-img{height:320px;}
+
+  .photo-strip{grid-template-columns:repeat(3,1fr);height:220px;}
+
+  .act-grid{grid-template-columns:repeat(4,1fr);}
+  .act-card{aspect-ratio:2/3;}
+
+  .exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+
+  .groups-feature-inner{flex-direction:row;align-items:stretch;}
+  .groups-img{width:42%;height:auto;min-height:420px;flex-shrink:0;border-radius:0;}
+  .groups-copy{padding:56px 56px 56px 64px;display:flex;flex-direction:column;justify-content:center;}
+  .groups-btns{flex-direction:row;}
+
+  .trust-intro-strip{padding:40px 48px;}
+  .trust-grid{grid-template-columns:repeat(3,1fr);max-width:1000px;gap:16px;}
+
+  .reviews-scroll{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible;}
+  .review-card{min-width:0;}
+
+  .final-cta-content{padding:80px 48px;}
+  .final-cta-btns{flex-direction:row;justify-content:center;}
+
+  footer{padding:64px 48px 32px;}
+  .footer-gift-strip{margin:0 -48px 36px;padding:14px 48px;}
+  .footer-grid{grid-template-columns:repeat(4,1fr);gap:32px;}
+
+  /* Desktop pop-up centered */
+  .popup-overlay{align-items:center;padding:0;}
+  .popup-box{border-radius:20px;max-width:500px;}
+}
+
+@media(min-width:1024px){
+  .steps-grid{grid-template-columns:repeat(3,1fr);max-width:900px;margin:0 auto;}
+}
+</style>
+<style>
+/* Mobile-first hero: photo uncovered (people visible), text in a panel below */
+@media (max-width: 700px) {
+  .hero {
+    display: block;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    background: var(--dark-warm);
+    padding: 0;            /* kill section padding so the photo is edge-to-edge */
+    margin-top: 104px;     /* sit flush under the fixed nav + location bar */
+  }
+  .hero-photo {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+    transform: none;
+    animation: none;
+  }
+  .hero-overlay { display: none; }
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    background: var(--dark-warm);
+    padding: 26px 22px 42px;
+  }
+  .hero-btns { max-width: none; }
+  /* Photos full-bleed, no frames */
+  .location-feature { margin-left: -20px; margin-right: -20px; border: 0; border-radius: 0; box-shadow: none; max-width: none; }
+  .loc-feat-body { padding-left: 22px; padding-right: 22px; }
+  .photo-strip-item:not(:last-child) { border-right: 0; }
+  /* Card grids → full-width feed tiles */
+  .act-grid { grid-template-columns: 1fr; gap: 0; margin-left: -20px; margin-right: -20px; }
+  .act-card { aspect-ratio: 4 / 5; border-radius: 0; box-shadow: none; }
+  .act-content { padding: 18px 22px 24px; }
+  .act-content h3 { font-size: 20px; }
+  .act-price { font-size: 14px; }
+  .act-badge { top: 16px; left: 16px; font-size: 11px; padding: 5px 12px; }
+  .exp-grid { gap: 0; margin-left: -20px; margin-right: -20px; }
+  .exp-card { border-radius: 0; border: 0; box-shadow: none; }
+  .exp-img { height: auto; aspect-ratio: 4 / 5; }
+  .exp-body { padding: 22px 22px 28px; }
+}
+</style>
+<style>
+.hero-price{position:absolute;z-index:5;top:6%;left:22px;max-width:64%;font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(44px,15vw,76px);line-height:.95;letter-spacing:.004em;text-transform:uppercase;color:var(--cream);text-decoration:none;text-shadow:0 2px 18px rgba(0,0,0,.55),0 1px 2px rgba(0,0,0,.5);transition:opacity .2s ease;}
+.hero-price:hover{opacity:.9;}
+@media (min-width:768px){.hero-price{top:126px;left:auto;right:48px;max-width:42%;text-align:right;font-size:clamp(36px,3.6vw,54px);}}
+</style>
+</head>
+<body>
+<!-- LOCATION BAR -->
+<div class="loc-bar loc-bar-az">
+  <span class="loc-bar-pin">
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+    Canyon Lake, Arizona
+  </span>
+  <a class='loc-bar-switch' href='/'>
+    <svg viewBox="0 0 24 24" aria-hidden="true" style="width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+    Switch Location
+  </a>
+</div>
+
+
+<!-- ══ SVG ICON SPRITE ══════════════════════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;" aria-hidden="true">
+  <defs>
+    <!-- Location pin -->
+    <symbol id="ic-location" viewBox="0 0 24 24"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+    <!-- Kayak paddle (double-bladed) -->
+    <symbol id="ic-paddle" viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="21"/><path d="M8.5 6.5 Q12 3 15.5 6.5"/><path d="M8.5 17.5 Q12 21 15.5 17.5"/></symbol>
+    <!-- Calendar -->
+    <symbol id="ic-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/><rect x="7" y="14" width="3" height="3" rx="0.5" stroke-width="0" style="fill:currentColor"/></symbol>
+    <!-- Checkmark circle (check in) -->
+    <symbol id="ic-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-5.5"/></symbol>
+    <!-- Clock -->
+    <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 15"/></symbol>
+    <!-- Parking -->
+    <symbol id="ic-parking" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 18V6h5a3 3 0 0 1 0 6H9"/></symbol>
+    <!-- Phone / text -->
+    <symbol id="ic-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="3"/><line x1="11" y1="18" x2="13" y2="18"/></symbol>
+    <!-- Sun (for hero stamp) -->
+    <symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></symbol>
+    <!-- Kayak (side view for activity card) -->
+    <symbol id="ic-kayak" viewBox="0 0 24 24"><path d="M3 13 Q12 8 21 13 Q12 15 3 13Z"/><line x1="12" y1="13" x2="12" y2="9"/><line x1="9.5" y1="9" x2="14.5" y2="9"/></symbol>
+    <!-- Paddleboard person -->
+    <symbol id="ic-sup" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><line x1="12" y1="7.5" x2="12" y2="14"/><path d="M9 11l-3 3M15 11l3 3"/><path d="M4 20 Q12 17 20 20"/><line x1="8.5" y1="14" x2="15.5" y2="14"/></symbol>
+    <!-- Compass (guided tours) -->
+    <symbol id="ic-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="12 7 14 12 12 17 10 12" style="fill:currentColor;opacity:0.2"/><polygon points="12 7 14 12 12 17 10 12"/><circle cx="12" cy="12" r="1.5" style="fill:currentColor;stroke-width:0"/></symbol>
+    <!-- Fish -->
+    <symbol id="ic-fish" viewBox="0 0 24 24"><path d="M6 12C6 12 8 7 14 7C18.5 7 21 9.5 21 12C21 14.5 18.5 17 14 17C8 17 6 12 6 12Z"/><path d="M6 12L2 8M6 12L2 16"/><circle cx="16" cy="10" r="1" style="fill:currentColor;stroke-width:0"/></symbol>
+    <!-- Gear / paddle for "quality gear" -->
+    <symbol id="ic-gear" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/><path d="M8.5 5.5 Q12 2 15.5 5.5"/><path d="M8.5 18.5 Q12 22 15.5 18.5"/></symbol>
+    <!-- Life vest / PFD -->
+    <symbol id="ic-vest" viewBox="0 0 24 24"><path d="M12 3L8 7V20H16V7L12 3Z"/><line x1="12" y1="3" x2="12" y2="20"/><path d="M8 9H5C4 9 3 10 3 11V20H8"/><path d="M16 9H19C20 9 21 10 21 11V20H16"/><line x1="8" y1="14" x2="3" y2="14"/><line x1="16" y1="14" x2="21" y2="14"/></symbol>
+    <!-- Water waves -->
+    <symbol id="ic-water" viewBox="0 0 24 24"><path d="M2 12 Q5.5 9 9 12 Q12.5 15 16 12 Q19.5 9 22 12"/><path d="M2 17 Q5.5 14 9 17 Q12.5 20 16 17 Q19.5 14 22 17" style="opacity:0.4"/></symbol>
+    <!-- Beginner / no experience (person + check) -->
+    <symbol id="ic-beginner" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M9 22V16c0-1.7 1.3-3 3-3s3 1.3 3 3v6"/><path d="M7 13Q5 14 4 16"/><path d="M17 13Q19 14 20 16"/></symbol>
+    <!-- Camera (Instagram) -->
+    <symbol id="ic-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></symbol>
+    <!-- Music note (TikTok) -->
+    <symbol id="ic-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+    <!-- Share / network (Facebook) -->
+    <symbol id="ic-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></symbol>
+    <!-- Star outline (coming soon) -->
+    <symbol id="ic-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+    <!-- Map marker (location label in hero) -->
+    <symbol id="ic-marker" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2C7.58 2 4 5.58 4 10c0 6 8 12 8 12s8-6 8-12c0-4.42-3.58-8-8-8z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ══ NAV ════════════════════════════════════ -->
+<nav id="mainNav">
+  <a class='nav-logo' href='/arizona/' style='position:relative;display:inline-block;'>
+    <img src="../images/logo-nav-white.png" alt="Yak N Sup" class="nav-logo-img white-logo" style="position:absolute;top:0;left:0;height:46px;width:auto;">
+    <img src="../images/logo-nav-black.png"  alt="Yak N Sup" class="nav-logo-img blue-logo"  style="height:46px;width:auto;display:block;mix-blend-mode:multiply;">
+  </a>
+  <ul class="nav-links">
+    
+    <li><a href='/arizona/rentals'>Rentals</a></li>
+    <li class="nav-dropdown">
+      <a href='/arizona/experiences'>Special Events</a>
+      <div class="dropdown-menu">
+        <a href='/arizona/experiences#guided'>Guided Canyon Tours</a>
+        <a href='/arizona/experiences#moonlight'>Full Moon Paddle</a>
+        <a href='/arizona/experiences#sunset'>Sunset Paddle</a>
+        <div class="dropdown-divider"></div>
+        <a href='/arizona/experiences'>Full Calendar →</a>
+      </div>
+    </li>
+    <li><a href='/arizona/groups'>Groups</a></li>
+    <li><a href='/arizona/about'>About</a></li>
+    <li><a href='/arizona/blog'>Blog</a></li>
+    <li><a href='/arizona/faq'>FAQs</a></li>
+    <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-book">Book Now</a>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href='/locations/canyon-lake'>Canyon Lake Marina, AZ</a>
+  <a href='/arizona/rentals'>Rentals &amp; Pricing</a>
+  <a href='/arizona/experiences'>Special Events</a>
+  <a href='/arizona/groups'>For Groups</a>
+  <a href='/arizona/about'>About Us</a>
+  <a href='/arizona/blog'>Blog</a>
+  <a href='/arizona/faq'>FAQs</a>
+  <a href='/arizona/gift-cards'>Gift Cards</a>
+  <a href='/arizona/contact'>Contact</a>
+  <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="m-book">Book Now</a>
+</div>
+
+<!-- ══ HERO ════════════════════════════════════ -->
+<section class="hero">
+  <img src="../images/hero.jpg" alt="Paddleboarding at Canyon Lake Arizona — canyon walls rising from the water" class="hero-photo">
+  <div class="hero-overlay"></div>
+  <a class='hero-price' href='/arizona/rentals'>Rentals starting at $35</a>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Canyon Lake, Arizona</span>
+    <h1>Lake Days<br><span class="gold">Done Right.</span></h1>
+    <div class="wavy-line"></div>
+    <p class="hero-sub">Kayak and paddleboard rentals, unforgettable lake adventures, and easy days on the water.</p>
+    <div class="hero-btns">
+      <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-primary">Book Your Adventure</a>
+      <a class='btn-outline-white' href='/arizona/experiences'>Explore Special Events</a>
+    </div>
+    <div class="hero-locs">
+      <span class="hero-loc"><svg class="icon icon-sm icon-white" aria-hidden="true"><use href="#ic-marker"/></svg>Canyon Lake, AZ</span>
+      <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="hero-loc" style="text-decoration:none;color:inherit;"><svg class="icon icon-sm icon-white" aria-hidden="true"><use href="#ic-calendar"/></svg>Book Online</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PLAN YOUR VISIT INTRO ══════════════════ -->
+<div class="plan-intro water-bg reveal">
+  <!-- Faint photo overlay — adds lake depth to sky blue section -->
+  <div class="section-bg-photo" style="background-image:url('../images/paddling-reeds.jpg');opacity:0.09;mix-blend-mode:multiply;" aria-hidden="true"></div>
+  <div class="plan-intro-inner">
+    <span class="sec-label">Plan Your Visit</span>
+    <h2>First Time? Here's How It Works.</h2>
+    <p>Getting on the water is easier than you think. We take care of the gear, the briefing, and all the details — you just show up and enjoy it.</p>
+  </div>
+</div>
+
+<!-- ══ HOW IT WORKS ════════════════════════════ -->
+<section class="steps-section grain-heavy">
+  <div class="center reveal" style="margin-bottom:32px;">
+    <span class="sec-label">Three Easy Steps</span>
+    <h2 class="sec-title">It Really Is That Simple.</h2>
+  </div>
+  <div class="steps-grid stagger-children">
+    <div class="step-card" data-num="1">
+      <div class="step-icon-box"><svg class="icon" aria-hidden="true"><use href="#ic-paddle"/></svg></div>
+      <div><p class="step-num">Step 01</p><h3>Choose Your Adventure</h3><p>Kayak, paddleboard, guided tour, or group outing — pick the experience that's right for you.</p></div>
+    </div>
+    <div class="step-card" data-num="2">
+      <div class="step-icon-box"><svg class="icon" aria-hidden="true"><use href="#ic-calendar"/></svg></div>
+      <div><p class="step-num">Step 02</p><h3>Book Online</h3><p>Reserve your spot in minutes. Walk-ups welcome on availability — booking ahead guarantees your spot.</p></div>
+    </div>
+    <div class="step-card" data-num="3">
+      <div class="step-icon-box"><svg class="icon" aria-hidden="true"><use href="#ic-location"/></svg></div>
+      <div><p class="step-num">Step 03</p><h3>Head to Canyon Lake</h3><p>Show up, grab your gear, and paddle out. Canyon Lake Marina is one of the most beautiful paddling spots in the Southwest — just enjoy it.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ PHOTO STRIP ══════════════════════════════ -->
+<div class="photo-strip">
+  <div class="photo-strip-item"><img src="../images/paddling-reeds.jpg" alt="Paddling through reeds at Canyon Lake"></div>
+  <div class="photo-strip-item"><img src="../images/dock-checkin.jpg" alt="Gear dock at Canyon Lake Marina"></div>
+  <div class="photo-strip-item"><img src="../images/sup-profile.jpg" alt="SUP paddling at Canyon Lake"></div>
+</div>
+
+<!-- ══ RENTALS / ACTIVITIES ════════════════════ -->
+<section class="activities-section grain-heavy" id="activities">
+  <div class="center reveal" style="margin-bottom:32px;">
+    <span class="sec-label">Rentals</span>
+    <h2 class="sec-title">How Do You Want to Paddle?</h2>
+    <p class="sec-sub">From solo floats to guided adventures — we have the gear and the guides.</p>
+  </div>
+  <div class="act-grid stagger-children">
+    <a class='act-card' href='/arizona/rentals'>
+      <img src="../images/act-kayak.jpg" alt="Kayak rentals Canyon Lake">
+      <div class="act-overlay"></div>
+      <span class="act-badge badge-orange">From $35</span>
+      <div class="act-content"><div class="act-icon"><svg class="icon" aria-hidden="true"><use href="#ic-kayak"/></svg></div><h3>Kayak Rentals</h3><p class="act-price">Single &amp; tandem available</p></div>
+    </a>
+    <a class='act-card' href='/arizona/rentals'>
+      <img src="../images/act-sup.jpg" alt="Paddleboard rentals Canyon Lake">
+      <div class="act-overlay"></div>
+      <span class="act-badge badge-orange">From $35</span>
+      <div class="act-content"><div class="act-icon"><svg class="icon" aria-hidden="true"><use href="#ic-sup"/></svg></div><h3>Paddleboards</h3><p class="act-price">Hard &amp; inflatable SUPs</p></div>
+    </a>
+    <a class='act-card' href='/arizona/experiences'>
+      <img src="../images/act-tours.jpg" alt="Guided canyon tour">
+      <div class="act-overlay"></div>
+      <span class="act-badge badge-blue">Guided</span>
+      <div class="act-content"><div class="act-icon"><svg class="icon" aria-hidden="true"><use href="#ic-compass"/></svg></div><h3>Guided Tours</h3><p class="act-price">Daily 10:30 AM – 1 PM</p></div>
+    </a>
+    <a class='act-card' href='/arizona/rentals'>
+      <img src="../images/boards-dock.jpg" alt="Fishing kayaks at Canyon Lake">
+      <div class="act-overlay"></div>
+      <span class="act-badge badge-sky">Fishing</span>
+      <div class="act-content"><div class="act-icon"><svg class="icon" aria-hidden="true"><use href="#ic-fish"/></svg></div><h3>Fishing Kayaks</h3><p class="act-price">PDL &amp; standard options</p></div>
+    </a>
+  </div>
+  <div class="center reveal" style="margin-top:28px;">
+    <a class='btn-outline-blue' href='/arizona/rentals'>View All Rentals &amp; Pricing</a>
+  </div>
+</section>
+
+<!-- ══ EXPERIENCES ══════════════════════════════ -->
+<section class="experiences-section" id="experiences">
+  <div class="center reveal" style="margin-bottom:32px;">
+    <span class="sec-label">Special Events</span>
+    <h2 class="sec-title">More Than a Rental.</h2>
+    <p class="sec-sub">Guided tours, full moon paddles, sunset paddles — designed around connection and lake memories.</p>
+  </div>
+  <div class="exp-grid stagger-children">
+    <div class="exp-card">
+      <img src="../images/exp-sunrise.jpg" alt="Guided canyon tour Canyon Lake" class="exp-img">
+      <div class="exp-body">
+        <span class="exp-tag">Daily · 10:30 AM – 1 PM</span>
+        <h3>Guided Canyon Tour</h3>
+        <p>An expert guide leads your group through dramatic canyon passages most visitors never find on their own. All gear included.</p>
+        <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-sm">Book Now</a>
+      </div>
+    </div>
+    <div class="exp-card">
+      <img src="../images/exp-moonlight.jpg" alt="Full moon paddle Canyon Lake" class="exp-img">
+      <div class="exp-body">
+        <span class="exp-tag">Monthly · 5:30 – 9:30 PM</span>
+        <h3>Full Moon Paddle</h3>
+        <p>Paddling under a full moon is hard to describe until you've done it. Glow gear included, guided route, zero experience needed.</p>
+        <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-sm">Book Now</a>
+      </div>
+    </div>
+    <div class="exp-card">
+      <img src="../images/exp-social.jpg" alt="Group event Canyon Lake" class="exp-img">
+      <div class="exp-body">
+        <span class="exp-tag">Special Events</span>
+        <h3>Group &amp; Private Events</h3>
+        <p>Birthdays, bachelorettes, team outings. One free 2-hour rental during your birthday week. Call for custom planning.</p>
+        <a class='btn-sm' href='/arizona/groups'>Plan an Event</a>
+      </div>
+    </div>
+  </div>
+  <div class="center reveal" style="margin-top:28px;">
+    <a class='btn-outline-blue' href='/arizona/experiences'>View Full Calendar</a>
+  </div>
+</section>
+
+<!-- ══ GROUP FEATURE — Deep Blue ══════════════ -->
+<section class="groups-feature" id="groups">
+  <div class="groups-feature-inner">
+    <img src="../images/groups-visual.jpg" alt="Large group paddling through Canyon Lake Arizona" class="groups-img">
+    <div class="groups-copy">
+      <span class="sec-label">For Groups</span>
+      <h2>Bring the Whole Crew.</h2>
+      <p>Bachelorettes, corporate retreats, birthdays, school trips, community outings — we make group paddling on Canyon Lake seamless and seriously fun.</p>
+      <ul class="groups-list">
+        <li>Groups of 10 to 100+ welcome</li>
+        <li>Dedicated event coordinator</li>
+        <li>Custom route &amp; experience planning</li>
+        <li>All equipment &amp; safety briefing included</li>
+        <li>Birthday perk — 1 free 2-hr rental during your birthday week</li>
+      </ul>
+      <div class="groups-btns">
+        <a class='btn-primary' href='/arizona/groups'>Inquire About Groups</a>
+        <a class='btn-outline-blue' href='/arizona/gift-cards'>Gift Cards</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRUST INTRO — Sky Blue ════════════════ -->
+<div class="trust-intro-strip reveal">
+  <div class="trust-intro-inner">
+    <span class="sec-label">Why Yak N Sup</span>
+    <h2>We're Here to Make Sure You Have a Great Time.</h2>
+    <p>Not just a gear shed. Every rental comes with a friendly crew, quality equipment, and everything you need to feel confident on the water.</p>
+  </div>
+</div>
+
+<!-- ══ TRUST CARDS ═════════════════════════════ -->
+<section class="trust-section">
+  <!-- Faint wide paddle group photo — people on water behind trust cards -->
+  <div class="section-bg-photo" style="background-image:url('../images/act-tours.jpg');opacity:0.08;mix-blend-mode:multiply;background-position:center;" aria-hidden="true"></div>
+  <div class="trust-grid stagger-children">
+    <div class="trust-card tc-blue">
+      <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#ic-gear"/></svg></span>
+      <div><h4>Top Quality Gear</h4><p>Well-maintained kayaks and paddleboards so every rental delivers.</p></div>
+    </div>
+    <div class="trust-card tc-orange">
+      <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#ic-beginner"/></svg></span>
+      <div><h4>No Experience Needed</h4><p>Every rental includes a safety briefing. Confident on the water in minutes.</p></div>
+    </div>
+    <div class="trust-card tc-cream">
+      <span class="trust-icon"><svg class="icon icon-blue" aria-hidden="true"><use href="#ic-vest"/></svg></span>
+      <div><h4>All Gear Included</h4><p>PFD, paddle, everything. Just show up ready to have fun.</p></div>
+    </div>
+    <div class="trust-card tc-gold">
+      <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#ic-location"/></svg></span>
+      <div><h4>Local Knowledge</h4><p>We know Canyon Lake inside out. Ask us where to go — we'll point you right.</p></div>
+    </div>
+    <div class="trust-card tc-heritage">
+      <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#ic-calendar"/></svg></span>
+      <div><h4>Easy Online Booking</h4><p>Book your spot in under 2 minutes. Walk-ups welcome on availability.</p></div>
+    </div>
+    <div class="trust-card tc-blue">
+      <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#ic-water"/></svg></span>
+      <div><h4>Locally Owned</h4><p>Not a chain. We're here because we love this lake and this community.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ REVIEWS ═════════════════════════════════ -->
+<section class="reviews-section">
+  <div class="reviews-inner">
+    <div class="center reveal" style="margin-bottom:28px;">
+      <span class="sec-label">Our Community</span>
+      <h2 class="sec-title">What People Are Saying.</h2>
+    </div>
+    <div class="reviews-scroll stagger-children">
+      <div class="review-card">
+        <div class="stars"></div>
+        <blockquote>"One of the best afternoons I've ever had in Arizona. Canyon Lake is absolutely stunning and the staff made everything so easy. Already planning to go back."</blockquote>
+        <div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Sarah M. — Scottsdale, AZ</div><div class="reviewer-source">Google Review</div></div></div>
+      </div>
+      <div class="review-card">
+        <div class="stars"></div>
+        <blockquote>"Did the full moon paddle — easily a top 5 life experience. The glow gear, the guide, the whole vibe. They thought of everything. Absolutely unreal."</blockquote>
+        <div class="reviewer"><div class="reviewer-av">J</div><div><div class="reviewer-name">Jake &amp; Tara — Phoenix Area</div><div class="reviewer-source">TripAdvisor</div></div></div>
+      </div>
+      <div class="review-card">
+        <div class="stars"></div>
+        <blockquote>"Used Yak N Sup for our company retreat. Massive hit. First-timers and experienced paddlers all had a great time. Super professional and easy to work with."</blockquote>
+        <div class="reviewer"><div class="reviewer-av">M</div><div><div class="reviewer-name">Maria T. — Scottsdale, AZ</div><div class="reviewer-source">Google Review</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PARTNERS PLACEHOLDER ══════════════════ -->
+<section class="partners-section reveal">
+  <div class="partners-placeholder">
+    <strong>Community &amp; Partners</strong>
+    <p>[ Add confirmed partner logos here — tourism partners, local businesses, community groups, and cleanup organizations. Confirmed partners only. ]</p>
+  </div>
+</section>
+
+<!-- ══ FAQ ════════════════════════════════════ -->
+<section class="faq-section">
+  <!-- Very faint SUP silhouette behind FAQ — almost invisible, just adds warmth -->
+  <div class="section-bg-photo" style="background-image:url('../images/sup-profile.jpg');opacity:0.05;mix-blend-mode:multiply;background-position:right center;" aria-hidden="true"></div>
+  <div class="center reveal" style="margin-bottom:28px;">
+    <span class="sec-label">Good to Know</span>
+    <h2 class="sec-title">Before You Head Out.</h2>
+    <p class="sec-sub" style="margin:0 auto 28px;">Quick answers about paddling Canyon Lake.</p>
+  </div>
+  <div class="faq-wrap">
+    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">Do I need any experience? <span class="faq-icon">+</span></button><div class="faq-a">Zero. Every rental starts with a short safety and paddling briefing. Most people feel comfortable and ready within a few minutes on the water.</div></div>
+    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">What's included with my rental? <span class="faq-icon">+</span></button><div class="faq-a">Your craft (kayak or SUP), an adjustable paddle, a properly fitted life jacket (PFD), and a safety briefing. Bring sunscreen, water, and clothes you're okay getting wet.</div></div>
+    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">What are the rental rates? <span class="faq-icon">+</span></button><div class="faq-a">Single Kayak & SUP: $35 (2hr) / $65 (4hr) / $75 (full day). Tandem Kayak: $50 / $90 / $110. PDL Fishing Kayak: $150. Standard Fishing Kayak: $80. Paying cash? Use code YNSCASH for a discount.</div></div>
+    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">Can I walk up without a reservation? <span class="faq-icon">+</span></button><div class="faq-a">Yes — walk-ups are welcome based on availability. We recommend booking online to guarantee your spot, especially on weekends and holidays.</div></div>
+    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">Why can't I reach anyone by phone? <span class="faq-icon">+</span></button><div class="faq-a">Cell service is notoriously spotty at Canyon Lake. Text us at (480) 420-8144 — your message will go through when you get signal. Best to book online in advance and arrive ready to go.</div></div>
+  </div>
+  <div class="center reveal" style="margin-top:28px;">
+    <a class='btn-outline-blue' href='/arizona/faq'>See All FAQs</a>
+  </div>
+</section>
+
+<!-- ══ FINAL CTA ═══════════════════════════════ -->
+<div class="final-cta">
+  <div class="final-cta-bg"><img src="../images/canyon-group.jpg" alt="Group paddleboarding through Canyon Lake Arizona"></div>
+  <div class="final-cta-overlay"></div>
+  <div class="final-cta-content reveal">
+    <span class="sec-label" style="color:var(--gold);">Your Next Lake Day</span>
+    <h2>Starts Here.</h2>
+    <div class="wavy-line" style="margin:8px auto 16px;"></div>
+    <p>Show up, paddle, and enjoy the water. We'll help with the rest.</p>
+    <div class="final-cta-btns">
+      <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-primary">Book Your Adventure</a>
+      <a class='btn-outline-white' href='/locations/canyon-lake'>Find Your Lake</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══════════════════════════════════ -->
+<footer>
+  <a href='/arizona/'><img src="../images/logo-nav-white.png" alt="Yak N Sup — Rentals · Tours · Adventure" class="footer-logo-img" style="mix-blend-mode:screen;width:200px;height:auto;display:block;margin:0 auto 14px;"></a>
+  <p class="footer-tagline">Lake adventures, made better. Show up, paddle, and enjoy. See you out there.</p>
+  <div class="newsletter">
+    <input type="email" placeholder="Get updates &amp; lake day deals">
+    <button>Subscribe</button>
+  </div>
+  <div class="footer-gift-strip">
+    <p>Gift cards available — valid for any rental or experience.</p>
+    <a href='/arizona/gift-cards'>Buy a Gift Card →</a>
+  </div>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>Company</h4><ul><li><a href='/arizona/about'>About Us</a></li><li><a href='/arizona/blog'>Blog</a></li><li><a href='/arizona/faq'>FAQs</a></li><li><a href='/arizona/gift-cards'>Gift Cards</a></li><li><a href='/arizona/contact'>Contact</a></li><li><a href="#">Safety &amp; Policies</a></li></ul></div>
+    <div class="footer-col"><h4>Explore</h4><ul><li><a href='/locations/canyon-lake'>Canyon Lake Marina, AZ</a></li><li><a href='/arizona/rentals'>Rentals &amp; Pricing</a></li><li><a href='/arizona/experiences'>Special Events</a></li><li><a href='/arizona/groups'>Group Bookings</a></li><li><a href="https://fareharbor.com/yaknsup/items/" target="_blank">Book Now</a></li></ul></div>
+    <div class="footer-col"><h4>Hours (Seasonal)</h4><li>Mon–Sun · 7 days/week</li><li>Rentals: 8 AM – 5:30 PM</li><li>Tours: 10:30 AM – 1 PM</li><li>Events: 5:30 – 9:30 PM</li></div>
+    <div class="footer-col"><h4>Get in Touch</h4><li><a href="tel:+14804208144">(480) 420-8144</a></li><li style="font-size:12px;opacity:0.45;">Text preferred at Canyon Lake</li><li style="margin-top:6px;"><a href="mailto:hello@yaknsup.com">hello@yaknsup.com</a></li><li style="margin-top:10px;opacity:0.45;font-size:12px;">16802 AZ-88, Tortilla Flat, AZ</li></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Yak N Sup. All rights reserved. Lake life, done right.</p>
+    <div class="social-row" style="display:flex;gap:16px;align-items:center;font-size:13px;opacity:0.75;">
+      <a href="https://instagram.com/yaknsupaz" style="color:inherit;text-decoration:none;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" style="display:inline-block;vertical-align:middle"><title>Instagram</title><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://tiktok.com/@yaknsupaz" style="color:inherit;text-decoration:none;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><title>TikTok</title><path d="M14 3c.3 2.4 1.9 4.3 4.5 4.6v3c-1.7 0-3.2-.5-4.5-1.4v6.1a5.6 5.6 0 1 1-5.6-5.6c.3 0 .7 0 1 .1v3.1a2.6 2.6 0 1 0 1.6 2.4V3H14Z"/></svg></a>
+      <a href="https://facebook.com/yaknsupaz" style="color:inherit;text-decoration:none;"><svg viewBox="0 0 24 24" width="20" height="20" role="img" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><title>Facebook</title><path d="M15 8h-2a2 2 0 0 0-2 2v11M8 13h6"/></svg></a>
+      <span style="opacity:0.5;">@yaknsupaz</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ POP-UP ════════════════════════════════════ -->
+<div class="popup-overlay" id="popup" role="dialog" aria-label="Special offer">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup()" aria-label="Close">×</button>
+    <img src="../images/exp-moonlight.jpg" alt="Full Moon Paddle at Canyon Lake" class="popup-img">
+    <div class="popup-body">
+      <span class="popup-badge-label">Monthly Event</span>
+      <h3>Full Moon Paddle</h3>
+      <p>Paddle Canyon Lake under the full moon. Glow gear included. Zero experience needed. Spots fill up fast.</p>
+      <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-primary" style="display:block;text-align:center;" onclick="closePopup()">Book Your Spot</a>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── STICKY NAV ─────────────────────────── */
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 80);
+}, { passive: true });
+
+/* ── MOBILE MENU ────────────────────────── */
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburgerBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+mobileMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => mobileMenu.classList.remove('open'));
+});
+
+/* ── SCROLL REVEAL ──────────────────────── */
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .stagger-children, .scale-in');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => observer.observe(el));
+
+/* ── FAQ ACCORDION ──────────────────────── */
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+/* ── POP-UP — show after scroll 40% OR 10s ─ */
+const popup = document.getElementById('popup');
+let popupShown = false;
+
+function showPopup() {
+  if (popupShown || sessionStorage.getItem('popupClosed')) return;
+  popup.classList.add('visible');
+  popupShown = true;
+}
+function closePopup() {
+  popup.classList.remove('visible');
+  sessionStorage.setItem('popupClosed', '1');
+}
+// Close on overlay click
+popup.addEventListener('click', (e) => {
+  if (e.target === popup) closePopup();
+});
+// Scroll trigger — 40% down page
+window.addEventListener('scroll', () => {
+  const scrollPct = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+  if (scrollPct > 0.4) showPopup();
+}, { passive: true });
+// Fallback timer — 12 seconds
+setTimeout(showPopup, 12000);
+
+/* ── EXIT INTENT (desktop only) ─────────── */
+if (window.innerWidth >= 768) {
+  document.addEventListener('mouseleave', (e) => {
+    if (e.clientY < 20) showPopup();
+  });
+}
+</script>
+<!-- FareHarbor Lightframe API -->
+<script src="https://fareharbor.com/embeds/api/v1/?autolightboxall=yes"></script>
+</body>
+</html>
