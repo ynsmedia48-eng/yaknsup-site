@@ -1,0 +1,105 @@
+# ============================================================
+# Yak N Sup — Netlify Redirects
+# WordPress → Static site migration (301 = permanent, SEO-safe)
+# ============================================================
+
+# --- RENTALS ---
+/rental-rates/                                                          /arizona/rentals.html                   301
+/rental-rates                                                           /arizona/rentals.html                   301
+/kayak-and-paddleboard-rentals/                                         /arizona/rentals.html                   301
+/kayak-and-paddleboard-rentals                                          /arizona/rentals.html                   301
+/rentals/                                                               /arizona/rentals.html                   301
+/rentals                                                                /arizona/rentals.html                   301
+/rental-process/                                                        /arizona/rentals.html                   301
+/rental-process                                                         /arizona/rentals.html                   301
+/paddleboard-and-kayak-lessons/                                         /arizona/rentals.html                   301
+/paddleboard-and-kayak-lessons                                          /arizona/rentals.html                   301
+
+# --- EXPERIENCES / TOURS / EVENTS ---
+/tours/                                                                 /arizona/experiences.html               301
+/tours                                                                  /arizona/experiences.html               301
+/special-events/                                                        /arizona/experiences.html               301
+/special-events                                                         /arizona/experiences.html               301
+/full-moon-kayaking-and-paddleboarding-tours/                           /arizona/experiences.html               301
+/full-moon-kayaking-and-paddleboarding-tours                            /arizona/experiences.html               301
+/full-moon-night-paddles/                                               /arizona/experiences.html               301
+/full-moon-night-paddles                                                /arizona/experiences.html               301
+/celebrate-love-on-the-water/                                           /arizona/experiences.html               301
+/celebrate-love-on-the-water                                            /arizona/experiences.html               301
+/self-guided-tours-literature/                                          /arizona/experiences.html               301
+/self-guided-tours-literature                                           /arizona/experiences.html               301
+/events/                                                                /arizona/experiences.html               301
+/events                                                                 /arizona/experiences.html               301
+/events/categories/                                                     /arizona/experiences.html               301
+/events/tags/                                                           /arizona/experiences.html               301
+/events/locations/                                                      /arizona/                               301
+/events/food-drives-at-yak-n-sup/                                       /arizona/experiences.html               301
+/events/yak-n-sup-charity-floats/                                       /arizona/experiences.html               301
+/events/trash-clean-up/                                                 /arizona/experiences.html               301
+/events/yak-n-sup-night-kayaking-2/                                     /arizona/experiences.html               301
+/events/yak-n-sup-night-kayaking/                                       /arizona/experiences.html               301
+/events/my-bookings/                                                    https://fareharbor.com/yaknsup/items/   301
+
+# --- GROUPS ---
+/groups/                                                                /arizona/groups.html                    301
+/groups                                                                 /arizona/groups.html                    301
+
+# --- ABOUT ---
+/about-us/                                                              /arizona/about.html                     301
+/about-us                                                               /arizona/about.html                     301
+/giving-back-sponsors/                                                  /arizona/about.html                     301
+/giving-back-sponsors                                                   /arizona/about.html                     301
+/partners/                                                              /arizona/about.html                     301
+/partners                                                               /arizona/about.html                     301
+
+# --- CONTACT ---
+/contact-us/                                                            /arizona/contact.html                   301
+/contact-us                                                             /arizona/contact.html                   301
+/contact-us-copy/                                                       /arizona/contact.html                   301
+/contact-us-copy                                                        /arizona/contact.html                   301
+/careers/                                                               /arizona/contact.html                   301
+/careers                                                                /arizona/contact.html                   301
+
+# --- FAQ ---
+/commonquestions/                                                       /arizona/faq.html                       301
+/commonquestions                                                        /arizona/faq.html                       301
+
+# --- BLOG ---
+/blog/                                                                  /arizona/blog.html                      301
+/blog                                                                   /arizona/blog.html                      301
+/the-skeleton-cave-massacre-a-dark-chapter-in-canyon-lakes-history/     /arizona/blog.html                      301
+/the-skeleton-cave-massacre-a-dark-chapter-in-canyon-lakes-history      /arizona/blog.html                      301
+/canyon-lake-the-perfect-bachelorette-or-bachelor-party-adventure-with-yak-n-sup/  /arizona/blog.html          301
+/canyon-lake-the-perfect-bachelorette-or-bachelor-party-adventure-with-yak-n-sup   /arizona/blog.html          301
+/la-barge-and-tortilla-creek/                                           /arizona/blog.html                      301
+/la-barge-and-tortilla-creek                                            /arizona/blog.html                      301
+/canyon-lake-a-rich-history-and-paddling-paradise/                      /arizona/blog.html                      301
+/canyon-lake-a-rich-history-and-paddling-paradise                       /arizona/blog.html                      301
+/fall-paddling-at-canyon-lake-a-serene-escape-with-yak-n-sup/           /arizona/blog.html                      301
+/fall-paddling-at-canyon-lake-a-serene-escape-with-yak-n-sup            /arizona/blog.html                      301
+/bighorn-sheep-spotting-at-canyon-lake-paddle-through-history-with-yak-n-sup/      /arizona/blog.html          301
+/bighorn-sheep-spotting-at-canyon-lake-paddle-through-history-with-yak-n-sup       /arizona/blog.html          301
+/rainy-days-at-canyon-lake/                                             /arizona/blog.html                      301
+/rainy-days-at-canyon-lake                                              /arizona/blog.html                      301
+
+# --- LOCATIONS ---
+/locations/canyon-lake/                                                 /arizona/                               301
+/locations/canyon-lake                                                  /arizona/                               301
+
+# --- TEXAS ---
+/txhc/                                                                  /texas/                                 301
+/txhc                                                                   /texas/                                 301
+
+# --- THANK YOU / JUNK WORDPRESS PAGES ---
+/thank-you/                                                             /                                       301
+/thank-you                                                              /                                       301
+/demo/                                                                  /                                       301
+/demo                                                                   /                                       301
+/home/                                                                  /                                       301
+/home                                                                   /                                       301
+/main-page/                                                             /                                       301
+/main-page                                                              /                                       301
+/cart/                                                                  /                                       301
+/cart                                                                   /                                       301
+/landing-page/                                                          /                                       301
+/landing-page                                                           /                                       301
